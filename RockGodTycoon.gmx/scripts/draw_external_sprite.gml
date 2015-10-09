@@ -237,6 +237,8 @@ for( var _x = -_w * argument4; _x <= view_wview[ view_current ]; _x += _w * argu
 
 #define sprite_load_begin
 ///sprite_load_begin(tex_page_width,tex_page_height,tex_offset)
+gml_pragma("forceinline"); // in YYC, proccessing boost but it inflates the final exe size
+
 __s_tex_width  = argument0; // TEXTURE PAGE WIDTH
 __s_tex_height = argument1; // TEXTURE PAGE HEIGHT
 __s_tex_offset = argument2; // SPRITE OFFSET ON THE TEXTURE PAGE
@@ -253,12 +255,13 @@ __s_l_back_sorted = ds_list_create();
 
 #define sprite_load_add
 ///sprite_load_add(identifier,fname,subimg,xorig,yorig)
+gml_pragma("forceinline"); // in YYC, proccessing boost but it inflates the final exe size
 ds_list_add( __s_l_background , background_add( argument1 , false , false ) , argument0 , argument2 , argument3 , argument4 );
 
 
 #define sprite_load_end
 ///sprite_load_end()
-
+gml_pragma("forceinline"); // in YYC, proccessing boost but it inflates the final exe size
 // SORT THEIR IMAGES BY THEIR SIZE
 for( var n = 0; n < ds_list_size( __s_l_background ); n += 5 ){
     var _size = ( ( background_get_width( __s_l_background[| n ] ) div __s_l_background[| n + 2 ] ) + background_get_height( __s_l_background[| n ] ) ) / 2;
@@ -308,8 +311,7 @@ var _l_trash = ds_list_create();
 ds_list_add( _l_areas , 0 , 0 , __s_tex_width , __s_tex_height );
 
 surface_set_target( __s_surf_texpage );
-draw_clear( c_black ); // this can be removed
-draw_set_blend_mode_ext( bm_one , bm_zero );
+draw_clear_alpha(0,0); // this can be removed
 var _bck = -1;
 
 while( ds_list_size( __s_l_back_sorted ) > 0 ){ // LOOP THROUGH THE SPRITES AND ADD THEM TO THE TEXTURE PAGE WHERE POSSIBLE
@@ -406,7 +408,7 @@ return( _back );
     DELETE THE DS_LIST AFTER USAGE TO AVOID A MEMORY LEAK
     ! IMPORTANT !
 */
-
+gml_pragma("forceinline"); // in YYC, proccessing boost but it inflates the final exe size
 // SORT THEIR IMAGES BY THEIR SIZE
 for( var n = 0; n < ds_list_size( __s_l_background ); n += 5 ){
     var _size = ( ( background_get_width( __s_l_background[| n ] ) div __s_l_background[| n + 2 ] ) + background_get_height( __s_l_background[| n ] ) ) / 2;
@@ -461,8 +463,7 @@ ds_list_add( _l_texpage ,
 );
 
 surface_set_target( _l_texpage[| ds_list_size( _l_texpage ) - 2 ] );
-draw_clear( c_black ); // this can be removed
-draw_set_blend_mode_ext( bm_one , bm_zero );
+draw_clear_alpha(0,0); // this can be removed
 var _bck = -1;
 
 while( ds_list_size( __s_l_back_sorted ) > 0 ){ // LOOP THROUGH THE SPRITES AND ADD THEM TO THE TEXTURE PAGE WHERE POSSIBLE
@@ -584,6 +585,8 @@ return( _l_return );
 
 #define sprite_load_get
 ///sprite_load_get(identifier)
+gml_pragma("forceinline"); // in YYC, proccessing boost but it inflates the final exe size
+
 var _val = temp_sprite_get[? argument0 ];
 ds_map_delete( temp_sprite_get , argument0 );
 // DELETE THE TEMP MAP AFTER IT HAS BEEN EMPTIED

@@ -30,6 +30,12 @@ menu_state = "Main Menu";
 button_select = -2;
 mouse_over = -1;
 spr[10]=0;
+
+// Make Adjustments To Image Offsets
+sprite_external_set_offset(global.sprite_map[?"Main Menu\Light.png"],70,9);
+
+// Special Variables
+light_rot = 2.5;light_rot_speed = 0.05;
 </string>
           </argument>
         </arguments>
@@ -152,11 +158,16 @@ var y_point = 0;var color = 0;var gray = make_colour_rgb(200,200,200);
 
 switch(menu_state){
 case "Main Menu":{ // Main Menu
+
+// Do Whatever Special Code Here
+if ( light_rot &lt; 2.5 ){light_rot_speed = 0.05;}if ( light_rot &gt; 11 ){light_rot_speed -= 0.05;}
+light_rot += light_rot_speed;
+
 // Menu Pieces
 draw_external_sprite(global.sprite_map[?"Main Menu\Background.png"],0,x_center,y_center);
 draw_external_sprite(global.sprite_map[?"Main Menu\Paper Light Reflection.png"],0,x_center,y_center);
-draw_external_sprite_ext(global.sprite_map[?"Main Menu\Light.png"],0,x_center-470,y_center-182,1,1,0,c_white,1);
-draw_external_sprite_ext(global.sprite_map[?"Main Menu\Light.png"],0,x_center+470,y_center-182,-1,1,0,c_white,1);
+draw_external_sprite_ext(global.sprite_map[?"Main Menu\Light.png"],0,x_center-920,y_center-540,1,1,light_rot,c_white,1);
+draw_external_sprite_ext(global.sprite_map[?"Main Menu\Light.png"],0,x_center+920,y_center-540,-1,1,-light_rot,c_white,1);
 draw_external_sprite(global.sprite_map[?"Main Menu\Paper Piece.png"],0,x_center,y_center);
 
 // Buttons
