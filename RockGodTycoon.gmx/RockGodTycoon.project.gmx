@@ -681,7 +681,6 @@
       <script>scripts\mouse_check_area.gml</script>
     </scripts>
   </scripts>
-  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\font_grave_24</font>
   </fonts>
@@ -699,7 +698,7 @@
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="1">
-    <constant name="build_version">"Build 0.0.0.1"</constant>
+    <constant name="build_version">"Build 0.0.0.2"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
