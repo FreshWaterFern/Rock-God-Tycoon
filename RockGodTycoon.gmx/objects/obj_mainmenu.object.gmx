@@ -139,22 +139,22 @@ draw_external_sprite(global.sprite_map[?"Main Menu\Paper Piece.png"],0,x_center,
 
 // Buttons
 // New Game
-if ( mouse_over != 0 ){color = c_dkgray}else{color = c_white}
+if ( mouse_over != 0 ){color = c_white}else{color = c_gray}
 draw_external_sprite_ext(spr[0],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Continue
-if ( mouse_over != 1 ){color = c_dkgray}else{color = c_white}
+if ( mouse_over != 1 ){color = c_white}else{color = c_gray}
 draw_external_sprite_ext(spr[1],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Load Game
-if ( mouse_over != 2 ){color = c_dkgray}else{color = c_white}
+if ( mouse_over != 2 ){color = c_white}else{color = c_gray}
 draw_external_sprite_ext(spr[2],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Options
-if ( mouse_over != 3 ){color = c_dkgray}else{color = c_white}
+if ( mouse_over != 3 ){color = c_white}else{color = c_gray}
 draw_external_sprite_ext(spr[3],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Credits
-if ( mouse_over != 4 ){color = c_dkgray}else{color = c_white}
+if ( mouse_over != 4 ){color = c_white}else{color = c_gray}
 draw_external_sprite_ext(spr[4],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Exit Game
-if ( mouse_over != 5 ){color = c_dkgray}else{color = c_white}
+if ( mouse_over != 5 ){color = c_white}else{color = c_gray}
 draw_external_sprite_ext(spr[5],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 break;}
 
