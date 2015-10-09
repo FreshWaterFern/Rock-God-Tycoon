@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>/// Initialize
 menu_state = "Main Menu";
+button_select = -2;
+mouse_over = -1;
 spr[10]=0;
 </string>
           </argument>
@@ -52,42 +54,54 @@ spr[10]=0;
             <kind>1</kind>
             <string>/// Button Logic
 var x_center = room_width/2;var y_center = room_height/2;
-var y_point = 192;var mouse_over = -1;
+var y_point = 192;mouse_over = -1;
 
 switch(menu_state){
 case "Main Menu":{ // Main Menu
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 0;
+if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 0;}
+if ( button_select == 0 ){
 spr[0]=global.sprite_map[?"Main Menu\Buttons\New game button effect.png"]}else{spr[0]=global.sprite_map[?"Main Menu\Buttons\New game button.png"]}
 
 y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 1;
+if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 1;}
+if ( button_select == 1 ){
 spr[1]=global.sprite_map[?"Main Menu\Buttons\Continue button effect.png"]}else{spr[1]=global.sprite_map[?"Main Menu\Buttons\Continue button.png"]}
 
 y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 2;
+if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 2;}
+if ( button_select == 2 ){
 spr[2]=global.sprite_map[?"Main Menu\Buttons\Load game button effect.png"]}else{spr[2]=global.sprite_map[?"Main Menu\Buttons\Load game button.png"]}
 
 y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 3;
+if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 3;}
+if ( button_select == 3 ){
 spr[3]=global.sprite_map[?"Main Menu\Buttons\Options button effect.png"]}else{spr[3]=global.sprite_map[?"Main Menu\Buttons\Options button.png"]}
 
 y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 4;
+if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 4;}
+if ( button_select == 4 ){
 spr[4]=global.sprite_map[?"Main Menu\Buttons\Credits button effect.png"]}else{spr[4]=global.sprite_map[?"Main Menu\Buttons\Credits button.png"]}
 
 y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 5;
+if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 5;}
+if ( button_select == 5 ){
 spr[5]=global.sprite_map[?"Main Menu\Buttons\Exit game button effect.png"]}else{spr[5]=global.sprite_map[?"Main Menu\Buttons\Exit game button.png"]}
 
+if ( mouse_check_button_released(mb_left) ){button_select=-2;
+if ( mouse_over == button_select ){
+switch(button_select){
+case 0:{show_message("TEST");break;}
+case 1:{show_message("TEST");break;}
+case 2:{show_message("TEST");break;}
+case 3:{show_message("TEST");break;}
+case 4:{show_message("TEST");break;}
+case 5:{show_message("TEST");break;}
+}}}
+
 if ( mouse_check_button_pressed(mb_left) ){
-switch(mouse_over){
-case 0:{show_message("Start A New Game!");break;}
-case 1:{show_message("Continue Your Game!");break;}
-case 2:{show_message("Load Your Game!");break;}
-case 3:{menu_state="Options";break;}
-case 4:{show_message("Credits About Those Two Guys Who Did Everything!");break;}
-case 5:{game_end();break;}
-}}}}
+if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}
+
+break;}}
 </string>
           </argument>
         </arguments>
@@ -112,7 +126,7 @@ case 5:{game_end();break;}
             <kind>1</kind>
             <string>/// Render
 var x_center = room_width/2;var y_center = room_height/2;
-var y_point = 192;
+var y_point = 192;var color = 0;
 
 switch(menu_state){
 case "Main Menu":{ // Main Menu
@@ -125,18 +139,24 @@ draw_external_sprite(global.sprite_map[?"Main Menu\Paper Piece.png"],0,x_center,
 
 // Buttons
 // New Game
-draw_external_sprite(spr[0],0,x_center,y_center-y_point);y_point -= 116;
+if ( mouse_over != 0 ){color = c_dkgray}else{color = c_white}
+draw_external_sprite_ext(spr[0],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Continue
-draw_external_sprite(spr[1],0,x_center,y_center-y_point);y_point -= 116;
+if ( mouse_over != 1 ){color = c_dkgray}else{color = c_white}
+draw_external_sprite_ext(spr[1],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Load Game
-draw_external_sprite(spr[2],0,x_center,y_center-y_point);y_point -= 116;
+if ( mouse_over != 2 ){color = c_dkgray}else{color = c_white}
+draw_external_sprite_ext(spr[2],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Options
-draw_external_sprite(spr[3],0,x_center,y_center-y_point);y_point -= 116;
+if ( mouse_over != 3 ){color = c_dkgray}else{color = c_white}
+draw_external_sprite_ext(spr[3],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Credits
-draw_external_sprite(spr[4],0,x_center,y_center-y_point);y_point -= 116;
+if ( mouse_over != 4 ){color = c_dkgray}else{color = c_white}
+draw_external_sprite_ext(spr[4],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 // Exit Game
-draw_external_sprite(spr[5],0,x_center,y_center-y_point);y_point -= 116;
-}
+if ( mouse_over != 5 ){color = c_dkgray}else{color = c_white}
+draw_external_sprite_ext(spr[5],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
+break;}
 
 case "Options":{ // Options Menu
 // Menu Pieces
@@ -159,10 +179,10 @@ draw_external_sprite(spr[3],0,x_center,y_center-y_point);y_point -= 116;
 draw_external_sprite(spr[4],0,x_center,y_center-y_point);y_point -= 116;
 // Exit Game
 draw_external_sprite(spr[5],0,x_center,y_center-y_point);y_point -= 116;
-}}
+break;}}
 
 // Version Number
-draw_set_font(font_grave_24);draw_set_halign(fa_left);draw_set_valign(fa_bottom);draw_set_color(c_white);
+draw_set_font(font_grave_24);draw_set_halign(fa_left);draw_set_valign(fa_bottom);color = c_white;
 draw_text(view_xview[0],view_yview[0]+view_hview[0],build_version);
 </string>
           </argument>
