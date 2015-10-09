@@ -681,6 +681,7 @@
       <script>scripts\mouse_check_area.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\font_grave_24</font>
   </fonts>
