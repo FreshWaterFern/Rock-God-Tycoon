@@ -3,18 +3,703 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="46" name="datafiles">
+    <datafiles number="46" name="Main Menu">
+      <datafile>
+        <name>Light.png</name>
+        <exists>-1</exists>
+        <size>227119</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Light.png</filename>
+      </datafile>
+      <datafile>
+        <name>Background.png</name>
+        <exists>-1</exists>
+        <size>962425</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Background.png</filename>
+      </datafile>
+      <datafile>
+        <name>Paper Light Reflection.png</name>
+        <exists>-1</exists>
+        <size>216242</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Paper Light Reflection.png</filename>
+      </datafile>
+      <datafile>
+        <name>Paper Piece.png</name>
+        <exists>-1</exists>
+        <size>972420</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Paper Piece.png</filename>
+      </datafile>
+      <datafile>
+        <name>Reference image.png</name>
+        <exists>-1</exists>
+        <size>1864948</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Reference image.png</filename>
+      </datafile>
+      <datafiles number="46" name="Buttons">
+        <datafile>
+          <name>Credits button effect.png</name>
+          <exists>-1</exists>
+          <size>37320</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Credits button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Credits button.png</name>
+          <exists>-1</exists>
+          <size>36094</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Credits button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Exit game button effect.png</name>
+          <exists>-1</exists>
+          <size>41192</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Exit game button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Exit game button.png</name>
+          <exists>-1</exists>
+          <size>39070</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Exit game button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Load game button effect.png</name>
+          <exists>-1</exists>
+          <size>41355</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Load game button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Load game button.png</name>
+          <exists>-1</exists>
+          <size>39421</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Load game button.png</filename>
+        </datafile>
+        <datafile>
+          <name>New game button effect.png</name>
+          <exists>-1</exists>
+          <size>39068</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>New game button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>New game button.png</name>
+          <exists>-1</exists>
+          <size>37205</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>New game button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Options button effect.png</name>
+          <exists>-1</exists>
+          <size>36598</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Options button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Options button.png</name>
+          <exists>-1</exists>
+          <size>35461</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Options button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Continue button effect.png</name>
+          <exists>-1</exists>
+          <size>39320</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Continue button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Continue button.png</name>
+          <exists>-1</exists>
+          <size>37827</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Continue button.png</filename>
+        </datafile>
+      </datafiles>
+    </datafiles>
+    <datafiles number="46" name="Options">
+      <datafile>
+        <name>Background.png</name>
+        <exists>-1</exists>
+        <size>1092305</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Background.png</filename>
+      </datafile>
+      <datafile>
+        <name>Light.png</name>
+        <exists>-1</exists>
+        <size>371906</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Light.png</filename>
+      </datafile>
+      <datafile>
+        <name>Paper Piece.png</name>
+        <exists>-1</exists>
+        <size>841433</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Paper Piece.png</filename>
+      </datafile>
+      <datafile>
+        <name>Reference Image.png</name>
+        <exists>-1</exists>
+        <size>1853255</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Reference Image.png</filename>
+      </datafile>
+      <datafile>
+        <name>Speaker.png</name>
+        <exists>-1</exists>
+        <size>42548</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Speaker.png</filename>
+      </datafile>
+      <datafiles number="46" name="Buttons">
+        <datafile>
+          <name>Audio settings button.png</name>
+          <exists>-1</exists>
+          <size>41099</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Audio settings button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Audio settings button effect.png</name>
+          <exists>-1</exists>
+          <size>44838</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Audio settings button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Control settings button effect.png</name>
+          <exists>-1</exists>
+          <size>43175</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Control settings button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Control settings button.png</name>
+          <exists>-1</exists>
+          <size>40219</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Control settings button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Video settings button effect.png</name>
+          <exists>-1</exists>
+          <size>37976</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Video settings button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Video settings button.png</name>
+          <exists>-1</exists>
+          <size>36547</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Video settings button.png</filename>
+        </datafile>
+      </datafiles>
+      <datafiles number="46" name="Back button">
+        <datafile>
+          <name>Back Button effect.png</name>
+          <exists>-1</exists>
+          <size>29412</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Back Button effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Back Button.png</name>
+          <exists>-1</exists>
+          <size>29067</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Back Button.png</filename>
+        </datafile>
+      </datafiles>
+    </datafiles>
+    <datafiles number="46" name="Audio">
+      <datafile>
+        <name>Amplifier.png</name>
+        <exists>-1</exists>
+        <size>70007</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Amplifier.png</filename>
+      </datafile>
+      <datafile>
+        <name>Background.png</name>
+        <exists>-1</exists>
+        <size>1054027</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Background.png</filename>
+      </datafile>
+      <datafile>
+        <name>Hand.png</name>
+        <exists>-1</exists>
+        <size>23706</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Hand.png</filename>
+      </datafile>
+      <datafile>
+        <name>Microphone.png</name>
+        <exists>-1</exists>
+        <size>26985</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Microphone.png</filename>
+      </datafile>
+      <datafile>
+        <name>Paper Piece.png</name>
+        <exists>-1</exists>
+        <size>1470083</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Paper Piece.png</filename>
+      </datafile>
+      <datafile>
+        <name>Reference Image.png</name>
+        <exists>-1</exists>
+        <size>1983642</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Reference Image.png</filename>
+      </datafile>
+      <datafiles number="46" name="Apply button">
+        <datafile>
+          <name>Apply button effect .png</name>
+          <exists>-1</exists>
+          <size>29640</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Apply button effect .png</filename>
+        </datafile>
+        <datafile>
+          <name>Apply button.png</name>
+          <exists>-1</exists>
+          <size>29031</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Apply button.png</filename>
+        </datafile>
+      </datafiles>
+    </datafiles>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <shaders name="shaders"/>
+  <scripts name="scripts">
+    <scripts name="initialize">
+      <script>scripts\sprite_list_ini.gml</script>
+    </scripts>
+    <scripts name="external">
+      <script>scripts\draw_external_sprite.gml</script>
+    </scripts>
+    <scripts name="controls">
+      <script>scripts\mouse_check_area.gml</script>
+    </scripts>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_grave_24</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\obj_game</object>
+    <objects name="logic">
+      <object>objects\obj_ini_load</object>
+      <object>objects\obj_game</object>
+    </objects>
+    <objects name="Main Menu">
+      <object>objects\obj_mainmenu</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_loading</room>
     <room>rooms\rm_main</room>
   </rooms>
+  <constants number="1">
+    <constant name="build_version">"Build 0.0.0.1"</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
