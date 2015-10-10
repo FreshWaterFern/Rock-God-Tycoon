@@ -1,4 +1,6 @@
 /// mouse_check_area(x1,y1,x2,y2);
+gml_pragma("forceinline"); // YYC speed up
+
 var m_x = mouse_x-view_xview[0];
 var m_y = mouse_y-view_yview[0];
 
