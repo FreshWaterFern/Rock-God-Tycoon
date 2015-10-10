@@ -3,8 +3,44 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="46" name="datafiles">
-    <datafiles number="46" name="Back button">
+  <datafiles number="54" name="datafiles">
+    <datafiles number="54" name="Apply button">
+      <datafile>
+        <name>Apply button.png</name>
+        <exists>-1</exists>
+        <size>29031</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Apply button.png</filename>
+      </datafile>
+      <datafile>
+        <name>Apply button effect.png</name>
+        <exists>-1</exists>
+        <size>29640</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Apply button effect.png</filename>
+      </datafile>
+    </datafiles>
+    <datafiles number="54" name="Back button">
       <datafile>
         <name>Back Button effect.png</name>
         <exists>-1</exists>
@@ -40,7 +76,7 @@
         <filename>Back Button.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="46" name="Main Menu">
+    <datafiles number="54" name="Main Menu">
       <datafile>
         <name>Light.png</name>
         <exists>-1</exists>
@@ -109,24 +145,7 @@
         </ConfigOptions>
         <filename>Paper Piece.png</filename>
       </datafile>
-      <datafile>
-        <name>Reference image.png</name>
-        <exists>-1</exists>
-        <size>1864948</size>
-        <exportAction>2</exportAction>
-        <exportDir></exportDir>
-        <overwrite>0</overwrite>
-        <freeData>-1</freeData>
-        <removeEnd>0</removeEnd>
-        <store>0</store>
-        <ConfigOptions>
-          <Config name="Default">
-            <CopyToMask>9223372036854775807</CopyToMask>
-          </Config>
-        </ConfigOptions>
-        <filename>Reference image.png</filename>
-      </datafile>
-      <datafiles number="46" name="Buttons">
+      <datafiles number="54" name="Buttons">
         <datafile>
           <name>Credits button effect.png</name>
           <exists>-1</exists>
@@ -333,7 +352,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="46" name="Options">
+    <datafiles number="54" name="Options">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -386,23 +405,6 @@
         <filename>Paper Piece.png</filename>
       </datafile>
       <datafile>
-        <name>Reference Image.png</name>
-        <exists>-1</exists>
-        <size>1853255</size>
-        <exportAction>2</exportAction>
-        <exportDir></exportDir>
-        <overwrite>0</overwrite>
-        <freeData>-1</freeData>
-        <removeEnd>0</removeEnd>
-        <store>0</store>
-        <ConfigOptions>
-          <Config name="Default">
-            <CopyToMask>9223372036854775807</CopyToMask>
-          </Config>
-        </ConfigOptions>
-        <filename>Reference Image.png</filename>
-      </datafile>
-      <datafile>
         <name>Speaker.png</name>
         <exists>-1</exists>
         <size>42548</size>
@@ -419,7 +421,7 @@
         </ConfigOptions>
         <filename>Speaker.png</filename>
       </datafile>
-      <datafiles number="46" name="Buttons">
+      <datafiles number="54" name="Buttons">
         <datafile>
           <name>Audio settings button.png</name>
           <exists>-1</exists>
@@ -524,7 +526,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="46" name="Audio">
+    <datafiles number="54" name="Audio">
       <datafile>
         <name>Amplifier.png</name>
         <exists>-1</exists>
@@ -627,11 +629,64 @@
         </ConfigOptions>
         <filename>Reference Image.png</filename>
       </datafile>
-      <datafiles number="46" name="Apply button">
+    </datafiles>
+    <datafiles number="54" name="Video Settings">
+      <datafile>
+        <name>Controller.png</name>
+        <exists>-1</exists>
+        <size>33808</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Controller.png</filename>
+      </datafile>
+      <datafile>
+        <name>Paper Piece.png</name>
+        <exists>-1</exists>
+        <size>1640458</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Paper Piece.png</filename>
+      </datafile>
+      <datafile>
+        <name>Tv.png</name>
+        <exists>-1</exists>
+        <size>97431</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Tv.png</filename>
+      </datafile>
+      <datafiles number="54" name="Buttons">
         <datafile>
-          <name>Apply button effect .png</name>
+          <name>Arrow button effect.png</name>
           <exists>-1</exists>
-          <size>29640</size>
+          <size>20767</size>
           <exportAction>2</exportAction>
           <exportDir></exportDir>
           <overwrite>0</overwrite>
@@ -643,12 +698,12 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Apply button effect .png</filename>
+          <filename>Arrow button effect.png</filename>
         </datafile>
         <datafile>
-          <name>Apply button.png</name>
+          <name>Button.png</name>
           <exists>-1</exists>
-          <size>29031</size>
+          <size>1613</size>
           <exportAction>2</exportAction>
           <exportDir></exportDir>
           <overwrite>0</overwrite>
@@ -660,12 +715,33 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Apply button.png</filename>
+          <filename>Button.png</filename>
         </datafile>
       </datafiles>
     </datafiles>
+    <datafiles number="54" name="Audio_Controls_Video">
+      <datafile>
+        <name>Background.png</name>
+        <exists>-1</exists>
+        <size>1054027</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>Background.png</filename>
+      </datafile>
+    </datafiles>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\FXAA Shader</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites"/>
   <backgrounds name="background"/>
@@ -676,13 +752,17 @@
     </scripts>
     <scripts name="external">
       <script>scripts\draw_external_sprite.gml</script>
+      <script>scripts\background_destroy.gml</script>
     </scripts>
     <scripts name="controls">
       <script>scripts\mouse_check_area.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\sha_fxaa.shader</shader>
+  </shaders>
   <fonts name="fonts">
-    <font>fonts\font_grave_24</font>
+    <font>fonts\font_grave_36</font>
   </fonts>
   <objects name="objects">
     <objects name="logic">
