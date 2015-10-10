@@ -34,5 +34,5 @@ ds_list_add(sprite_list,"Options\Buttons\Control settings button effect.png");
 ds_list_add(sprite_list,"Options\Buttons\Control settings button.png");
 ds_list_add(sprite_list,"Options\Buttons\Video settings button effect.png");
 ds_list_add(sprite_list,"Options\Buttons\Video settings button.png");
-ds_list_add(sprite_list,"Options\Back button\Back Button effect.png");
-ds_list_add(sprite_list,"Options\Back button\Back Button.png");
+ds_list_add(sprite_list,"Back button\Back Button effect.png");
+ds_list_add(sprite_list,"Back button\Back Button.png");

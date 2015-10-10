@@ -122,7 +122,7 @@ spr[2]=global.sprite_map[?"Options\Buttons\Control settings button effect.png"]}
 
 y_point -= 171;
 if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 3;}if ( button_select == 3 ){
-spr[3]=global.sprite_map[?"Options\Back button\Back Button effect.png"]}else{spr[3]=global.sprite_map[?"Options\Back button\Back Button.png"]}
+spr[3]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[3]=global.sprite_map[?"Back button\Back Button.png"]}
 
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){switch(button_select){
