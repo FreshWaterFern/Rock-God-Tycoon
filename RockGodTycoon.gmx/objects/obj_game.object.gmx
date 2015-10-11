@@ -33,7 +33,12 @@ message_spr = 0;
 message_pressed = 0;
 message_over = 0;
 message_id = 0;
-img_ext[50]=0;
+emit_sound = audio_emitter_create();
+emit_music = audio_emitter_create();
+img_ext[50]=-99;
+audio_ext[50]=-99;
+for(var i=50;i&gt;-1;i--){img_ext[i]=-99;}
+for(var i=50;i&gt;-1;i--){audio_ext[i]=-99;}
 </string>
           </argument>
         </arguments>
@@ -82,7 +87,7 @@ instance_create(0,0,obj_ini_load);
             <kind>1</kind>
             <string>/// Message_Show Handling
 if ( menu_set == "popup" ){
-if ( mouse_check_area_ui((res_x/2)-100,(res_y/2)+115-40,(res_x/2)+100,(res_y/2)+115+40) ){
+if ( mouse_check_area((res_x/2)-100,(res_y/2)+115-40,(res_x/2)+100,(res_y/2)+115+40) ){
 message_over = 1;
 if ( mouse_check_button_pressed(mb_left) ){message_pressed=1;}
 if ( mouse_check_button_released(mb_left) &amp;&amp; message_pressed == 1 ){menu_set = "none";message_handle();io_clear();}}else{
@@ -121,15 +126,44 @@ resolution_update();
 if ( g_fs != window_get_fullscreen() ){window_set_fullscreen(g_fs)}
 
 if ( room == rm_main ){ // Main Menu
-background_destroy(10);
+background_destroy(50);audio_destroy(50);
 img_ext[0]=background_add("Main Menu\Background.png",0,0);
 img_ext[1]=background_add("Main Menu\Background.png",0,0);
 img_ext[2]=background_add("Audio_Controls_Video\Background.png",0,0);
 img_ext[3]=background_add("Main Menu\Paper Piece.png",0,0);
 img_ext[4]=background_add("Options\Paper Piece.png",0,0);
 img_ext[5]=background_add("Video Settings\Paper Piece.png",0,0);
-draw_set_blend_mode(bm_normal);
+img_ext[6]=background_add("Audio\Paper Piece.png",0,0);
+audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
+
+draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Clear memory
+background_destroy(50);audio_destroy(50);
+for(i=0;i&lt;ds_list_size(global.texture_pages);i++){
+background_delete(global.texture_pages[|i]);}
 </string>
           </argument>
         </arguments>
@@ -159,13 +193,17 @@ g_fxaa = ini_read_real("data","fxaa",0);
 g_vsync = ini_read_real("data","vsync",0);
 g_fs = ini_read_real("data","fullscreen",0);
 g_res = ini_read_real("data","resolution",0);
+g_sound = ini_read_real("data","sound",0);
+g_music = ini_read_real("data","music",0);
 }else{
 ini_open("settings.ini");
 ini_write_real("data","fxaa",0);
 ini_write_real("data","vsync",0);
 ini_write_real("data","fullscreen",0);
 ini_write_real("data","resolution",0);
-g_fxaa = 0;g_vsync = 0;g_fs = 0;g_res = 0;}
+ini_write_real("data","sound",1);
+ini_write_real("data","music",1);
+g_fxaa = 0;g_vsync = 0;g_fs = 0;g_res = 0;g_sound = 1;g_music = 1}
 ini_close();
 
 res_count = 0;res_x=0;res_y=0;

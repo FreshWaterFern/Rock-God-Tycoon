@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="56" name="datafiles">
-    <datafiles number="56" name="Apply button">
+  <datafiles number="57" name="datafiles">
+    <datafiles number="57" name="Apply button">
       <datafile>
         <name>Apply button.png</name>
         <exists>-1</exists>
@@ -40,7 +40,7 @@
         <filename>Apply button effect.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="56" name="Back button">
+    <datafiles number="57" name="Back button">
       <datafile>
         <name>Back Button effect.png</name>
         <exists>-1</exists>
@@ -76,7 +76,7 @@
         <filename>Back Button.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="56" name="Main Menu">
+    <datafiles number="57" name="Main Menu">
       <datafile>
         <name>Light.png</name>
         <exists>-1</exists>
@@ -145,7 +145,7 @@
         </ConfigOptions>
         <filename>Paper Piece.png</filename>
       </datafile>
-      <datafiles number="56" name="Buttons">
+      <datafiles number="57" name="Buttons">
         <datafile>
           <name>Credits button effect.png</name>
           <exists>-1</exists>
@@ -352,7 +352,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="56" name="Options">
+    <datafiles number="57" name="Options">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -421,7 +421,7 @@
         </ConfigOptions>
         <filename>Speaker.png</filename>
       </datafile>
-      <datafiles number="56" name="Buttons">
+      <datafiles number="57" name="Buttons">
         <datafile>
           <name>Audio settings button.png</name>
           <exists>-1</exists>
@@ -526,7 +526,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="56" name="Audio">
+    <datafiles number="57" name="Audio">
       <datafile>
         <name>Amplifier.png</name>
         <exists>-1</exists>
@@ -613,7 +613,7 @@
         <filename>Reference Image.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="56" name="Video Settings">
+    <datafiles number="57" name="Video Settings">
       <datafile>
         <name>Paper Piece.png</name>
         <exists>-1</exists>
@@ -665,7 +665,7 @@
         </ConfigOptions>
         <filename>Tv.png</filename>
       </datafile>
-      <datafiles number="56" name="Buttons">
+      <datafiles number="57" name="Buttons">
         <datafile>
           <name>Arrow button effect.png</name>
           <exists>-1</exists>
@@ -702,7 +702,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="56" name="Audio_Controls_Video">
+    <datafiles number="57" name="Audio_Controls_Video">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -721,7 +721,7 @@
         <filename>Background.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="56" name="General">
+    <datafiles number="57" name="General">
       <datafile>
         <name>message_show.png</name>
         <exists>-1</exists>
@@ -738,6 +738,25 @@
           </Config>
         </ConfigOptions>
         <filename>message_show.png</filename>
+      </datafile>
+    </datafiles>
+    <datafiles number="57" name="sound_files">
+      <datafile>
+        <name>click01.ogg</name>
+        <exists>-1</exists>
+        <size>10723</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>click01.ogg</filename>
       </datafile>
     </datafiles>
   </datafiles>
@@ -757,16 +776,23 @@
     <scripts name="external">
       <script>scripts\draw_external_sprite.gml</script>
       <script>scripts\background_destroy.gml</script>
+      <script>scripts\audio_destroy.gml</script>
     </scripts>
     <scripts name="controls">
       <script>scripts\mouse_check_area.gml</script>
-      <script>scripts\mouse_check_area_ui.gml</script>
     </scripts>
     <scripts name="system">
-      <script>scripts\game_save_settings.gml</script>
-      <script>scripts\string_split.gml</script>
-      <script>scripts\message_show.gml</script>
-      <script>scripts\message_handle.gml</script>
+      <scripts name="message">
+        <script>scripts\message_handle.gml</script>
+        <script>scripts\message_show.gml</script>
+      </scripts>
+      <scripts name="misc">
+        <script>scripts\string_split.gml</script>
+        <script>scripts\game_save_settings.gml</script>
+      </scripts>
+      <scripts name="audio">
+        <script>scripts\audio_play.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">

@@ -23,4 +23,6 @@ default:{g_res=0;resolution_update();break;}
 //view_wport = res_x;view_hport = res_y;
 if ( window_get_width() != res_x or window_get_height() != res_y ){
 window_set_size(res_x,res_y);}
-window_set_position((display_get_width()/2)-(res_x/2),(display_get_height()/2)-(res_y/2));}
+window_set_position((display_get_width()/2)-(res_x/2),(display_get_height()/2)-(res_y/2));
+if ( g_fs == 1 ){res_x = display_get_width();res_y = display_get_height();display_reset(0,g_vsync);} // Override
+}
