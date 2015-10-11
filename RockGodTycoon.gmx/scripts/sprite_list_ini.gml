@@ -38,3 +38,4 @@ ds_list_add(sprite_list,"Back button\Back Button effect.png");
 ds_list_add(sprite_list,"Back button\Back Button.png");
 ds_list_add(sprite_list,"Apply button\Apply button effect.png");
 ds_list_add(sprite_list,"Apply button\Apply button.png");
+ds_list_add(sprite_list,"General\message_show.png");

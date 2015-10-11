@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-999</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,7 +27,62 @@
             <kind>1</kind>
             <string>/// Initialize
 application_surface_draw_enable(0);
+menu_set = "none";
+message_str = "";
+message_spr = 0;
+message_pressed = 0;
+message_over = 0;
 img_ext[50]=0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Popup Messages Create
+if ( room == rm_main ){ // Main Menu
+message_show("Welcome to Rock God Tycoon! This game is awesome. Like for real dog. It is super epic.");
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Only use at game start
+instance_create(0,0,obj_ini_load);
 </string>
           </argument>
         </arguments>
@@ -50,10 +105,18 @@ img_ext[50]=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ( keyboard_check_pressed(vk_down) ){g_fxaa --;}
-if ( keyboard_check_pressed(vk_up) ){g_fxaa ++;}
+            <string>/// Message_Show Handling
+if ( menu_set == "popup" ){
+if ( mouse_check_area_ui((res_x/2)-100,(res_y/2)+115-40,(res_x/2)+100,(res_y/2)+115+40) ){
+message_over = 1;
+if ( mouse_check_button_pressed(mb_left) ){message_pressed=1;}
+if ( mouse_check_button_released(mb_left) &amp;&amp; message_pressed == 1 ){menu_set = "none";io_clear();}}else{
+message_over = 0;
+if ( mouse_check_button_released(mb_left) ){message_pressed = 0;}
+message_spr=global.sprite_map[? "Apply button\Apply button.png"];}
 
-if ( g_fxaa &lt; 0 ){g_fxaa=0;}if ( g_fxaa &gt; 16 ){g_fxaa=16;}
+if ( message_pressed == 1 ){message_over = 0;
+message_spr=global.sprite_map[? "Apply button\Apply button effect.png"];}}
 </string>
           </argument>
         </arguments>
@@ -80,7 +143,10 @@ if ( g_fxaa &lt; 0 ){g_fxaa=0;}if ( g_fxaa &gt; 16 ){g_fxaa=16;}
 
 resolution_update();
 
+if ( g_fs != window_get_fullscreen() ){window_set_fullscreen(g_fs)}
+
 if ( room == rm_main ){ // Main Menu
+alarm[1]=2;
 background_destroy(10);
 img_ext[0]=background_add("Main Menu\Background.png",0,0);
 img_ext[1]=background_add("Main Menu\Background.png",0,0);
@@ -88,6 +154,7 @@ img_ext[2]=background_add("Audio_Controls_Video\Background.png",0,0);
 img_ext[3]=background_add("Main Menu\Paper Piece.png",0,0);
 img_ext[4]=background_add("Options\Paper Piece.png",0,0);
 img_ext[5]=background_add("Video Settings\Paper Piece.png",0,0);
+draw_set_blend_mode(bm_normal);
 }
 </string>
           </argument>
@@ -132,6 +199,8 @@ res_count = 0;
 display_reset(0,g_vsync);
 
 resolution_update();
+
+alarm[0]=2;
 </string>
           </argument>
         </arguments>
@@ -174,6 +243,62 @@ draw_surface_stretched(application_surface,0,0,display_get_width(),display_get_h
 draw_enable_alphablend(1);
 // RESET THE SHADER //
 if(g_fxaa&gt;0){shader_reset();}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Render Loading Screen
+if ( room == rm_loading ){
+draw_set_font(font_grave_36);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_white);
+draw_text(960,540,"Loading...");}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw Pop Up Messages
+if ( menu_set == "popup" ){
+var gray = make_colour_rgb(200,200,200);var color = c_white;
+draw_set_font(font_peax_20);draw_set_halign(fa_left);draw_set_valign(fa_middle);draw_set_color(c_white);draw_set_alpha(1);
+draw_external_sprite(global.sprite_map[? "General\message_show.png"],0,view_xview[0]+(res_x/2),view_yview[0]+(res_y/2));
+if ( message_over != 1 ){color = c_white}else{color = gray}if ( message_pressed == 1 ){color = c_white}
+draw_external_sprite_ext(message_spr,0,view_xview[0]+(res_x/2),view_yview[0]+(res_y/2)+115,1,1,0,color,1);
+draw_set_color(c_black);
+draw_text(view_xview[0]+(res_x/2)-225,view_yview[0]+(res_y/2)-105,message_str);
+}
 </string>
           </argument>
         </arguments>

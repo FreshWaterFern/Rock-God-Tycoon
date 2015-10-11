@@ -25,4 +25,5 @@ view_wport = res_x;view_hport = res_y;
 if ( window_get_width() != res_x or window_get_height() != res_y ){
 window_set_size(res_x,res_y);}
 
-window_set_position((display_get_width()/2)-(res_x/2),(display_get_height()/2)-(res_y/2));}
+window_set_position((display_get_width()/2)-(res_x/2),(display_get_height()/2)-(res_y/2));
+display_set_gui_size(res_x,res_y);}
