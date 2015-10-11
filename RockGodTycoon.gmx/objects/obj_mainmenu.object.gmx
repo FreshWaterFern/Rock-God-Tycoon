@@ -49,6 +49,8 @@ light_rot1 = 2.5;light_rot_speed1 = 0.05;
 light_rot2 = 1;light_rot_speed2 = 0.025;
 light_rot3 = 42.5;light_rot_speed3 = 0.05;
 speaker_move1 = 0;speaker_move_speed1 = 0.15;
+tv_move1 = 0;tv_move_speed1 = 0.1;
+remote_move1 = 0;remote_move_speed1 = 0.1;
 </string>
           </argument>
         </arguments>
@@ -312,13 +314,18 @@ speaker_move1 += speaker_move_speed1;*/
 draw_background(obj_game.img_ext[2],0,0);
 draw_external_sprite_ext(global.sprite_map[?"Options\Light.png"],0,x_center-1050,y_center,1,1,light_rot3-80,c_white,1);
 draw_external_sprite_ext(global.sprite_map[?"Options\Light.png"],0,x_center+1050,y_center,-1,1,-light_rot3+80,c_white,1);
-draw_external_sprite_ext(global.sprite_map[?"Video Settings\Tv.png"],0,x_center-828,y_center+260,0.9,0.9,0,c_white,1);
-draw_external_sprite_ext(global.sprite_map[?"Video Settings\Controller.png"],0,x_center+828,y_center-360,0.9,0.9,0,c_white,1);
+draw_external_sprite_ext(global.sprite_map[?"Video Settings\Tv.png"],0,x_center-828+tv_move1,y_center+260-tv_move1,0.9,0.9,0,c_white,1);
+draw_external_sprite_ext(global.sprite_map[?"Video Settings\Controller.png"],0,x_center+828-(remote_move1/-2),y_center-360+remote_move1,0.9,0.9,0,c_white,1);
 draw_background(obj_game.img_ext[5],x_center-667,y_center-517.5);
+
+if ( tv_move1 &lt; -6 ){tv_move_speed1 = 0.1;}if ( tv_move1 &gt; 6 ){tv_move_speed1 = -0.1;}
+tv_move1 += tv_move_speed1;
+if ( remote_move1 &lt; -6 ){remote_move_speed1 = 0.1;}if ( remote_move1 &gt; 6 ){remote_move_speed1 = -0.1;}
+remote_move1 += remote_move_speed1;
 
 // Buttons
 y_point = 328;
-// Video Settings
+
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
 draw_external_sprite_ext(spr[0],0,x_center-328-130,y_center-152,1,1,0,color,1);
 if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
