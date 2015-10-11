@@ -1,6 +1,5 @@
 /// resolution_update()
 with(obj_game){
-res_x = 0;res_y = 0;
 if ( display_get_width()/display_get_height() == 1.7777 ){show_debug_message("16:9");
 switch(g_res){
 case 0:{res_x=1280;res_y=720;break;}
@@ -21,9 +20,7 @@ case 5:{res_x=1600;res_y=1200;break;}
 default:{g_res=0;resolution_update();break;}
 }res_count=6;}
 
-view_wport = res_x;view_hport = res_y;
+//view_wport = res_x;view_hport = res_y;
 if ( window_get_width() != res_x or window_get_height() != res_y ){
 window_set_size(res_x,res_y);}
-
-window_set_position((display_get_width()/2)-(res_x/2),(display_get_height()/2)-(res_y/2));
-display_set_gui_size(res_x,res_y);}
+window_set_position((display_get_width()/2)-(res_x/2),(display_get_height()/2)-(res_y/2));}

@@ -75,7 +75,7 @@ remote_move1 = 0;remote_move_speed1 = 0.1;
             <kind>1</kind>
             <string>/// Button Logic
 if ( obj_game.menu_set == "none" ){
-var x_center = room_width/2;var y_center = room_height/2;
+var x_center = view_xport+view_wport[0]/2;var y_center = view_yport+view_hport[0]/2;
 var y_point = 0;mouse_over = -1;
 
 switch(menu_state){
@@ -139,7 +139,7 @@ spr[3]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[3]=glob
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){switch(button_select){
 case 0:{menu_state = "Video Settings";state_load=0;break;}
-case 1:{show_message("TEST");break;}
+case 1:{menu_state = "Audio Settings";state_load=0;break;}
 case 2:{show_message("TEST");break;}
 case 3:{menu_state = "Main Menu";state_load=0;break;}
 }}button_select=-2;}
@@ -199,8 +199,9 @@ case 4:{res_set--;if(res_set&lt;0){res_set=obj_game.res_count-1;}break;}
 case 5:{res_set++;if(res_set&gt;obj_game.res_count-1){res_set=0;}break;}
 case 6:{fs_set--;if(fs_set&lt;0){fs_set=1;}break;}
 case 7:{fs_set++;if(fs_set&gt;1){fs_set=0;}break;}
-case 8:{if(obj_game.g_fxaa!=fxaa_set||obj_game.g_vsync!=vsync_set||obj_game.g_res!=res_set||obj_game.g_fs!=fs_set){
-obj_game.g_fxaa=fxaa_set;obj_game.g_vsync=vsync_set;obj_game.g_res=res_set;obj_game.g_fs=fs_set;display_reset(0,obj_game.g_vsync);resolution_update();game_save_settings();}break;}
+case 8:{if ( obj_game.g_vsync != vsync_set || obj_game.g_fs != fs_set ){message_show("The game needs to restart to apply vsync.",0);io_clear();}
+if(obj_game.g_fxaa!=fxaa_set||obj_game.g_vsync!=vsync_set||obj_game.g_res!=res_set||obj_game.g_fs!=fs_set){
+obj_game.g_vsync=vsync_set;obj_game.g_fxaa=fxaa_set;obj_game.g_res=res_set;obj_game.g_fs=fs_set;resolution_update();game_save_settings();}break;}
 case 9:{menu_state = "Options";fxaa_set = obj_game.g_fxaa;vsync_set = obj_game.g_vsync;res_set = obj_game.g_res;fs_set = obj_game.g_fs;state_load=0;break;}
 }}button_select=-2;}
 
@@ -213,7 +214,7 @@ break;}}}
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -231,7 +232,7 @@ break;}}}
           <argument>
             <kind>1</kind>
             <string>/// Render
-var x_center = room_width/2;var y_center = room_height/2;
+var x_center = view_wview[0]/2;var y_center = view_hview[0]/2;
 var y_point = 0;var color = 0;var gray = make_colour_rgb(200,200,200);
 
 switch(menu_state){

@@ -766,6 +766,7 @@
       <script>scripts\game_save_settings.gml</script>
       <script>scripts\string_split.gml</script>
       <script>scripts\message_show.gml</script>
+      <script>scripts\message_handle.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">

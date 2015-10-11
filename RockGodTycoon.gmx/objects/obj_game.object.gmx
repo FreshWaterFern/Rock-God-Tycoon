@@ -32,33 +32,8 @@ message_str = "";
 message_spr = 0;
 message_pressed = 0;
 message_over = 0;
+message_id = 0;
 img_ext[50]=0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Popup Messages Create
-if ( room == rm_main ){ // Main Menu
-message_show("Welcome to Rock God Tycoon! This game is awesome. Like for real dog. It is super epic.");
-}
 </string>
           </argument>
         </arguments>
@@ -110,7 +85,7 @@ if ( menu_set == "popup" ){
 if ( mouse_check_area_ui((res_x/2)-100,(res_y/2)+115-40,(res_x/2)+100,(res_y/2)+115+40) ){
 message_over = 1;
 if ( mouse_check_button_pressed(mb_left) ){message_pressed=1;}
-if ( mouse_check_button_released(mb_left) &amp;&amp; message_pressed == 1 ){menu_set = "none";io_clear();}}else{
+if ( mouse_check_button_released(mb_left) &amp;&amp; message_pressed == 1 ){menu_set = "none";message_handle();io_clear();}}else{
 message_over = 0;
 if ( mouse_check_button_released(mb_left) ){message_pressed = 0;}
 message_spr=global.sprite_map[? "Apply button\Apply button.png"];}
@@ -146,7 +121,6 @@ resolution_update();
 if ( g_fs != window_get_fullscreen() ){window_set_fullscreen(g_fs)}
 
 if ( room == rm_main ){ // Main Menu
-alarm[1]=2;
 background_destroy(10);
 img_ext[0]=background_add("Main Menu\Background.png",0,0);
 img_ext[1]=background_add("Main Menu\Background.png",0,0);
@@ -194,7 +168,7 @@ ini_write_real("data","resolution",0);
 g_fxaa = 0;g_vsync = 0;g_fs = 0;g_res = 0;}
 ini_close();
 
-res_count = 0;
+res_count = 0;res_x=0;res_y=0;
 
 display_reset(0,g_vsync);
 
@@ -224,6 +198,7 @@ alarm[0]=2;
           <argument>
             <kind>1</kind>
             <string>/// Render Application With FXAA
+
 // DISABLE ALPHABLEND BECAUSE SURFACES //
 draw_enable_alphablend(0);
 // GET OFFSET OF THE APPLICATION SURFACE FOR MANUAL DRAWING //
@@ -291,6 +266,8 @@ draw_text(960,540,"Loading...");}
             <kind>1</kind>
             <string>/// Draw Pop Up Messages
 if ( menu_set == "popup" ){
+// Crash prevention
+if ( message_spr == 0 ){message_spr = global.sprite_map[? "Apply button\Apply button.png"];}
 var gray = make_colour_rgb(200,200,200);var color = c_white;
 draw_set_font(font_peax_20);draw_set_halign(fa_left);draw_set_valign(fa_middle);draw_set_color(c_white);draw_set_alpha(1);
 draw_external_sprite(global.sprite_map[? "General\message_show.png"],0,view_xview[0]+(res_x/2),view_yview[0]+(res_y/2));
@@ -299,6 +276,28 @@ draw_external_sprite_ext(message_spr,0,view_xview[0]+(res_x/2),view_yview[0]+(re
 draw_set_color(c_black);
 draw_text(view_xview[0]+(res_x/2)-225,view_yview[0]+(res_y/2)-105,message_str);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// GUI Scale Update
+display_set_gui_size(view_wview[0],view_hview[0]);
 </string>
           </argument>
         </arguments>
