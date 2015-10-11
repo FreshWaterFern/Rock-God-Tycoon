@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>/// Initialize
 application_surface_draw_enable(0);
-g_fxaa = 4;
 img_ext[50]=0;
 </string>
           </argument>
@@ -79,6 +78,8 @@ if ( g_fxaa &lt; 0 ){g_fxaa=0;}if ( g_fxaa &gt; 16 ){g_fxaa=16;}
             <kind>1</kind>
             <string>/// Pre-load
 
+resolution_update();
+
 if ( room == rm_main ){ // Main Menu
 background_destroy(10);
 img_ext[0]=background_add("Main Menu\Background.png",0,0);
@@ -88,6 +89,49 @@ img_ext[3]=background_add("Main Menu\Paper Piece.png",0,0);
 img_ext[4]=background_add("Options\Paper Piece.png",0,0);
 img_ext[5]=background_add("Video Settings\Paper Piece.png",0,0);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Game Initialize
+if ( file_exists("settings.ini") ){
+ini_open("settings.ini");
+g_fxaa = ini_read_real("data","fxaa",0);
+g_vsync = ini_read_real("data","vsync",0);
+g_fs = ini_read_real("data","fullscreen",0);
+g_res = ini_read_real("data","resolution",0);
+}else{
+ini_open("settings.ini");
+ini_write_real("data","fxaa",0);
+ini_write_real("data","vsync",0);
+ini_write_real("data","fullscreen",0);
+ini_write_real("data","resolution",0);
+g_fxaa = 0;g_vsync = 0;g_fs = 0;g_res = 0;}
+ini_close();
+
+res_count = 0;
+
+display_reset(0,g_vsync);
+
+resolution_update();
 </string>
           </argument>
         </arguments>
@@ -123,7 +167,9 @@ shader_set_uniform_f(shader_get_uniform(sha_fxaa, "u_texel"), texture_get_texel_
 shader_set_uniform_f(shader_get_uniform(sha_fxaa, "u_strength"),g_fxaa);
 }
 // DRAW THE APPLICATION SURFACE //
-draw_surface(application_surface,offset[0],offset[1]);
+if ( !g_fs ){
+draw_surface_stretched(application_surface,offset[0],offset[1],res_x,res_y);}else{
+draw_surface_stretched(application_surface,0,0,display_get_width(),display_get_height());}
 // RESET ALPHABLEND //
 draw_enable_alphablend(1);
 // RESET THE SHADER //
