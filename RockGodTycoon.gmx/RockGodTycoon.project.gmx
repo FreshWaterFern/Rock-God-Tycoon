@@ -793,7 +793,7 @@
     </scripts>
     <scripts name="external">
       <script>scripts\draw_external_sprite.gml</script>
-      <script>scripts\background_destroy.gml</script>
+      <script>scripts\image_destroy.gml</script>
       <script>scripts\audio_destroy.gml</script>
     </scripts>
     <scripts name="controls">
