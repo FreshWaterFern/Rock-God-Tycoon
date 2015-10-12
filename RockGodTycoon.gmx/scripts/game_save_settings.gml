@@ -5,4 +5,6 @@ ini_write_real("data","fxaa",g_fxaa);
 ini_write_real("data","vsync",g_vsync);
 ini_write_real("data","fullscreen",g_fs);
 ini_write_real("data","resolution",g_res);
+ini_write_real("data","sound",g_sound);
+ini_write_real("data","music",g_music);
 ini_close();}
