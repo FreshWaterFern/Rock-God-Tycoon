@@ -134,6 +134,7 @@ img_ext[8]=sprite_add("Audio\Amplifier.png",0,0,0,183,134);
 img_ext[9]=sprite_add("Video Settings\Tv.png",0,0,0,154,189);
 img_ext[10]=sprite_add("Main Menu\Light.png",0,0,0,70,9);
 img_ext[11]=sprite_add("Options\Light.png",0,0,0,90,1060);
+img_ext[12]=background_add("Controls Sub Menu\Paper Piece.png",0,0);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 audio_ext[1]=audio_create_stream("sound_files\bg_music01.ogg");
 
@@ -225,6 +226,10 @@ display_reset(0,g_vsync);
 
 volume_update();
 resolution_update();
+
+window_set_cursor(cr_none);
+cursor_sprite = spr_ui_cursor;
+
 
 alarm[0]=2;
 </string>

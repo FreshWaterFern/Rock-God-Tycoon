@@ -46,7 +46,7 @@ spr[i]=global.sprite_map[?"Video Settings\Controller.png"];}
 light_rot1 = 2.5;light_rot_speed1 = 0.05;
 light_rot2 = 1;light_rot_speed2 = 0.025;
 light_rot3 = 42.5;light_rot_speed3 = 0.05;
-mic_rot1 = 0;mic_rot_speed1 = 0.6;
+mic_rot1 = 0;mic_rot_speed1 = 0.4;
 speaker_move1 = 0;speaker_move_speed1 = 0.15;
 tv_move1 = 0;tv_move_speed1 = 0.1;
 remote_move1 = 0;remote_move_speed1 = 0.1;
@@ -142,10 +142,10 @@ spr[3]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[3]=glob
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
-case 0:{menu_state = "Video Settings";state_load=0;break;}
-case 1:{menu_state = "Audio Settings";state_load=0;break;}
-case 2:{show_message("TEST");break;}
-case 3:{menu_state = "Main Menu";state_load=0;break;}
+case 0:{menu_state = "Video Settings";break;}
+case 1:{menu_state = "Audio Settings";break;}
+case 2:{menu_state = "Control Settings";break;}
+case 3:{menu_state = "Main Menu";break;}
 }}button_select=-2;}
 
 if ( mouse_check_button_pressed(mb_left) ){
@@ -464,9 +464,46 @@ draw_background(obj_game.img_ext[6],x_center-667,y_center-517.5);
 y_point = 328;
 
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center-530+(375*music_slider),y_center-42,1,1,0,color,1);
+draw_external_sprite_ext(spr[0],0,x_center-530+(375*music_slider),y_center-52,1,1,0,color,1);
 if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center+130+(375*sound_slider),y_center-42,1,1,0,color,1);
+draw_external_sprite_ext(spr[1],0,x_center+130+(375*sound_slider),y_center-52,1,1,0,color,1);
+
+if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
+draw_external_sprite_ext(spr[2],0,x_center+245,y_center+398,1,1,0,color,1);
+if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
+draw_external_sprite_ext(spr[3],0,x_center+480,y_center+398,1,1,0,color,1);
+
+draw_set_color(c_white);
+break;}
+
+case "Control Settings":{ // Audio Settings
+
+
+// Do Whatever Special Code Here
+if ( light_rot3 &lt; 35 ){light_rot_speed3 = 0.05;}if ( light_rot3 &gt; 50 ){light_rot_speed3 = -0.05;}
+light_rot3 += light_rot_speed3;
+
+if ( mic_rot1 &lt; 0 ){mic_rot_speed1 += 0.015;}if ( mic_rot1 &gt; 0 ){mic_rot_speed1 += -0.015;}
+mic_rot1 += mic_rot_speed1;
+
+if ( tv_move1 &lt; -6 ){tv_move_speed1 = 0.1;}if ( tv_move1 &gt; 6 ){tv_move_speed1 = -0.1;}
+tv_move1 += tv_move_speed1;
+
+// Menu Pieces
+draw_background(obj_game.img_ext[2],0,0);
+draw_sprite_ext(obj_game.img_ext[11],0,x_center-1050,y_center,1,1,light_rot3-80,c_white,1);
+draw_sprite_ext(obj_game.img_ext[11],0,x_center+1050,y_center,-1,1,-light_rot3+80,c_white,1);
+//draw_sprite_ext(obj_game.img_ext[7],0,x_center+840,-10,1,1,mic_rot1,c_white,1);
+//draw_sprite(obj_game.img_ext[8],0,x_center-800+(tv_move1/2),800-tv_move1);
+draw_background(obj_game.img_ext[12],x_center-667,y_center-517.5);
+
+// Buttons
+y_point = 328;
+
+if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
+draw_external_sprite_ext(spr[0],0,x_center-530+(375*music_slider),y_center-52,1,1,0,color,1);
+if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
+draw_external_sprite_ext(spr[1],0,x_center+130+(375*sound_slider),y_center-52,1,1,0,color,1);
 
 if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
 draw_external_sprite_ext(spr[2],0,x_center+245,y_center+398,1,1,0,color,1);
