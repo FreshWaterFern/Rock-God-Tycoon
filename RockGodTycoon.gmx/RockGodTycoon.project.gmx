@@ -1006,6 +1006,11 @@
       <scripts name="saving">
         <script>scripts\game_save_settings.gml</script>
       </scripts>
+      <scripts name="controls">
+        <script>scripts\keyboard_get_str.gml</script>
+        <script>scripts\keyboard_save_controls.gml</script>
+        <script>scripts\keyboard_set_key.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">
