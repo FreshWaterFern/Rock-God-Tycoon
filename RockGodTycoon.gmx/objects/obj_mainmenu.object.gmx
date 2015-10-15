@@ -33,14 +33,16 @@ fxaa_set = obj_game.g_fxaa;
 vsync_set = obj_game.g_vsync;
 res_set = obj_game.g_res;
 fs_set = obj_game.g_fs;
+spr_internal = 0;
 music_slider = obj_game.g_music;
 sound_slider = obj_game.g_sound;
+key_state = 0;
 
 math_set_epsilon(0.0001);
 
 // initialize array
 for(var i=10;i&gt;=0;i--){spr[i]=global.sprite_map[?"Video Settings\Controller.png"];}
-for(var i=5;i&gt;=0;i--){key_state[i]=0;}
+for(var i=5;i&gt;=0;i--){key_set[i]=obj_game.control_map[?"key"+string(i+1)];}
 
 // Special Variables
 light_rot1 = 2.5;light_rot_speed1 = 0.05;
@@ -252,36 +254,55 @@ break;}
 
 case "Control Settings":{ // Control Settings
 
-if ( mouse_check_area(x_center-530+(375*music_slider)-24,y_center-42-24,x_center-530+(375*music_slider)+24,y_center-42+24) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Audio\Hand.png"]}else{spr[0]=global.sprite_map[?"Audio\Hand.png"]}
-if ( mouse_check_area(x_center+130+(375*sound_slider)-24,y_center-42-24,x_center+130+(375*sound_slider)+24,y_center-42+24) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Audio\Hand.png"]}else{spr[1]=global.sprite_map[?"Audio\Hand.png"]}
+if ( mouse_check_area(x_center-507-64,y_center-325-64,x_center-507+64,y_center-325+64) ){mouse_over = 0;}if ( button_select == 0 ){
+spr[0]=global.sprite_map[?"Notes\Green.png"]}else{spr[0]=global.sprite_map[?"Notes\Green1.png"]}
+if ( mouse_check_area(x_center-352-64,y_center-325-64,x_center-352+64,y_center-325+64) ){mouse_over = 1;}if ( button_select == 1 ){
+spr[1]=global.sprite_map[?"Notes\Red.png"]}else{spr[1]=global.sprite_map[?"Notes\Red1.png"]}
+if ( mouse_check_area(x_center-195-64,y_center-325-64,x_center-195+64,y_center-325+64) ){mouse_over = 2;}if ( button_select == 2 ){
+spr[2]=global.sprite_map[?"Notes\Yellow.png"]}else{spr[2]=global.sprite_map[?"Notes\Yellow1.png"]}
+if ( mouse_check_area(x_center-38-64,y_center-325-64,x_center-38+64,y_center-325+64) ){mouse_over = 3;}if ( button_select == 3 ){
+spr[3]=global.sprite_map[?"Notes\Blue.png"]}else{spr[3]=global.sprite_map[?"Notes\Blue1.png"]}
+if ( mouse_check_area(x_center+120-64,y_center-325-64,x_center+120+64,y_center-325+64) ){mouse_over = 4;}if ( button_select == 4 ){
+spr[4]=global.sprite_map[?"Notes\Orange.png"]}else{spr[4]=global.sprite_map[?"Notes\Orange1.png"]}
+if ( mouse_check_area(x_center+410-150,y_center-325-32,x_center+410+150,y_center-325+32) ){mouse_over = 5;}if ( button_select == 5 ){
+spr_internal=real(obj_game.img_ext[14]);}else{spr_internal=real(obj_game.img_ext[13]);}
 
-if ( mouse_check_area(x_center+245-94,y_center+398-36,x_center+245+94,y_center+398+36) ){mouse_over = 9;}if ( button_select == 9 ){
-spr[9]=global.sprite_map[?"Apply button\Apply button effect.png"]}else{spr[9]=global.sprite_map[?"Apply button\Apply button.png"]}
-if ( mouse_check_area(x_center+480-94,y_center+398-36,x_center+480+94,y_center+398+36) ){mouse_over = 10;}if ( button_select == 10 ){
-spr[10]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[10]=global.sprite_map[?"Back button\Back Button.png"]}
 
-if ( mouse_check_button_released(mb_left) ){slider_lock[0]=0;slider_lock[1]=0;//show_message(string(music_slider));
+if ( mouse_check_area(x_center+245-94,y_center+398-36,x_center+245+94,y_center+398+36) ){mouse_over = 6;}if ( button_select == 6 ){
+spr[6]=global.sprite_map[?"Apply button\Apply button effect.png"]}else{spr[6]=global.sprite_map[?"Apply button\Apply button.png"]}
+if ( mouse_check_area(x_center+480-94,y_center+398-36,x_center+480+94,y_center+398+36) ){mouse_over = 7;}if ( button_select == 7 ){
+spr[7]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[7]=global.sprite_map[?"Back button\Back Button.png"]}
+
+if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
+key_state=button_select+1;
 switch(button_select){
-case 0:{fxaa_set--;if(fxaa_set&lt;0){fxaa_set=4;}break;}
-case 1:{fxaa_set++;if(fxaa_set&gt;4){fxaa_set=0;}break;}
-case 9:{volume_update();game_save_settings();break;}
-case 10:{music_slider=obj_game.g_music;sound_slider=obj_game.g_sound;menu_state = "Options";volume_update();break;}
+case 6:{
+obj_game.control_map[?"key1"] = keyboard_set_key(obj_game.control_map[?"key1"],key_set[0]);
+obj_game.control_map[?"key2"] = keyboard_set_key(obj_game.control_map[?"key2"],key_set[1]);
+obj_game.control_map[?"key3"] = keyboard_set_key(obj_game.control_map[?"key3"],key_set[2]);
+obj_game.control_map[?"key4"] = keyboard_set_key(obj_game.control_map[?"key4"],key_set[3]);
+obj_game.control_map[?"key5"] = keyboard_set_key(obj_game.control_map[?"key5"],key_set[4]);
+obj_game.control_map[?"key6"] = keyboard_set_key(obj_game.control_map[?"key6"],key_set[5]);
+game_save_settings();break;}
+case 7:{for(var i=5;i&gt;=0;i--){key_set[i]=obj_game.control_map[?"key"+string(i+1)];}menu_state = "Options";break;}
 }}button_select=-2;}
 
-if ( mouse_check_button_pressed(mb_left) ){slider_lock[0]=0;slider_lock[1]=0;
-if ( mouse_over != -1 ){button_select = mouse_over;
-if ( button_select == 0 ){slider_lock[0]=1;}
-if ( button_select == 1 ){slider_lock[1]=1;}
+if ( mouse_check_button_pressed(mb_left) ){
+if ( mouse_over != -1 ){button_select = mouse_over;key_state=0;
+if ( button_select == 0 ){}
+if ( button_select == 1 ){}
 }else{button_select = -2;}}
 
-// Special code for slider handling
-if ( mouse_check_button(mb_left) ){
-audio_emitter_gain(obj_game.emit_sound,sound_slider);audio_emitter_gain(obj_game.emit_music,music_slider);
-if ( slider_lock[0] == 1 ){music_slider = (clamp(device_mouse_x_to_gui(0)-(x_center-530),0,375)/375);}
-if ( slider_lock[1] == 1 ){sound_slider = (clamp(device_mouse_x_to_gui(0)-(x_center+130),0,375)/375);}}
+if ( keyboard_check(vk_anykey) ){
+switch(key_state){
+case 1:{key_set[0] = keyboard_set_key(obj_game.control_map[?"key1"],keyboard_key);break;}
+case 2:{key_set[1] = keyboard_set_key(obj_game.control_map[?"key2"],keyboard_key);break;}
+case 3:{key_set[2] = keyboard_set_key(obj_game.control_map[?"key3"],keyboard_key);break;}
+case 4:{key_set[3] = keyboard_set_key(obj_game.control_map[?"key4"],keyboard_key);break;}
+case 5:{key_set[4] = keyboard_set_key(obj_game.control_map[?"key5"],keyboard_key);break;}
+case 6:{key_set[5] = keyboard_set_key(obj_game.control_map[?"key6"],keyboard_key);break;}
+}key_state=0;}
 
 break;}}}
 </string>
@@ -520,24 +541,47 @@ draw_background(obj_game.img_ext[2],0,0);
 //draw_sprite(obj_game.img_ext[8],0,x_center-800+(tv_move1/2),800-tv_move1);
 draw_background(obj_game.img_ext[12],x_center-667,y_center-517.5);
 
-draw_external_sprite(global.sprite_map[?"Notes\Green.png"],0,x_center-450,y_center-450);
+if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
+draw_external_sprite_ext(spr[0],0,x_center-507,y_center-325,1,1,0,color,1);
+if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
+draw_external_sprite_ext(spr[1],0,x_center-352,y_center-325,1,1,0,color,1);
+if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
+draw_external_sprite_ext(spr[2],0,x_center-195,y_center-325,1,1,0,color,1);
+if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
+draw_external_sprite_ext(spr[3],0,x_center-38,y_center-325,1,1,0,color,1);
+if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
+draw_external_sprite_ext(spr[4],0,x_center+120,y_center-325,1,1,0,color,1);
+if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
+draw_sprite_ext(real(spr_internal),0,x_center+410,y_center-325,1,1,0,color,1);
 
 // Buttons
 y_point = 328;
 
-/*if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center-530+(375*music_slider),y_center-52,1,1,0,color,1);
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center+130+(375*sound_slider),y_center-52,1,1,0,color,1);*/
-
-if ( mouse_over != 9 ){color = c_white}else{color = gray}if ( button_select == 9 ){color = c_white}
-draw_external_sprite_ext(spr[9],0,x_center+245,y_center+398,1,1,0,color,1);
-if ( mouse_over != 10 ){color = c_white}else{color = gray}if ( button_select == 10 ){color = c_white}
-draw_external_sprite_ext(spr[10],0,x_center+480,y_center+398,1,1,0,color,1);
+if ( mouse_over != 6 ){color = c_white}else{color = gray}if ( button_select == 6 ){color = c_white}
+draw_external_sprite_ext(spr[6],0,x_center+245,y_center+398,1,1,0,color,1);
+if ( mouse_over != 7 ){color = c_white}else{color = gray}if ( button_select == 7 ){color = c_white}
+draw_external_sprite_ext(spr[7],0,x_center+480,y_center+398,1,1,0,color,1);
 
 // Draw Text
-draw_set_font(font_grave_48);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_black);var str = "";
-draw_text(x_center-325,y_center+126,keyboard_get_str(obj_game.control_map[? "key1"]));
+draw_set_font(font_peax_80);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_black);var str = "";
+var scale_text1 = 1;
+while((string_width(string(keyboard_get_str(key_set[0])))*scale_text1)&gt;140){scale_text1-=0.025;}
+draw_text_transformed(x_center-507,y_center-195,string(keyboard_get_str(key_set[0])),scale_text1,scale_text1,0);
+scale_text1 = 1;
+while((string_width(keyboard_get_str(key_set[1]))*scale_text1)&gt;140){scale_text1-=0.025;}
+draw_text_transformed(x_center-352,y_center-195,keyboard_get_str(key_set[1]),scale_text1,scale_text1,0);
+scale_text1 = 1;
+while((string_width(keyboard_get_str(key_set[2]))*scale_text1)&gt;140){scale_text1-=0.025;}
+draw_text_transformed(x_center-195,y_center-195,keyboard_get_str(key_set[2]),scale_text1,scale_text1,0);
+scale_text1 = 1;
+while((string_width(keyboard_get_str(key_set[3]))*scale_text1)&gt;140){scale_text1-=0.025;}
+draw_text_transformed(x_center-38,y_center-195,keyboard_get_str(key_set[3]),scale_text1,scale_text1,0);;
+scale_text1 = 1;
+while((string_width(keyboard_get_str(key_set[4]))*scale_text1)&gt;140){scale_text1-=0.025;}
+draw_text_transformed(x_center+120,y_center-195,keyboard_get_str(key_set[4]),scale_text1,scale_text1,0);
+scale_text1 = 0.9;
+while((string_width(keyboard_get_str(key_set[5]))*scale_text1)&gt;200){scale_text1-=0.025;}
+draw_text_transformed(x_center+410,y_center-230,keyboard_get_str(key_set[5]),scale_text1,scale_text1,0);
 
 draw_set_color(c_white);
 break;}}
