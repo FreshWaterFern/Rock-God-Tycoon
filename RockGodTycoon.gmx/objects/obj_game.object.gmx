@@ -194,6 +194,8 @@ audio_emitter_free(emit_music);audio_emitter_free(emit_sound);
           <argument>
             <kind>1</kind>
             <string>/// Game Initialize
+control_map = ds_map_create();
+
 if ( file_exists("settings.ini") ){
 ini_open("settings.ini");
 g_fxaa = ini_read_real("data","fxaa",0);
@@ -202,6 +204,12 @@ g_fs = ini_read_real("data","fullscreen",0);
 g_res = ini_read_real("data","resolution",0);
 g_sound = ini_read_real("data","sound",0.5);
 g_music = ini_read_real("data","music",0.5);
+ds_map_add(control_map,"key1",ini_read_real("controls","key1",ord("Z")));
+ds_map_add(control_map,"key2",ini_read_real("controls","key2",ord("X")));
+ds_map_add(control_map,"key3",ini_read_real("controls","key3",ord("C")));
+ds_map_add(control_map,"key4",ini_read_real("controls","key4",ord("V")));
+ds_map_add(control_map,"key5",ini_read_real("controls","key5",ord("B")));
+ds_map_add(control_map,"key6",ini_read_real("controls","key6",vk_enter));
 }else{
 ini_open("settings.ini");
 ini_write_real("data","fxaa",0);
@@ -210,6 +218,15 @@ ini_write_real("data","fullscreen",0);
 ini_write_real("data","resolution",0);
 ini_write_real("data","sound",0.5);
 ini_write_real("data","music",0.5);
+ini_write_real("controls","key1",ord("Z"));
+ini_write_real("controls","key2",ord("X"));
+ini_write_real("controls","key3",ord("C"));
+ini_write_real("controls","key4",ord("V"));
+ini_write_real("controls","key5",ord("B"));
+ini_write_real("controls","key6",vk_enter);
+ds_map_add(control_map,"key1",ord("Z"));ds_map_add(control_map,"key2",ord("X"));
+ds_map_add(control_map,"key3",ord("C"));ds_map_add(control_map,"key4",ord("V"));
+ds_map_add(control_map,"key5",ord("B"));ds_map_add(control_map,"key6",vk_enter);
 g_fxaa = 0;g_vsync = 0;g_fs = 0;g_res = 0;g_sound = 0.5;g_music = 0.5;}
 ini_close();
 

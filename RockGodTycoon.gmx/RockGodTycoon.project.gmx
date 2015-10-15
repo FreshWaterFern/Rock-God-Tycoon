@@ -989,9 +989,6 @@
       <script>scripts\image_destroy.gml</script>
       <script>scripts\audio_destroy.gml</script>
     </scripts>
-    <scripts name="controls">
-      <script>scripts\mouse_check_area.gml</script>
-    </scripts>
     <scripts name="system">
       <scripts name="message">
         <script>scripts\message_handle.gml</script>
@@ -1010,6 +1007,7 @@
         <script>scripts\keyboard_get_str.gml</script>
         <script>scripts\keyboard_save_controls.gml</script>
         <script>scripts\keyboard_set_key.gml</script>
+        <script>scripts\mouse_check_area.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -1018,6 +1016,7 @@
   </shaders>
   <fonts name="fonts">
     <font>fonts\font_grave_36</font>
+    <font>fonts\font_grave_48</font>
     <font>fonts\font_peax_20</font>
   </fonts>
   <objects name="objects">
