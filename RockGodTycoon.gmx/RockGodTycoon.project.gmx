@@ -1189,7 +1189,8 @@
   <fonts name="fonts">
     <font>fonts\font_grave_36</font>
     <font>fonts\font_peax_20</font>
-    <font>fonts\font_peax_80</font>
+    <font>fonts\font_grave_80</font>
+    <font>fonts\font_peax_70</font>
   </fonts>
   <objects name="objects">
     <objects name="logic">
@@ -1205,7 +1206,7 @@
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="1">
-    <constant name="build_version">"Build 0.0.0.4"</constant>
+    <constant name="build_version">"Build 0.0.0.5"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
