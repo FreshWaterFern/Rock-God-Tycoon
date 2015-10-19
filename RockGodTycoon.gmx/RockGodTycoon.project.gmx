@@ -1185,40 +1185,8 @@
         <script>scripts\mouse_check_area.gml</script>
       </scripts>
     </scripts>
-    <scripts name="fake 3d">
-      <script>scripts\fps_set_projection.gml</script>
-      <script>scripts\fps_model_test_texture.gml</script>
-      <script>scripts\fps_path_position.gml</script>
-      <script>scripts\fps_model_draw.gml</script>
-      <script>scripts\fps_model_create.gml</script>
-      <script>scripts\fps_get_z.gml</script>
-      <script>scripts\fps_get_y.gml</script>
-      <script>scripts\fps_get_xy.gml</script>
-      <script>scripts\fps_get_xy2.gml</script>
-      <script>scripts\fps_get_rot_index.gml</script>
-      <script>scripts\fps_get_hor.gml</script>
-      <script>scripts\fps_get_ver.gml</script>
-      <script>scripts\fps_get_direction.gml</script>
-      <script>scripts\fps_get_distance.gml</script>
-      <script>scripts\fps_get_alpha.gml</script>
-      <script>scripts\fps_draw_wall_ext.gml</script>
-      <script>scripts\fps_draw_wall.gml</script>
-      <script>scripts\fps_draw_sprite_rot.gml</script>
-      <script>scripts\fps_draw_text.gml</script>
-      <script>scripts\fps_draw_sprite_ext.gml</script>
-      <script>scripts\fps_draw_sprite.gml</script>
-      <script>scripts\fps_draw_point.gml</script>
-      <script>scripts\fps_draw_mode7_double.gml</script>
-      <script>scripts\fps_draw_mode7_triple.gml</script>
-      <script>scripts\fps_draw_mode7.gml</script>
-      <script>scripts\fps_draw_floor_tile_ext.gml</script>
-      <script>scripts\fps_draw_line.gml</script>
-      <script>scripts\fps_draw_floor_tile.gml</script>
-      <script>scripts\fps_draw_background.gml</script>
-      <script>scripts\fps_draw_floor.gml</script>
-      <script>scripts\fps_calculate_z.gml</script>
-      <script>scripts\fps_depth.gml</script>
-    </scripts>
+    <script>scripts\create_premultiplied_sprite.gml</script>
+    <script>scripts\premultiply_color.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sha_fxaa.shader</shader>
@@ -1239,6 +1207,7 @@
     </objects>
     <objects name="performance">
       <object>objects\obj_performance</object>
+      <object>objects\obj_fret_note</object>
     </objects>
   </objects>
   <rooms name="rooms">

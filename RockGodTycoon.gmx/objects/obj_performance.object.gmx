@@ -31,19 +31,20 @@ z=0
 tilt=-0.5
 angle = 0;
 z = 128;
-surface = surface_create(640,1280);
+y_0 = -1920;y_1 = -640;y_2 = 640;y_3 = 1920;
+note_test_y = 0;
+
 tex = sprite_get_texture(spr_neck,0);
 tex1 = 0;tex2 = 0;
+zdirection=0
+surface = surface_create(1920,1080);
 // initialize 3D
-d3d_start();
 d3d_set_hidden(false);
 d3d_set_fog(false,c_black,480,1080);
 d3d_set_lighting(false);
 d3d_set_culling(false);
 // interpolate textures
 texture_set_interpolation(true);
-z=10
-zdirection=0
 global.camx = x;
 global.camy = y;
 global.camsin = sin(direction*pi/180);
@@ -79,7 +80,7 @@ global.camcos = cos(direction*pi/180);
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="73">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -96,47 +97,9 @@ global.camcos = cos(direction*pi/180);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// set color and transparency
-draw_set_alpha(1);
-draw_set_color(c_white);
-d3d_set_projection_ortho(0,0,view_wview[0],view_hview[0],0);
-/*draw_sprite(spr_note,0,64,64);
-draw_sprite(spr_note,0,128,256);
-draw_sprite(spr_note,0,192,384);
-draw_sprite(spr_note,0,256,512);*/
-//draw_circle(view_wview[0]/2,960,16,false);
-/*
-if ( !surface_exists(surface) ){surface = surface_create(640,1280);}
-surface_set_target(surface);
-
-//Draw the addition sprite
-draw_sprite(spr_note,0,64,64);
-draw_sprite(spr_note,0,128,256);
-draw_sprite(spr_note,0,192,384);
-draw_sprite(spr_note,0,256,512);
-draw_sprite(spr_note,0,320,640);
-
-draw_sprite(spr_trans,0,0,0);
-
-draw_set_blend_mode( bm_subtract );
-draw_set_color( c_black ); //Set all colour channels to zero...
-draw_set_alpha( 1 ); //...apart from the alpha channel.
-
-//Set the alpha of the entire surface to 0 but keep the colour information
-draw_rectangle( 0, 0, 640, 1280, false );
-
-//Set the alpha of the area equal to sprite A to 1 but, again, don't interfere with the
-//actual colours
-draw_set_blend_mode( bm_add );
-draw_sprite(spr_trans,0,0,0);
-
-//Don't forget this bit!
-draw_set_blend_mode( bm_normal );
-surface_reset_target();
-
-draw_set_blend_mode_ext(bm_one,bm_inv_src_alpha);
-draw_surface(surface,960-320,-200);
-draw_set_blend_mode( bm_normal );
+            <string>/*var spr = create_premultiplied_sprite(spr_note)
+sprite_assign(spr_note,spr);
+sprite_delete(spr);
 </string>
           </argument>
         </arguments>
@@ -161,11 +124,38 @@ draw_set_blend_mode( bm_normal );
             <kind>1</kind>
             <string>// set the projection 
 x = 960;y = 1080;
-d3d_set_projection(x,y,128,x+cos(direction*pi/180),y-sin(direction*pi/180),127.75,0,0,1);
-var tex1 = sprite_duplicate(spr_neck);var tex2 = sprite_duplicate(spr_trans);
-sprite_set_alpha_from_sprite(tex1,tex2);
-d3d_draw_floor(990.15-80,-200,0,990.15+80,1080,0,sprite_get_texture(tex1,0),1,1);
-sprite_delete(tex2);sprite_delete(tex1);
+draw_set_alpha(1);draw_set_color(c_white);draw_set_blend_mode(bm_normal);
+if ( !surface_exists(surface) ){surface = surface_create(1920,1080);}
+//view_surface_id[0]=surface;
+surface_set_target(surface);
+draw_clear_alpha(c_white,0);
+d3d_end();
+draw_sprite_ext(spr_trans,0,960,view_yview[0]+view_hview[0]+240,1,1,0,c_white,1);
+d3d_start();
+//d3d_set_projection_ortho(0,0,view_wview[0],view_hview[0],0);
+d3d_set_projection(x,y,128,x+cos(direction*pi/180),y-sin(direction*pi/180),127.85,0,0,1);
+draw_set_blend_mode_ext(bm_dest_alpha,bm_inv_src_alpha)
+d3d_draw_floor(960-100,y_0-1280,-50,960+100,y_0,-50,tex,1,1);
+d3d_draw_floor(960-100,y_1-1280,-50,960+100,y_1,-50,tex,1,1);
+d3d_draw_floor(960-100,y_2-1280,-50,960+100,y_2,-50,tex,1,1);
+d3d_draw_floor(960-100,y_3-1280,-50,960+100,y_3,-50,tex,1,1);
+y_0+=4;y_1+=4;y_2+=4;y_3+=4;note_test_y+=4;
+if ( y_0 &gt;= 3200 ){y_0 = -1920;}if ( y_1 &gt;= 3200 ){y_1 = -1920;}if ( y_2 &gt;= 3200 ){y_2 = -1920;}if ( y_3 &gt;= 3200 ){y_3 = -1920;}
+with(obj_fret_note){
+//var tex = sprite_get_texture(spr_note,0);
+d3d_draw_wall(x-16,y+other.note_test_y,32,x+16,y+other.note_test_y,0,sprite_get_texture(spr_note,0),1,1);
+}
+/*d3d_end();
+draw_sprite_ext(spr_note,0,960-64,64,1,1,0,c_white,1);
+draw_sprite(spr_note,0,960-128,256);
+draw_sprite(spr_note,0,960+64,384);
+draw_sprite(spr_note,0,960+128,512);
+draw_sprite(spr_note,0,960,640);*/
+draw_set_blend_mode(bm_normal);
+surface_reset_target();
+
+view_surface_id[0]=application_surface;
+draw_surface_ext(obj_performance.surface,view_xview[0],view_yview[0]+view_hview[0],1,-1,0,c_white,1);
 
 xt=0
 yt=0
