@@ -37,6 +37,7 @@ spr_internal[10] = 0;
 music_slider = obj_game.g_music;
 sound_slider = obj_game.g_sound;
 key_state = 0;
+track_volume = 0;
 
 math_set_epsilon(0.0001);
 
@@ -111,7 +112,7 @@ spr[5]=global.sprite_map[?"Main Menu\Buttons\Exit game button effect.png"]}else{
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
-case 0:{break;}
+case 0:{obj_game.menu_set="start game"break;}
 case 1:{break;}
 case 2:{break;}
 case 3:{menu_state = "Options";state_load=0;break;}
@@ -320,6 +321,54 @@ break;}}}
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Special Logic
+if ( obj_game.menu_set == "start game" &amp;&amp; audio_exists(track) ){
+if ( track_volume == 0 ){track_volume = 1;
+audio_sound_gain(track,0,1200);}}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Unload Menu Data
+spr=0;key_set=0;audio_stop_sound(track);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="7" enumb="4">
       <action>
@@ -339,7 +388,7 @@ break;}}}
           <argument>
             <kind>1</kind>
             <string>/// Play Background Music
-audio_play(1,1,1,2);
+track = audio_play(1,1,1,2);
 </string>
           </argument>
         </arguments>

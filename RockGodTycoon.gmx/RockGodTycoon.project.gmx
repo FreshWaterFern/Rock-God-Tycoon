@@ -1202,18 +1202,22 @@
       <object>objects\obj_ini_load</object>
       <object>objects\obj_game</object>
     </objects>
-    <objects name="Main Menu">
-      <object>objects\obj_mainmenu</object>
-    </objects>
     <objects name="performance">
       <object>objects\obj_performance</object>
       <object>objects\obj_fret_note</object>
     </objects>
+    <objects name="Start">
+      <object>objects\obj_intro</object>
+      <object>objects\obj_mainmenu</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <rooms name="start">
+      <room>rooms\rm_loading</room>
+      <room>rooms\rm_main</room>
+      <room>rooms\rm_intro</room>
+    </rooms>
     <room>rooms\rm_performance</room>
-    <room>rooms\rm_loading</room>
-    <room>rooms\rm_main</room>
   </rooms>
   <constants number="1">
     <constant name="build_version">"Build 0.0.0.5"</constant>

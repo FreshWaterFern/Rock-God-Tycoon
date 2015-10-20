@@ -33,6 +33,7 @@ message_spr = 0;
 message_pressed = 0;
 message_over = 0;
 message_id = 0;
+draw_fade = 0;
 </string>
           </argument>
         </arguments>
@@ -91,6 +92,58 @@ message_spr=global.sprite_map[? "Apply button\Apply button.png"];}
 
 if ( message_pressed == 1 ){message_over = 0;
 message_spr=global.sprite_map[? "Apply button\Apply button effect.png"];}}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Special Scripts
+
+// Fade Out On Main Menu
+if ( menu_set == "start game" ){
+if ( room != rm_intro ){
+if ( draw_fade &lt; 1.25 ){draw_fade+=0.01;}if ( draw_fade &gt;= 1.25 ){room_goto(rm_intro);}}}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ( room == rm_main ){ // Main Menu
+image_destroy(50);audio_destroy(50);
+draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
+}
 </string>
           </argument>
         </arguments>
@@ -328,6 +381,31 @@ if(g_fxaa&gt;0){shader_reset();}
 if ( room == rm_loading ){
 draw_set_font(font_grave_36);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_white);
 draw_text(960,540,"Loading...");}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Special Drawing
+if ( menu_set == "start game" ){
+draw_set_alpha(draw_fade);draw_set_color(c_black);
+draw_rectangle(0,0,view_wview[0],view_hview[0],false);
+draw_set_alpha(1);draw_set_color(c_white);}
 </string>
           </argument>
         </arguments>
