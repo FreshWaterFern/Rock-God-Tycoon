@@ -29,11 +29,17 @@
 menu_state = "Intro";
 button_select = -2;
 mouse_over = -1;
-spr_internal[10] = 0;
 
 // initialize array
 for(var i=10;i&gt;=0;i--){spr[i]=global.sprite_map[?"Video Settings\Controller.png"];}
 for(var i=5;i&gt;=0;i--){key_set[i]=obj_game.control_map[?"key"+string(i+1)];}
+
+// Pre-set Sprite Variables
+spr[0] = obj_game.img_ext[2];spr[1] = obj_game.img_ext[4];
+
+// Variables (unique)
+band_role = 0;
+sign_frame = 0;
 </string>
           </argument>
         </arguments>
@@ -57,53 +63,43 @@ for(var i=5;i&gt;=0;i--){key_set[i]=obj_game.control_map[?"key"+string(i+1)];}
           <argument>
             <kind>1</kind>
             <string>/// Button Logic
-if ( obj_game.menu_set == "none" ){
+if ( obj_game.menu_set == "start game" ){
 var x_center = view_xport+view_wport[0]/2;var y_center = view_yport+view_hport[0]/2;
 var y_point = 0;mouse_over = -1;
 
-/*
 switch(menu_state){
-case "Main Menu":{y_point = 192;// Main Menu
+case "Intro":{y_point = 5; // Intro (sign up page)
 
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Main Menu\Buttons\New game button effect.png"]}else{spr[0]=global.sprite_map[?"Main Menu\Buttons\New game button.png"]}
+if ( mouse_check_area(x_center-40-72,y_center-y_point-32,x_center-40+72,y_center-y_point+32) ){mouse_over = 0;}if ( button_select == 0 ){
+spr[0]=obj_game.img_ext[3]}else{spr[0]=obj_game.img_ext[2]}y_point-=65;
 
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Main Menu\Buttons\Continue button effect.png"]}else{spr[1]=global.sprite_map[?"Main Menu\Buttons\Continue button.png"]}
+if ( mouse_check_area(x_center-40-72,y_center-y_point-32,x_center-40+72,y_center-y_point+32) ){mouse_over = 1;}if ( button_select == 1 ){
+spr[1]=obj_game.img_ext[5]}else{spr[1]=obj_game.img_ext[4]}y_point-=75;
 
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 2;}if ( button_select == 2 ){
-spr[2]=global.sprite_map[?"Main Menu\Buttons\Load game button effect.png"]}else{spr[2]=global.sprite_map[?"Main Menu\Buttons\Load game button.png"]}
+if ( mouse_check_area(x_center-40-72,y_center-y_point-32,x_center-40+72,y_center-y_point+32) ){mouse_over = 2;}if ( button_select == 2 ){
+spr[2]=obj_game.img_ext[7]}else{spr[2]=obj_game.img_ext[6]}y_point-=68;
 
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 3;}if ( button_select == 3 ){
-spr[3]=global.sprite_map[?"Main Menu\Buttons\Options button effect.png"]}else{spr[3]=global.sprite_map[?"Main Menu\Buttons\Options button.png"]}
+if ( mouse_check_area(x_center-40-72,y_center-y_point-32,x_center-40+72,y_center-y_point+32) ){mouse_over = 3;}if ( button_select == 3 ){
+spr[3]=obj_game.img_ext[9]}else{spr[3]=obj_game.img_ext[8]}y_point-=240;
 
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 4;}if ( button_select == 4 ){
-spr[4]=global.sprite_map[?"Main Menu\Buttons\Credits button effect.png"]}else{spr[4]=global.sprite_map[?"Main Menu\Buttons\Credits button.png"]}
-
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 5;}if ( button_select == 5 ){
-spr[5]=global.sprite_map[?"Main Menu\Buttons\Exit game button effect.png"]}else{spr[5]=global.sprite_map[?"Main Menu\Buttons\Exit game button.png"]}
+if ( mouse_check_area(x_center+24,y_center-y_point-128,x_center+230,y_center-y_point+6) ){mouse_over = 4;}
 
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
-case 0:{obj_game.menu_set="start game"break;}
-case 1:{break;}
-case 2:{break;}
-case 3:{menu_state = "Options";state_load=0;break;}
-case 4:{break;}
-case 5:{game_end();break;}
+case 0:{band_role = 0;break;}
+case 1:{band_role = 1;break;}
+case 2:{band_role = 2;break;}
+case 3:{band_role = 3;break;}
+case 4:{if ( string_length(text_char_name.str) &gt; 0 &amp;&amp; string_length(text_band_name.str) &gt; 0 ){menu_state="signing";path_start(path_signature,4.5,path_action_stop,false);
+text_char_name.set_mode="LOLOLOL";text_band_name.set_mode="LOLOLOL";}break;}
 }}button_select=-2;}
 
 if ( mouse_check_button_pressed(mb_left) ){
 if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}
 
 break;}
-}*/}
+}}
 </string>
           </argument>
         </arguments>
@@ -132,6 +128,31 @@ obj_game.draw_fade -= 0.01;}
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Place Objects In Room
+text_char_name = text_input_create(955,375,140,15,140,14,font_peax_28,26,270,"start game");text_char_name.select = true;
+text_band_name = text_input_create(1011,415,196,15,196,13,font_peax_28,36,376,"start game");
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -153,39 +174,41 @@ obj_game.draw_fade -= 0.01;}
 var x_center = view_wview[0]/2;var y_center = view_hview[0]/2;
 var y_point = 0;var color = 0;var gray = make_colour_rgb(200,200,200);
 
-switch(menu_state){
-case "Intro":{ // Main Menu
+draw_background(obj_game.img_ext[0],0,0);
+draw_sprite(obj_game.img_ext[1],0,view_wview[0]/2,view_hview[0]/2);
 /*
 // Do Whatever Special Code Here
 if ( light_rot1 &lt; 2.5 ){light_rot_speed1 = 0.05;}if ( light_rot1 &gt; 11 ){light_rot_speed1 = -0.05;}
 light_rot1 += light_rot_speed1;
 
 // Menu Pieces
-draw_background(obj_game.img_ext[0],0,0);
+draw_background(obj_game.img_ext[0],0,0);*/
 
 // Buttons
-y_point = 192;
+y_point = 5;
 // New Game
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Continue
+draw_sprite_ext(spr[0],0,x_center-40,y_center-y_point,1,1,0,color,1);y_point -= 65;
+
 if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Load Game
+draw_sprite_ext(spr[1],0,x_center-40,y_center-y_point,1,1,0,color,1);y_point -= 75;
+
 if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
-draw_external_sprite_ext(spr[2],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Options
+draw_sprite_ext(spr[2],0,x_center-40,y_center-y_point,1,1,0,color,1);y_point -= 68;
+
 if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Credits
-if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
-draw_external_sprite_ext(spr[4],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Exit Game
-if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
-draw_external_sprite_ext(spr[5],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;*/
-draw_set_font(font_peax_70);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_white);
-draw_text(view_wview[0]/2,view_hview[0]/2,"Rock God Tycoon");
-break;}}
+draw_sprite_ext(spr[3],0,x_center-40,y_center-y_point,1,1,0,color,1);y_point -= 240;
+
+if ( mouse_over != 4 ){draw_set_alpha(0);}else{draw_set_alpha(0.2);}color = c_white;
+draw_rectangle(x_center+24,y_center-y_point-128,x_center+230,y_center-y_point+6,false);
+draw_set_alpha(1);
+
+if ( menu_state == "signing" ){
+if ( sign_frame &gt; 0 ){draw_sprite(obj_game.img_ext[11],sign_frame,x_center+127,y_center-y_point-69);}
+if ( sign_frame &lt; 38 &amp;&amp; y &lt; 930 ){sign_frame+=0.42;}
+draw_sprite(obj_game.img_ext[10],0,x,y);
+if ( sign_frame &gt;= 38 ){y+=7.5;x+=2;}
+}
 </string>
           </argument>
         </arguments>

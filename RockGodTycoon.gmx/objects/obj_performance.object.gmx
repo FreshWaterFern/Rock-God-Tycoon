@@ -134,7 +134,7 @@ draw_sprite_ext(spr_trans,0,960,view_yview[0]+view_hview[0]+240,1,1,0,c_white,1)
 d3d_start();
 //d3d_set_projection_ortho(0,0,view_wview[0],view_hview[0],0);
 d3d_set_projection(x,y,128,x+cos(direction*pi/180),y-sin(direction*pi/180),127.85,0,0,1);
-draw_set_blend_mode_ext(bm_dest_alpha,bm_inv_src_alpha)
+draw_set_blend_mode_ext(bm_dest_alpha,bm_inv_src_alpha);
 d3d_draw_floor(960-100,y_0-1280,-50,960+100,y_0,-50,tex,1,1);
 d3d_draw_floor(960-100,y_1-1280,-50,960+100,y_1,-50,tex,1,1);
 d3d_draw_floor(960-100,y_2-1280,-50,960+100,y_2,-50,tex,1,1);

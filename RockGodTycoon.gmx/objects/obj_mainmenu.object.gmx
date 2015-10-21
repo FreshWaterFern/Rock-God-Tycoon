@@ -364,7 +364,7 @@ audio_sound_gain(track,0,1200);}}
           <argument>
             <kind>1</kind>
             <string>/// Unload Menu Data
-spr=0;key_set=0;audio_stop_sound(track);
+spr=0;key_set=0;spr_internal=0;audio_stop_sound(track);
 </string>
           </argument>
         </arguments>

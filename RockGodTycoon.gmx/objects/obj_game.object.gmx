@@ -174,7 +174,6 @@ resolution_update();
 if ( g_fs != window_get_fullscreen() ){window_set_fullscreen(g_fs)}
 
 if ( room == rm_main ){ // Main Menu
-image_destroy(50);audio_destroy(50);
 img_ext[0]=background_add("Main Menu\Background.png",0,0);
 img_ext[1]=background_add("Main Menu\Background.png",0,0);
 img_ext[2]=background_add("Audio_Controls_Video\Background.png",0,0);
@@ -200,7 +199,23 @@ img_ext[21]=sprite_add("Controls Sub Menu\Mouse.png",0,0,0,10,1);
 img_ext[22]=sprite_add("Controls Sub Menu\Keyboard.png",0,0,0,162,171);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 audio_ext[1]=audio_create_stream("sound_files\bg_music01.ogg");
+draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
+}
 
+if ( room == rm_intro ){ // Intro
+img_ext[0]=background_add("Intro\Part I\Background.png",0,0);
+img_ext[1]=sprite_add("Intro\Part I\Paper Piece.png",0,0,0,368,485);
+img_ext[2]=sprite_add("Intro\Part I\Buttons\Guitarist Button.png",0,0,0,73,16);
+img_ext[3]=sprite_add("Intro\Part I\Buttons\Guitarist Button Effect.png",0,0,0,73,16);
+img_ext[4]=sprite_add("Intro\Part I\Buttons\Bassist Button.png",0,0,0,61,17);
+img_ext[5]=sprite_add("Intro\Part I\Buttons\Bassist Button Effect.png",0,0,0,61,17);
+img_ext[6]=sprite_add("Intro\Part I\Buttons\Vocalist Button.png",0,0,0,73,17);
+img_ext[7]=sprite_add("Intro\Part I\Buttons\Vocalist Button Effect.png",0,0,0,73,17);
+img_ext[8]=sprite_add("Intro\Part I\Buttons\Drummer Button.png",0,0,0,76,16);
+img_ext[9]=sprite_add("Intro\Part I\Buttons\Drummer Button Effect.png",0,0,0,76,16);
+img_ext[10]=sprite_add("Intro\Part I\Buttons\Hand.png",0,0,0,2,202);
+img_ext[11]=sprite_add("Intro\Part I\Signature.png",39,false,false,76,38);
+audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 }
 </string>
