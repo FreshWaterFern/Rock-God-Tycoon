@@ -126,13 +126,11 @@ sprite_delete(spr);
 x = 960;y = 1080;
 draw_set_alpha(1);draw_set_color(c_white);draw_set_blend_mode(bm_normal);
 if ( !surface_exists(surface) ){surface = surface_create(1920,1080);}
-//view_surface_id[0]=surface;
 surface_set_target(surface);
 draw_clear_alpha(c_white,0);
 d3d_end();
 draw_sprite_ext(spr_trans,0,960,view_yview[0]+view_hview[0]+240,1,1,0,c_white,1);
 d3d_start();
-//d3d_set_projection_ortho(0,0,view_wview[0],view_hview[0],0);
 d3d_set_projection(x,y,128,x+cos(direction*pi/180),y-sin(direction*pi/180),127.85,0,0,1);
 draw_set_blend_mode_ext(bm_dest_alpha,bm_inv_src_alpha);
 d3d_draw_floor(960-100,y_0-1280,-50,960+100,y_0,-50,tex,1,1);
@@ -142,15 +140,8 @@ d3d_draw_floor(960-100,y_3-1280,-50,960+100,y_3,-50,tex,1,1);
 y_0+=4;y_1+=4;y_2+=4;y_3+=4;note_test_y+=4;
 if ( y_0 &gt;= 3200 ){y_0 = -1920;}if ( y_1 &gt;= 3200 ){y_1 = -1920;}if ( y_2 &gt;= 3200 ){y_2 = -1920;}if ( y_3 &gt;= 3200 ){y_3 = -1920;}
 with(obj_fret_note){
-//var tex = sprite_get_texture(spr_note,0);
 d3d_draw_wall(x-16,y+other.note_test_y,32,x+16,y+other.note_test_y,0,sprite_get_texture(spr_note,0),1,1);
 }
-/*d3d_end();
-draw_sprite_ext(spr_note,0,960-64,64,1,1,0,c_white,1);
-draw_sprite(spr_note,0,960-128,256);
-draw_sprite(spr_note,0,960+64,384);
-draw_sprite(spr_note,0,960+128,512);
-draw_sprite(spr_note,0,960,640);*/
 draw_set_blend_mode(bm_normal);
 surface_reset_target();
 

@@ -1431,12 +1431,12 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_performance</room>
     <rooms name="start">
       <room>rooms\rm_loading</room>
       <room>rooms\rm_main</room>
       <room>rooms\rm_intro</room>
     </rooms>
-    <room>rooms\rm_performance</room>
   </rooms>
   <constants number="1">
     <constant name="build_version">"Build 0.0.0.5"</constant>
