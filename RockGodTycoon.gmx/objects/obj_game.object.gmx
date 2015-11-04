@@ -170,6 +170,7 @@ draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
             <kind>1</kind>
             <string>/// Pre-load
 
+draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 volume_update();
 
 if ( room == rm_main ){ // Main Menu
@@ -223,8 +224,9 @@ draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 if ( room == rm_garage ){ // Garage
 img_ext[0]=background_add("Main Game\GUI\Background.png",0,0);
 img_ext[1]=background_add("Main Game\GUI\Sub Menu Piece.png",0,0);
+img_ext[2]=background_add("Main Game\GUI\Time Bar.png",0,0);
+img_ext[3]=background_add("Main Game\GUI\Box.png",0,0);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
-draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 }
 </string>
           </argument>

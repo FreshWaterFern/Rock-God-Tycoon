@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="120" name="datafiles">
-    <datafiles number="120" name="Apply button">
+  <datafiles number="122" name="datafiles">
+    <datafiles number="122" name="Apply button">
       <datafile>
         <name>Apply button.png</name>
         <exists>-1</exists>
@@ -40,7 +40,7 @@
         <filename>Apply button effect.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="120" name="Back button">
+    <datafiles number="122" name="Back button">
       <datafile>
         <name>Back Button effect.png</name>
         <exists>-1</exists>
@@ -76,7 +76,7 @@
         <filename>Back Button.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="120" name="Main Menu">
+    <datafiles number="122" name="Main Menu">
       <datafile>
         <name>Light.png</name>
         <exists>-1</exists>
@@ -145,7 +145,7 @@
         </ConfigOptions>
         <filename>Paper Piece.png</filename>
       </datafile>
-      <datafiles number="120" name="Buttons">
+      <datafiles number="122" name="Buttons">
         <datafile>
           <name>Credits button effect.png</name>
           <exists>-1</exists>
@@ -352,7 +352,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="120" name="Options">
+    <datafiles number="122" name="Options">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -421,7 +421,7 @@
         </ConfigOptions>
         <filename>Speaker.png</filename>
       </datafile>
-      <datafiles number="120" name="Buttons">
+      <datafiles number="122" name="Buttons">
         <datafile>
           <name>Audio settings button.png</name>
           <exists>-1</exists>
@@ -526,7 +526,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="120" name="Audio">
+    <datafiles number="122" name="Audio">
       <datafile>
         <name>Amplifier.png</name>
         <exists>-1</exists>
@@ -596,7 +596,7 @@
         <filename>Paper Piece.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="120" name="Video Settings">
+    <datafiles number="122" name="Video Settings">
       <datafile>
         <name>Paper Piece.png</name>
         <exists>-1</exists>
@@ -648,7 +648,7 @@
         </ConfigOptions>
         <filename>Tv.png</filename>
       </datafile>
-      <datafiles number="120" name="Buttons">
+      <datafiles number="122" name="Buttons">
         <datafile>
           <name>Arrow button effect.png</name>
           <exists>-1</exists>
@@ -685,7 +685,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="120" name="Audio_Controls_Video">
+    <datafiles number="122" name="Audio_Controls_Video">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -704,7 +704,7 @@
         <filename>Background.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="120" name="General">
+    <datafiles number="122" name="General">
       <datafile>
         <name>message_show.png</name>
         <exists>-1</exists>
@@ -723,7 +723,7 @@
         <filename>message_show.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="120" name="sound_files">
+    <datafiles number="122" name="sound_files">
       <datafile>
         <name>click01.ogg</name>
         <exists>-1</exists>
@@ -759,7 +759,7 @@
         <filename>bg_music01.ogg</filename>
       </datafile>
     </datafiles>
-    <datafiles number="120" name="Controls Sub Menu">
+    <datafiles number="122" name="Controls Sub Menu">
       <datafile>
         <name>Keyboard.png</name>
         <exists>-1</exists>
@@ -828,7 +828,7 @@
         </ConfigOptions>
         <filename>Reference Image.png</filename>
       </datafile>
-      <datafiles number="120" name="Buttons">
+      <datafiles number="122" name="Buttons">
         <datafile>
           <name>Custom button effect.png</name>
           <exists>-1</exists>
@@ -967,7 +967,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="120" name="Notes">
+    <datafiles number="122" name="Notes">
       <datafile>
         <name>Blue.png</name>
         <exists>-1</exists>
@@ -1139,8 +1139,8 @@
         <filename>Yellow1.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="120" name="Intro">
-      <datafiles number="120" name="Part I">
+    <datafiles number="122" name="Intro">
+      <datafiles number="122" name="Part I">
         <datafile>
           <name>Background.png</name>
           <exists>-1</exists>
@@ -1192,7 +1192,7 @@
           </ConfigOptions>
           <filename>Signature.png</filename>
         </datafile>
-        <datafiles number="120" name="Buttons">
+        <datafiles number="122" name="Buttons">
           <datafile>
             <name>Bassist Button Effect.png</name>
             <exists>-1</exists>
@@ -1349,8 +1349,25 @@
         </datafiles>
       </datafiles>
     </datafiles>
-    <datafiles number="120" name="Main Game">
-      <datafiles number="120" name="GUI">
+    <datafiles number="122" name="Main Game">
+      <datafiles number="122" name="GUI">
+        <datafile>
+          <name>Box.png</name>
+          <exists>-1</exists>
+          <size>157686</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Box.png</filename>
+        </datafile>
         <datafile>
           <name>Background.png</name>
           <exists>-1</exists>
@@ -1891,7 +1908,7 @@
     </rooms>
   </rooms>
   <constants number="1">
-    <constant name="build_version">"Build 0.0.0.5"</constant>
+    <constant name="build_version">"Build 0.0.0.6"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

@@ -135,13 +135,17 @@ break;}
             <string>/// Render
 var x_center = view_wview[0]/2;var y_center = view_hview[0]/2;
 var color = 0;var gray = make_colour_rgb(200,200,200);
+draw_set_blend_mode(bm_normal);draw_set_color(c_white);
+draw_set_alpha(1);
 
 switch(menu_state){
 case "Main":{ // Main Menu
 
 // Menu Pieces
 draw_background(obj_game.img_ext[0],0,0);
+draw_background(obj_game.img_ext[3],view_wview[0]-665,view_hview[0]-297);
 draw_background(obj_game.img_ext[1],0,view_hview[0]-188);
+draw_background(obj_game.img_ext[2],1168,view_hview[0]-96);
 
 // Map
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}

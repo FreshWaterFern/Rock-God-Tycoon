@@ -54,7 +54,6 @@ ds_list_add(sprite_list,"Main Game\GUI\Stats Piece.png");
 ds_list_add(sprite_list,"Main Game\GUI\Stars Outlines.png");
 ds_list_add(sprite_list,"Main Game\GUI\Stars Fill.png");
 ds_list_add(sprite_list,"Main Game\GUI\Stars BG.png");
-ds_list_add(sprite_list,"Main Game\GUI\Time Bar.png");
 ds_list_add(sprite_list,"Main Game\GUI\Shop Button.png");
 ds_list_add(sprite_list,"Main Game\GUI\Shop Button Effect.png");
 ds_list_add(sprite_list,"Main Game\GUI\Money Button.png");
