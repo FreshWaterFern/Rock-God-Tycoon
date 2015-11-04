@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="94" name="datafiles">
-    <datafiles number="94" name="Apply button">
+  <datafiles number="120" name="datafiles">
+    <datafiles number="120" name="Apply button">
       <datafile>
         <name>Apply button.png</name>
         <exists>-1</exists>
@@ -40,7 +40,7 @@
         <filename>Apply button effect.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="94" name="Back button">
+    <datafiles number="120" name="Back button">
       <datafile>
         <name>Back Button effect.png</name>
         <exists>-1</exists>
@@ -76,7 +76,7 @@
         <filename>Back Button.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="94" name="Main Menu">
+    <datafiles number="120" name="Main Menu">
       <datafile>
         <name>Light.png</name>
         <exists>-1</exists>
@@ -145,7 +145,7 @@
         </ConfigOptions>
         <filename>Paper Piece.png</filename>
       </datafile>
-      <datafiles number="94" name="Buttons">
+      <datafiles number="120" name="Buttons">
         <datafile>
           <name>Credits button effect.png</name>
           <exists>-1</exists>
@@ -352,7 +352,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="94" name="Options">
+    <datafiles number="120" name="Options">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -421,7 +421,7 @@
         </ConfigOptions>
         <filename>Speaker.png</filename>
       </datafile>
-      <datafiles number="94" name="Buttons">
+      <datafiles number="120" name="Buttons">
         <datafile>
           <name>Audio settings button.png</name>
           <exists>-1</exists>
@@ -526,7 +526,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="94" name="Audio">
+    <datafiles number="120" name="Audio">
       <datafile>
         <name>Amplifier.png</name>
         <exists>-1</exists>
@@ -596,7 +596,7 @@
         <filename>Paper Piece.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="94" name="Video Settings">
+    <datafiles number="120" name="Video Settings">
       <datafile>
         <name>Paper Piece.png</name>
         <exists>-1</exists>
@@ -648,7 +648,7 @@
         </ConfigOptions>
         <filename>Tv.png</filename>
       </datafile>
-      <datafiles number="94" name="Buttons">
+      <datafiles number="120" name="Buttons">
         <datafile>
           <name>Arrow button effect.png</name>
           <exists>-1</exists>
@@ -685,7 +685,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="94" name="Audio_Controls_Video">
+    <datafiles number="120" name="Audio_Controls_Video">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -704,7 +704,7 @@
         <filename>Background.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="94" name="General">
+    <datafiles number="120" name="General">
       <datafile>
         <name>message_show.png</name>
         <exists>-1</exists>
@@ -723,7 +723,7 @@
         <filename>message_show.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="94" name="sound_files">
+    <datafiles number="120" name="sound_files">
       <datafile>
         <name>click01.ogg</name>
         <exists>-1</exists>
@@ -759,7 +759,7 @@
         <filename>bg_music01.ogg</filename>
       </datafile>
     </datafiles>
-    <datafiles number="94" name="Controls Sub Menu">
+    <datafiles number="120" name="Controls Sub Menu">
       <datafile>
         <name>Keyboard.png</name>
         <exists>-1</exists>
@@ -828,7 +828,7 @@
         </ConfigOptions>
         <filename>Reference Image.png</filename>
       </datafile>
-      <datafiles number="94" name="Buttons">
+      <datafiles number="120" name="Buttons">
         <datafile>
           <name>Custom button effect.png</name>
           <exists>-1</exists>
@@ -967,7 +967,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="94" name="Notes">
+    <datafiles number="120" name="Notes">
       <datafile>
         <name>Blue.png</name>
         <exists>-1</exists>
@@ -1139,8 +1139,8 @@
         <filename>Yellow1.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="94" name="Intro">
-      <datafiles number="94" name="Part I">
+    <datafiles number="120" name="Intro">
+      <datafiles number="120" name="Part I">
         <datafile>
           <name>Background.png</name>
           <exists>-1</exists>
@@ -1192,7 +1192,7 @@
           </ConfigOptions>
           <filename>Signature.png</filename>
         </datafile>
-        <datafiles number="94" name="Buttons">
+        <datafiles number="120" name="Buttons">
           <datafile>
             <name>Bassist Button Effect.png</name>
             <exists>-1</exists>
@@ -1349,6 +1349,452 @@
         </datafiles>
       </datafiles>
     </datafiles>
+    <datafiles number="120" name="Main Game">
+      <datafiles number="120" name="GUI">
+        <datafile>
+          <name>Background.png</name>
+          <exists>-1</exists>
+          <size>1998526</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Background.png</filename>
+        </datafile>
+        <datafile>
+          <name>Evening Background.png</name>
+          <exists>-1</exists>
+          <size>1987357</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Evening Background.png</filename>
+        </datafile>
+        <datafile>
+          <name>Night  Background.png</name>
+          <exists>-1</exists>
+          <size>2006296</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Night  Background.png</filename>
+        </datafile>
+        <datafile>
+          <name>Day Bar Piece.png</name>
+          <exists>-1</exists>
+          <size>115881</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Day Bar Piece.png</filename>
+        </datafile>
+        <datafile>
+          <name>Pause Button.png</name>
+          <exists>-1</exists>
+          <size>19807</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Pause Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Pause Button Effect.png</name>
+          <exists>-1</exists>
+          <size>19580</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Pause Button Effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Speed 1 Button.png</name>
+          <exists>-1</exists>
+          <size>19249</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Speed 1 Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Speed 1 Button Effect.png</name>
+          <exists>-1</exists>
+          <size>19194</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Speed 1 Button Effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Speed 3 Button.png</name>
+          <exists>-1</exists>
+          <size>20765</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Speed 3 Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Speed 3 Button Effect.png</name>
+          <exists>-1</exists>
+          <size>20528</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Speed 3 Button Effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Speed 2 Button.png</name>
+          <exists>-1</exists>
+          <size>20231</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Speed 2 Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Speed 2 Button Effect.png</name>
+          <exists>-1</exists>
+          <size>20068</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Speed 2 Button Effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Sub Menu Piece.png</name>
+          <exists>-1</exists>
+          <size>264241</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Sub Menu Piece.png</filename>
+        </datafile>
+        <datafile>
+          <name>Stats Piece.png</name>
+          <exists>-1</exists>
+          <size>59717</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Stats Piece.png</filename>
+        </datafile>
+        <datafile>
+          <name>Stars Outlines.png</name>
+          <exists>-1</exists>
+          <size>25671</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Stars Outlines.png</filename>
+        </datafile>
+        <datafile>
+          <name>Stars Fill.png</name>
+          <exists>-1</exists>
+          <size>28136</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Stars Fill.png</filename>
+        </datafile>
+        <datafile>
+          <name>Stars BG.png</name>
+          <exists>-1</exists>
+          <size>26958</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Stars BG.png</filename>
+        </datafile>
+        <datafile>
+          <name>Time Bar.png</name>
+          <exists>-1</exists>
+          <size>59809</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Time Bar.png</filename>
+        </datafile>
+        <datafile>
+          <name>Shop Button.png</name>
+          <exists>-1</exists>
+          <size>28103</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Shop Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Shop Button Effect.png</name>
+          <exists>-1</exists>
+          <size>26749</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Shop Button Effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Money Button.png</name>
+          <exists>-1</exists>
+          <size>31496</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Money Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Money Button Effect.png</name>
+          <exists>-1</exists>
+          <size>29477</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Money Button Effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Map Button.png</name>
+          <exists>-1</exists>
+          <size>37953</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Map Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Map Button Effect.png</name>
+          <exists>-1</exists>
+          <size>36002</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Map Button Effect.png</filename>
+        </datafile>
+        <datafile>
+          <name>Band Info Button.png</name>
+          <exists>-1</exists>
+          <size>35185</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Band Info Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Band Info Button Effect.png</name>
+          <exists>-1</exists>
+          <size>33125</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Band Info Button Effect.png</filename>
+        </datafile>
+      </datafiles>
+    </datafiles>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\FXAA Shader</extension>
@@ -1428,14 +1874,20 @@
         <object>objects\obj_performance</object>
         <object>objects\obj_fret_note</object>
       </objects>
+      <objects name="game menu">
+        <object>objects\obj_ingame_menu</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_performance</room>
     <rooms name="start">
       <room>rooms\rm_loading</room>
       <room>rooms\rm_main</room>
       <room>rooms\rm_intro</room>
+      <room>rooms\rm_performance</room>
+    </rooms>
+    <rooms name="game">
+      <room>rooms\rm_garage</room>
     </rooms>
   </rooms>
   <constants number="1">
