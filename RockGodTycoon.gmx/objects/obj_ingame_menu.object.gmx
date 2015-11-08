@@ -43,11 +43,42 @@ spr[0]=global.sprite_map[?"Main Game\GUI\Map Button.png"];
 spr[1]=global.sprite_map[?"Main Game\GUI\Money Button.png"];
 spr[2]=global.sprite_map[?"Main Game\GUI\Band Info Button.png"];
 spr[3]=global.sprite_map[?"Main Game\GUI\Shop Button.png"];
+spr[4]=global.sprite_map[?"Main Game\GUI\Pause Button.png"];
+spr[5]=global.sprite_map[?"Main Game\GUI\Speed 1 Button.png"];
+spr[6]=global.sprite_map[?"Main Game\GUI\Speed 2 Button.png"];
+spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button.png"];
 
 
 // Special Variables
 
 // UI Variables
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Rendering Variables
+day_alpha = 1;
+evening_alpha = 1;
+night_alpha = 1;
+gray = make_colour_rgb(200,200,200);
+orange = make_colour_rgb(209,102,2);
+blue = make_colour_rgb(17,30,102);
 </string>
           </argument>
         </arguments>
@@ -78,17 +109,29 @@ var y_point = 0;mouse_over = -1;
 switch(menu_state){
 case "Main":{// Main Screen
 
-if ( mouse_check_area(view_xport[0]+130-72,view_hview[0]-78-72,view_xport[0]+130+72,view_hview[0]-78+72) ){mouse_over = 0;}if ( button_select == 0 ){
+if ( mouse_check_area(130-72,view_hview[0]-78-72,130+72,view_hview[0]-78+72) ){mouse_over = 0;}if ( button_select == 0 ){
 spr[0]=global.sprite_map[?"Main Game\GUI\Map Button Effect.png"]}else{spr[0]=global.sprite_map[?"Main Game\GUI\Map Button.png"]}
 
-if ( mouse_check_area(view_xport[0]+412-72,view_hview[0]-78-72,view_xport[0]+412+72,view_hview[0]-78+72) ){mouse_over = 1;}if ( button_select == 1 ){
+if ( mouse_check_area(412-72,view_hview[0]-78-72,412+72,view_hview[0]-78+72) ){mouse_over = 1;}if ( button_select == 1 ){
 spr[1]=global.sprite_map[?"Main Game\GUI\Money Button Effect.png"]}else{spr[1]=global.sprite_map[?"Main Game\GUI\Money Button.png"]}
 
-if ( mouse_check_area(view_xport[0]+706-72,view_hview[0]-78-72,view_xport[0]+706+72,view_hview[0]-78+72) ){mouse_over = 2;}if ( button_select == 2 ){
+if ( mouse_check_area(706-72,view_hview[0]-78-72,706+72,view_hview[0]-78+72) ){mouse_over = 2;}if ( button_select == 2 ){
 spr[2]=global.sprite_map[?"Main Game\GUI\Band Info Button Effect.png"]}else{spr[2]=global.sprite_map[?"Main Game\GUI\Band Info Button.png"]}
 
-if ( mouse_check_area(view_xport[0]+1005-72,view_hview[0]-78-72,view_xport[0]+1005+72,view_hview[0]-78+72) ){mouse_over = 3;}if ( button_select == 3 ){
+if ( mouse_check_area(1009-72,view_hview[0]-78-72,1009+72,view_hview[0]-78+72) ){mouse_over = 3;}if ( button_select == 3 ){
 spr[3]=global.sprite_map[?"Main Game\GUI\Shop Button Effect.png"]}else{spr[3]=global.sprite_map[?"Main Game\GUI\Shop Button.png"]}
+
+if ( mouse_check_area(1218-24,1041-24,1218+24,1041+24) ){mouse_over = 4;}if ( button_select == 4 ){
+spr[4]=global.sprite_map[?"Main Game\GUI\Pause Button Effect.png"]}else{spr[4]=global.sprite_map[?"Main Game\GUI\Pause Button.png"]}
+
+if ( mouse_check_area(1279-24,1041-24,1279+24,1041+24) ){mouse_over = 5;}if ( button_select == 5 ){
+spr[5]=global.sprite_map[?"Main Game\GUI\Speed 1 Button Effect.png"]}else{spr[5]=global.sprite_map[?"Main Game\GUI\Speed 1 Button.png"]}
+
+if ( mouse_check_area(1355-24,1041-24,1355+24,1041+24) ){mouse_over = 6;}if ( button_select == 6 ){
+spr[6]=global.sprite_map[?"Main Game\GUI\Speed 2 Button Effect.png"]}else{spr[6]=global.sprite_map[?"Main Game\GUI\Speed 2 Button.png"]}
+
+if ( mouse_check_area(1430-24,1041-24,1430+24,1041+24) ){mouse_over = 7;}if ( button_select == 7 ){
+spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button Effect.png"]}else{spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button.png"]}
 
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
@@ -97,9 +140,11 @@ case 0:{obj_game.menu_set="start game";break;}
 /*
 case 1:{break;}
 case 2:{break;}
-case 3:{menu_state = "Options";state_load=0;break;}
-case 4:{break;}
-case 5:{game_end();break;}*/
+case 3:{menu_state = "Options";state_load=0;break;}*/
+case 4:{if(obj_game.game_time_pause){obj_game.game_time_pause=false}else{obj_game.game_time_pause=true};break;}
+case 5:{obj_game.game_time_speed=0;obj_game.game_time_pause=false;break;}
+case 6:{obj_game.game_time_speed=1;obj_game.game_time_pause=false;break;}
+case 7:{obj_game.game_time_speed=2;obj_game.game_time_pause=false;break;}
 }}button_select=-2;}
 
 if ( mouse_check_button_pressed(mb_left) ){
@@ -134,18 +179,66 @@ break;}
             <kind>1</kind>
             <string>/// Render
 var x_center = view_wview[0]/2;var y_center = view_hview[0]/2;
-var color = 0;var gray = make_colour_rgb(200,200,200);
-draw_set_blend_mode(bm_normal);draw_set_color(c_white);
-draw_set_alpha(1);
+var color = 0;
+draw_set_blend_mode(bm_normal);draw_set_color(c_white);draw_set_alpha(1);
 
 switch(menu_state){
 case "Main":{ // Main Menu
 
 // Menu Pieces
-draw_background(obj_game.img_ext[0],0,0);
-draw_background(obj_game.img_ext[3],view_wview[0]-665,view_hview[0]-297);
-draw_background(obj_game.img_ext[1],0,view_hview[0]-188);
-draw_background(obj_game.img_ext[2],1168,view_hview[0]-96);
+
+// Day &amp; Night Render Begin
+
+/*
+a = predifined time in minutes
+b = Total transition time in minutes
+c = current minutes
+d = current hours
+Day And Night Transition Equation: Alpha = clamp((((c-a)+(d*60))/b),0,1);
+*/
+
+// Day
+if ( obj_game.game_time_hours &lt; 18 &amp;&amp; obj_game.game_time_hours &gt; 5 )
+{
+if ( obj_game.game_time_hours &lt; 15 ){
+day_alpha = clamp((((obj_game.game_time_minutes-360)+(obj_game.game_time_hours*60))/180),0,1);}
+if ( obj_game.game_time_hours &gt; 14 ){
+day_alpha = 1-clamp((((obj_game.game_time_minutes-900)+(obj_game.game_time_hours*60))/180),0,1);}
+draw_background_ext(obj_game.img_ext[10],0,0,1,1,0,c_white,day_alpha);}
+
+// Evening
+if ( obj_game.game_time_hours &lt; 21 &amp;&amp; obj_game.game_time_hours &gt; 14 )
+{
+if ( obj_game.game_time_hours &lt; 18 ){
+evening_alpha = clamp((((obj_game.game_time_minutes-900)+(obj_game.game_time_hours*60))/180),0,1);}
+if ( obj_game.game_time_hours &gt; 17 ){
+evening_alpha = 1-clamp((((obj_game.game_time_minutes-1140)+(obj_game.game_time_hours*60))/120),0,1);}
+draw_background_ext(obj_game.img_ext[11],0,0,1,1,0,c_white,evening_alpha);
+draw_set_color(orange);draw_set_alpha(evening_alpha*0.23);
+draw_rectangle(0,0,view_wview[0],view_hview[0],false);
+draw_set_color(c_white);draw_set_alpha(1);
+}
+
+// Night
+if ( obj_game.game_time_hours &lt; 9 or obj_game.game_time_hours &gt; 18 )
+{
+if ( obj_game.game_time_hours &lt; 9 &amp;&amp; obj_game.game_time_hours &gt; 5 ){
+night_alpha = 1-clamp((((obj_game.game_time_minutes-360)+(obj_game.game_time_hours*60))/180),0,1);}
+if ( obj_game.game_time_hours &gt; 17 ){
+night_alpha = clamp((((obj_game.game_time_minutes-1140)+(obj_game.game_time_hours*60))/120),0,1);}
+draw_background_ext(obj_game.img_ext[12],0,0,1,1,0,c_white,night_alpha);
+draw_set_color(blue);draw_set_alpha(night_alpha*0.26);
+draw_rectangle(0,0,view_wview[0],view_hview[0],false);
+draw_set_color(c_white);draw_set_alpha(1);
+}
+
+// Day &amp; Night Render End
+
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Box.png"],0,view_wview[0]-332,view_hview[0]-148);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Sub_Menu_Piece.png"],0,584,view_hview[0]-94);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Time Bar.png"],0,1331,view_hview[0]-50);
+
+draw_text(32,128,string(obj_game.game_time_hours)+":"+string(obj_game.game_time_minutes)+":"+string(floor(obj_game.game_time_seconds)));
 
 // Map
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
@@ -158,7 +251,19 @@ if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2
 draw_external_sprite_ext(spr[2],0,706,view_hview[0]-78,1,1,0,color,1);
 // Shop Info
 if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,1005,view_hview[0]-78,1,1,0,color,1);
+draw_external_sprite_ext(spr[3],0,1009,view_hview[0]-78,1,1,0,color,1);
+// Pause Button
+if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
+draw_external_sprite_ext(spr[4],0,1218,1041,1,1,0,color,1);
+// Speed 1x Button
+if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
+draw_external_sprite_ext(spr[5],0,1279,1041,1,1,0,color,1);
+// Speed 2x Button
+if ( mouse_over != 6 ){color = c_white}else{color = gray}if ( button_select == 6 ){color = c_white}
+draw_external_sprite_ext(spr[6],0,1355,1041,1,1,0,color,1);
+// Speed 3x Button
+if ( mouse_over != 7 ){color = c_white}else{color = gray}if ( button_select == 7 ){color = c_white}
+draw_external_sprite_ext(spr[7],0,1430,1041,1,1,0,color,1);
 
 break;}
 

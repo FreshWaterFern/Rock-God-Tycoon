@@ -38,6 +38,77 @@ draw_fade = 0;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Game System Initialize
+
+game_time_pause = false;
+game_time_seconds = 0;
+game_time_minutes = 0;
+game_time_hours = 14;
+game_time_day = 1;
+game_time_month = 1;
+game_time_year = 1;
+game_time_speed = 0;
+game_world_date = string(game_time_day)+"/"+string(game_time_month)+" Year "+string(game_time_year);
+
+// Write out month and day names
+game_day_name = ds_list_create();
+ds_list_add(game_day_name,"Monday");
+ds_list_add(game_day_name,"Tuesday");
+ds_list_add(game_day_name,"Wednesday");
+ds_list_add(game_day_name,"Thursday");
+ds_list_add(game_day_name,"Friday");
+ds_list_add(game_day_name,"Saturday");
+ds_list_add(game_day_name,"Sunday");
+
+game_month_name = ds_list_create();
+ds_list_add(game_month_name,"January");
+ds_list_add(game_month_name,"February");
+ds_list_add(game_month_name,"March");
+ds_list_add(game_month_name,"April");
+ds_list_add(game_month_name,"May");
+ds_list_add(game_month_name,"June");
+ds_list_add(game_month_name,"July");
+ds_list_add(game_month_name,"August");
+ds_list_add(game_month_name,"September");
+ds_list_add(game_month_name,"October");
+ds_list_add(game_month_name,"November");
+ds_list_add(game_month_name,"December");
+
+game_month_day_count = ds_list_create();
+ds_list_add(game_month_day_count,31);
+ds_list_add(game_month_day_count,28);
+ds_list_add(game_month_day_count,31);
+ds_list_add(game_month_day_count,30);
+ds_list_add(game_month_day_count,31);
+ds_list_add(game_month_day_count,30);
+ds_list_add(game_month_day_count,31);
+ds_list_add(game_month_day_count,31);
+ds_list_add(game_month_day_count,30);
+ds_list_add(game_month_day_count,31);
+ds_list_add(game_month_day_count,30);
+ds_list_add(game_month_day_count,31);
+
+// game_world_date = string(game_time_day)+"/"+string(game_time_month)+" Year "+string(game_time_year);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="0">
       <action>
@@ -124,6 +195,30 @@ if ( draw_fade &gt; 0 ){draw_fade-=0.03;menu_set = "start game";}else{menu_set =
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Game Logic Scripts
+
+// In-Game Time
+game_time_step();
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="7" enumb="5">
       <action>
@@ -168,7 +263,7 @@ draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Pre-load
+            <string>/// Pre-load Assets
 
 draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 volume_update();
@@ -222,10 +317,9 @@ draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 }
 
 if ( room == rm_garage ){ // Garage
-img_ext[0]=background_add("Main Game\GUI\Background.png",0,0);
-img_ext[1]=background_add("Main Game\GUI\Sub Menu Piece.png",0,0);
-img_ext[2]=background_add("Main Game\GUI\Time Bar.png",0,0);
-img_ext[3]=background_add("Main Game\GUI\Box.png",0,0);
+img_ext[10]=background_add("Main Game\GUI\Background.png",0,0);
+img_ext[11]=background_add("Main Game\GUI\Evening_Background.png",0,0);
+img_ext[12]=background_add("Main Game\GUI\Night_Background.png",0,0);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 }
 </string>
