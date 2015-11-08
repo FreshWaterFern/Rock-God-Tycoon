@@ -23,6 +23,7 @@ if ( game_time_seconds > 59 )
 {
 game_time_minutes++;
 game_time_seconds -= 60;
+game_time_seconds = clamp(game_time_seconds,0,60);
 }
 
 // Minutes
@@ -30,12 +31,14 @@ if ( game_time_minutes > 59 )
 {
 game_time_hours++;
 game_time_minutes -= 60;
+game_time_minutes = clamp(game_time_minutes,0,60);
 }
 
 // Hours
 if ( game_time_hours > 24 )
 {
 game_time_hours -= 24;
+game_time_hours = clamp(game_time_hours,1,25);
 game_time_day++;
 game_world_date = string(game_time_day)+"/"+string(game_time_month)+" Year "+string(game_time_year);
 }
@@ -45,6 +48,7 @@ if ( game_time_day > game_month_day_count[|game_time_month] )
 {
 game_time_day = 1;
 game_time_month ++;
+game_time_month = clamp(game_time_month,1,13);
 game_world_date = string(game_time_day)+"/"+string(game_time_month)+" Year "+string(game_time_year);
 }
 

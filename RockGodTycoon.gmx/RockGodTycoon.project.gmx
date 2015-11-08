@@ -1823,7 +1823,10 @@
     <sprite>sprites\spr_neck</sprite>
     <sprite>sprites\spr_note</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_orange</background>
+    <background>background\bg_blue</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\path_signature</path>
   </paths>
@@ -1867,6 +1870,7 @@
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sha_fxaa.shader</shader>
+    <shader type="GLSLES">shaders\sha_overlay.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\font_grave_36</font>
