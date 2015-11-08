@@ -254,15 +254,19 @@ draw_external_sprite_ext(spr[2],0,706,view_hview[0]-78,1,1,0,color,1);
 if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
 draw_external_sprite_ext(spr[3],0,1009,view_hview[0]-78,1,1,0,color,1);
 // Pause Button
+if ( obj_game.game_time_pause ){spr[4]=global.sprite_map[?"Main Game\GUI\Pause Button Effect.png"];}
 if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
 draw_external_sprite_ext(spr[4],0,1218,1041,1,1,0,color,1);
 // Speed 1x Button
+if ( obj_game.game_time_speed == 0 &amp;&amp; !obj_game.game_time_pause ){spr[5]=global.sprite_map[?"Main Game\GUI\Speed 1 Button Effect.png"];}
 if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
 draw_external_sprite_ext(spr[5],0,1279,1041,1,1,0,color,1);
 // Speed 2x Button
+if ( obj_game.game_time_speed == 1 &amp;&amp; !obj_game.game_time_pause ){spr[6]=global.sprite_map[?"Main Game\GUI\Speed 2 Button Effect.png"];}
 if ( mouse_over != 6 ){color = c_white}else{color = gray}if ( button_select == 6 ){color = c_white}
 draw_external_sprite_ext(spr[6],0,1355,1041,1,1,0,color,1);
 // Speed 3x Button
+if ( obj_game.game_time_speed == 2 &amp;&amp; !obj_game.game_time_pause ){spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button Effect.png"];}
 if ( mouse_over != 7 ){color = c_white}else{color = gray}if ( button_select == 7 ){color = c_white}
 draw_external_sprite_ext(spr[7],0,1430,1041,1,1,0,color,1);
 
