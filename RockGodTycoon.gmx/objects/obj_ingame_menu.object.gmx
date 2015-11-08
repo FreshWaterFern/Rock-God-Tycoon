@@ -214,11 +214,9 @@ evening_alpha = clamp((((obj_game.game_time_minutes-900)+(obj_game.game_time_hou
 if ( obj_game.game_time_hours &gt; 17 ){
 evening_alpha = 1-clamp((((obj_game.game_time_minutes-1140)+(obj_game.game_time_hours*60))/120),0,1);}
 draw_background_ext(obj_game.img_ext[11],0,0,1,1,0,c_white,evening_alpha);
-draw_set_blend_mode(bm_add);
-draw_set_color(orange);draw_set_alpha(evening_alpha*0.2);
+draw_set_color(orange);draw_set_alpha(evening_alpha*0.23);
 draw_rectangle(0,0,view_wview[0],view_hview[0],false);
 draw_set_color(c_white);draw_set_alpha(1);
-draw_set_blend_mode(bm_normal);
 }
 
 // Night
@@ -229,11 +227,9 @@ night_alpha = 1-clamp((((obj_game.game_time_minutes-360)+(obj_game.game_time_hou
 if ( obj_game.game_time_hours &gt; 17 ){
 night_alpha = clamp((((obj_game.game_time_minutes-1140)+(obj_game.game_time_hours*60))/120),0,1);}
 draw_background_ext(obj_game.img_ext[12],0,0,1,1,0,c_white,night_alpha);
-draw_set_blend_mode(bm_add);
 draw_set_color(blue);draw_set_alpha(night_alpha*0.26);
 draw_rectangle(0,0,view_wview[0],view_hview[0],false);
 draw_set_color(c_white);draw_set_alpha(1);
-draw_set_blend_mode(bm_normal);
 }
 
 // Day &amp; Night Render End
