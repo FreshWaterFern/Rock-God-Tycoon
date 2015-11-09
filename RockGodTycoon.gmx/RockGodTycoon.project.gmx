@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="124" name="datafiles">
-    <datafiles number="124" name="Apply button">
+  <datafiles number="127" name="datafiles">
+    <datafiles number="127" name="Apply button">
       <datafile>
         <name>Apply button.png</name>
         <exists>-1</exists>
@@ -40,7 +40,7 @@
         <filename>Apply button effect.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="124" name="Back button">
+    <datafiles number="127" name="Back button">
       <datafile>
         <name>Back Button effect.png</name>
         <exists>-1</exists>
@@ -76,7 +76,7 @@
         <filename>Back Button.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="124" name="Main Menu">
+    <datafiles number="127" name="Main Menu">
       <datafile>
         <name>Light.png</name>
         <exists>-1</exists>
@@ -145,7 +145,7 @@
         </ConfigOptions>
         <filename>Paper Piece.png</filename>
       </datafile>
-      <datafiles number="124" name="Buttons">
+      <datafiles number="127" name="Buttons">
         <datafile>
           <name>Credits button effect.png</name>
           <exists>-1</exists>
@@ -352,7 +352,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="124" name="Options">
+    <datafiles number="127" name="Options">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -421,7 +421,7 @@
         </ConfigOptions>
         <filename>Speaker.png</filename>
       </datafile>
-      <datafiles number="124" name="Buttons">
+      <datafiles number="127" name="Buttons">
         <datafile>
           <name>Audio settings button.png</name>
           <exists>-1</exists>
@@ -526,7 +526,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="124" name="Audio">
+    <datafiles number="127" name="Audio">
       <datafile>
         <name>Amplifier.png</name>
         <exists>-1</exists>
@@ -596,7 +596,7 @@
         <filename>Paper Piece.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="124" name="Video Settings">
+    <datafiles number="127" name="Video Settings">
       <datafile>
         <name>Paper Piece.png</name>
         <exists>-1</exists>
@@ -648,7 +648,7 @@
         </ConfigOptions>
         <filename>Tv.png</filename>
       </datafile>
-      <datafiles number="124" name="Buttons">
+      <datafiles number="127" name="Buttons">
         <datafile>
           <name>Arrow button effect.png</name>
           <exists>-1</exists>
@@ -685,7 +685,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="124" name="Audio_Controls_Video">
+    <datafiles number="127" name="Audio_Controls_Video">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -704,7 +704,7 @@
         <filename>Background.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="124" name="General">
+    <datafiles number="127" name="General">
       <datafile>
         <name>message_show.png</name>
         <exists>-1</exists>
@@ -723,7 +723,7 @@
         <filename>message_show.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="124" name="sound_files">
+    <datafiles number="127" name="sound_files">
       <datafile>
         <name>click01.ogg</name>
         <exists>-1</exists>
@@ -759,7 +759,7 @@
         <filename>bg_music01.ogg</filename>
       </datafile>
     </datafiles>
-    <datafiles number="124" name="Controls Sub Menu">
+    <datafiles number="127" name="Controls Sub Menu">
       <datafile>
         <name>Keyboard.png</name>
         <exists>-1</exists>
@@ -828,7 +828,7 @@
         </ConfigOptions>
         <filename>Reference Image.png</filename>
       </datafile>
-      <datafiles number="124" name="Buttons">
+      <datafiles number="127" name="Buttons">
         <datafile>
           <name>Custom button effect.png</name>
           <exists>-1</exists>
@@ -967,7 +967,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="124" name="Notes">
+    <datafiles number="127" name="Notes">
       <datafile>
         <name>Blue.png</name>
         <exists>-1</exists>
@@ -1139,8 +1139,8 @@
         <filename>Yellow1.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="124" name="Intro">
-      <datafiles number="124" name="Part I">
+    <datafiles number="127" name="Intro">
+      <datafiles number="127" name="Part I">
         <datafile>
           <name>Background.png</name>
           <exists>-1</exists>
@@ -1192,7 +1192,7 @@
           </ConfigOptions>
           <filename>Signature.png</filename>
         </datafile>
-        <datafiles number="124" name="Buttons">
+        <datafiles number="127" name="Buttons">
           <datafile>
             <name>Bassist Button Effect.png</name>
             <exists>-1</exists>
@@ -1349,8 +1349,8 @@
         </datafiles>
       </datafiles>
     </datafiles>
-    <datafiles number="124" name="Main Game">
-      <datafiles number="124" name="GUI">
+    <datafiles number="127" name="Main Game">
+      <datafiles number="127" name="GUI">
         <datafile>
           <name>Box.png</name>
           <exists>-1</exists>
@@ -1420,7 +1420,7 @@
           <filename>Night_Background.png</filename>
         </datafile>
         <datafile>
-          <name>Day Bar Piece.png</name>
+          <name>Day_Bar_Piece.png</name>
           <exists>-1</exists>
           <size>115881</size>
           <exportAction>2</exportAction>
@@ -1434,7 +1434,7 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Day Bar Piece.png</filename>
+          <filename>Day_Bar_Piece.png</filename>
         </datafile>
         <datafile>
           <name>Pause Button.png</name>
@@ -1810,6 +1810,57 @@
           </ConfigOptions>
           <filename>Band Info Button Effect.png</filename>
         </datafile>
+        <datafile>
+          <name>Day_Bar_Piece.png</name>
+          <exists>-1</exists>
+          <size>74553</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Day_Bar_Piece.png</filename>
+        </datafile>
+        <datafile>
+          <name>Date_Box.png</name>
+          <exists>-1</exists>
+          <size>27083</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Date_Box.png</filename>
+        </datafile>
+        <datafile>
+          <name>date_box_back.png</name>
+          <exists>-1</exists>
+          <size>83845</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>date_box_back.png</filename>
+        </datafile>
       </datafiles>
     </datafiles>
   </datafiles>
@@ -1878,6 +1929,8 @@
     <font>fonts\font_grave_80</font>
     <font>fonts\font_peax_70</font>
     <font>fonts\font_peax_28</font>
+    <font>fonts\font_metal_14</font>
+    <font>fonts\font_metal_18</font>
   </fonts>
   <objects name="objects">
     <objects name="System">

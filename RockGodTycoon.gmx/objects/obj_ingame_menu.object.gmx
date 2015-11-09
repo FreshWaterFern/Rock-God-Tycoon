@@ -51,6 +51,7 @@ spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button.png"];
 
 // Special Variables
 
+
 // UI Variables
 </string>
           </argument>
@@ -238,8 +239,15 @@ shader_reset();
 draw_external_sprite(global.sprite_map[?"Main Game\GUI\Box.png"],0,view_wview[0]-332,view_hview[0]-148);
 draw_external_sprite(global.sprite_map[?"Main Game\GUI\Sub_Menu_Piece.png"],0,584,view_hview[0]-94);
 draw_external_sprite(global.sprite_map[?"Main Game\GUI\Time Bar.png"],0,1331,view_hview[0]-50);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\date_box_back.png"],0,444,69);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Day_Bar_Piece.png"],0,444,69);
 
-draw_text(32,128,string(obj_game.game_time_hours)+":"+string(obj_game.game_time_minutes)+":"+string(floor(obj_game.game_time_seconds)));
+draw_set_font(font_metal_14);draw_set_color(c_white);draw_set_halign(fa_left);draw_set_halign(fa_middle);
+//draw_text(32,128,string(obj_game.game_time_hours)+":"+string(obj_game.game_time_minutes)+":"+string(floor(obj_game.game_time_seconds)));
+//draw_text(32,128,string(obj_game.game_time_hours)+":"+string(obj_game.game_time_minutes)+":"+string(floor(obj_game.game_time_seconds)));
+
+// Date Boxes
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,222,69);
 
 // Map
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
