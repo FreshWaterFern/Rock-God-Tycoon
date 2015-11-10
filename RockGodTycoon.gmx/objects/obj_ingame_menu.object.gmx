@@ -81,6 +81,7 @@ gray = make_colour_rgb(200,200,200);
 orange = make_colour_rgb(209,102,2);
 blue = make_colour_rgb(17,30,102);
 tex_overlay = shader_get_sampler_index(sha_overlay,"texOverlay");
+date_box_pos = 0;
 </string>
           </argument>
         </arguments>
@@ -239,15 +240,75 @@ shader_reset();
 draw_external_sprite(global.sprite_map[?"Main Game\GUI\Box.png"],0,view_wview[0]-332,view_hview[0]-148);
 draw_external_sprite(global.sprite_map[?"Main Game\GUI\Sub_Menu_Piece.png"],0,584,view_hview[0]-94);
 draw_external_sprite(global.sprite_map[?"Main Game\GUI\Time Bar.png"],0,1331,view_hview[0]-50);
-draw_external_sprite(global.sprite_map[?"Main Game\GUI\date_box_back.png"],0,444,69);
-draw_external_sprite(global.sprite_map[?"Main Game\GUI\Day_Bar_Piece.png"],0,444,69);
 
-draw_set_font(font_metal_14);draw_set_color(c_white);draw_set_halign(fa_left);draw_set_halign(fa_middle);
-//draw_text(32,128,string(obj_game.game_time_hours)+":"+string(obj_game.game_time_minutes)+":"+string(floor(obj_game.game_time_seconds)));
-//draw_text(32,128,string(obj_game.game_time_hours)+":"+string(obj_game.game_time_minutes)+":"+string(floor(obj_game.game_time_seconds)));
+// Date Box Background
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\date_box_back.png"],0,420,62);
 
 // Date Boxes
-draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,222,69);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,59-date_box_pos,59);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,167-date_box_pos,59);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,276-date_box_pos,59);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,385-date_box_pos,59);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,494-date_box_pos,59);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,603-date_box_pos,59);
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Date_Box.png"],0,712-date_box_pos,59);
+draw_set_font(font_metal_20);draw_set_color(c_black);draw_set_valign(fa_bottom);
+
+draw_set_halign(fa_right);
+var day_count = obj_game.game_time_day;
+draw_text(59-8-date_box_pos,59+37,day_count);
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;}
+draw_text(167-8-date_box_pos,59+37,day_count);
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;}
+draw_text(276-8-date_box_pos,59+37,day_count);
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;}
+draw_text(385-8-date_box_pos,59+37,day_count);
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;}
+draw_text(494-8-date_box_pos,59+37,day_count);
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;}
+draw_text(603-8-date_box_pos,59+37,day_count);
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;}
+draw_text(712-8-date_box_pos,59+37,day_count);
+
+draw_set_halign(fa_center);draw_set_font(font_metal_14);
+var month_count = obj_game.game_time_month;
+day_count = obj_game.game_time_day;
+draw_text(59+17-date_box_pos,59+36,string_delete(obj_game.game_month_name[|month_count-1],4,string_length(obj_game.game_month_name[|month_count-1])-2));
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;month_count++;}
+if ( month_count &gt; 12 ){month_count=1;}
+draw_text(167+17-date_box_pos,59+36,string_delete(obj_game.game_month_name[|month_count-1],4,string_length(obj_game.game_month_name[|month_count-1])-2));
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;month_count++;}
+if ( month_count &gt; 12 ){month_count=1;}
+draw_text(276+17-date_box_pos,59+36,string_delete(obj_game.game_month_name[|month_count-1],4,string_length(obj_game.game_month_name[|month_count-1])-2));
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;month_count++;}
+if ( month_count &gt; 12 ){month_count=1;}
+draw_text(385+17-date_box_pos,59+36,string_delete(obj_game.game_month_name[|month_count-1],4,string_length(obj_game.game_month_name[|month_count-1])-2));
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;month_count++;}
+if ( month_count &gt; 12 ){month_count=1;}
+draw_text(494+17-date_box_pos,59+36,string_delete(obj_game.game_month_name[|month_count-1],4,string_length(obj_game.game_month_name[|month_count-1])-2));
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;month_count++;}
+if ( month_count &gt; 12 ){month_count=1;}
+draw_text(603+17-date_box_pos,59+36,string_delete(obj_game.game_month_name[|month_count-1],4,string_length(obj_game.game_month_name[|month_count-1])-2));
+day_count++;
+if ( day_count &gt; obj_game.game_month_day_count[|obj_game.game_time_month-1] ){day_count=1;month_count++;}
+if ( month_count &gt; 12 ){month_count=1;}
+draw_text(712+17-date_box_pos,59+36,string_delete(obj_game.game_month_name[|month_count-1],4,string_length(obj_game.game_month_name[|month_count-1])-2));
+
+draw_set_color(c_white);
+
+// Other Date Related Stuff
+draw_external_sprite(global.sprite_map[?"Main Game\GUI\Day_Bar_Piece.png"],0,438,62);
 
 // Map
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}

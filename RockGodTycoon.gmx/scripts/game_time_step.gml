@@ -44,7 +44,7 @@ game_world_date = string(game_time_day)+"/"+string(game_time_month)+" Year "+str
 }
 
 // Months
-if ( game_time_day > game_month_day_count[|game_time_month] )
+if ( game_time_day > game_month_day_count[|game_time_month-1] )
 {
 game_time_day = 1;
 game_time_month ++;
