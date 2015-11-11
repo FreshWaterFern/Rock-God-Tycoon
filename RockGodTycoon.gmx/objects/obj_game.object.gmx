@@ -64,7 +64,7 @@ game_time_day = 1;
 game_time_month = 1;
 game_time_year = 1;
 game_time_speed = 0;
-game_world_date = string(game_time_day)+"/"+string(game_time_month)+" Year "+string(game_time_year);
+game_world_date = string(game_time_day)+"/"+string(game_time_month)+"/Year "+string(game_time_year);
 
 // Write out month and day names
 game_day_name = ds_list_create();
@@ -239,6 +239,28 @@ if ( draw_fade &gt; 0 ){draw_fade-=0.03;menu_set = "start game";}else{menu_set =
 
 // In-Game Time
 game_time_step();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Debug Controls
+if ( keyboard_check(vk_escape) ){game_end();}
 </string>
           </argument>
         </arguments>
