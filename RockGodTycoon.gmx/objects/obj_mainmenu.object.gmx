@@ -600,7 +600,7 @@ draw_external_sprite_ext(spr[3],0,x_center-38,y_center-325,1,1,0,color,1);
 if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
 draw_external_sprite_ext(spr[4],0,x_center+120,y_center-325,1,1,0,color,1);
 if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
-draw_sprite_ext(real(spr_internal[0]),0,x_center+404,y_center-325,1.25,1.25,0,color,1);
+draw_sprite_ext(real(spr_internal[0]),0,x_center+410,y_center-318,1.25,1.25,0,color,1);
 
 // Buttons
 y_point = 328;
@@ -624,34 +624,34 @@ var color = make_colour_hsv(48,42,100);
 draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_black);var str = "";
 var scale_text1 = 1;
 if ( key_state == 1 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_80);}
+if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
 while((string_width(string(keyboard_get_str(key_set[0])))*scale_text1)&gt;140){scale_text1-=0.025;}
 draw_text_transformed(x_center-507,y_center-195,string(keyboard_get_str(key_set[0])),scale_text1,scale_text1,0);
 scale_text1 = 1;
 if ( key_state == 2 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_80);}
+if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
 while((string_width(keyboard_get_str(key_set[1]))*scale_text1)&gt;140){scale_text1-=0.025;}
 draw_text_transformed(x_center-352,y_center-195,keyboard_get_str(key_set[1]),scale_text1,scale_text1,0);
 scale_text1 = 1;
 if ( key_state == 3 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_80);}
+if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
 while((string_width(keyboard_get_str(key_set[2]))*scale_text1)&gt;140){scale_text1-=0.025;}
 draw_text_transformed(x_center-195,y_center-195,keyboard_get_str(key_set[2]),scale_text1,scale_text1,0);
 scale_text1 = 1;
 if ( key_state == 4 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_80);}
+if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
 while((string_width(keyboard_get_str(key_set[3]))*scale_text1)&gt;140){scale_text1-=0.025;}
 draw_text_transformed(x_center-38,y_center-195,keyboard_get_str(key_set[3]),scale_text1,scale_text1,0);;
 scale_text1 = 1;
 if ( key_state == 5 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_80);}
+if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
 while((string_width(keyboard_get_str(key_set[4]))*scale_text1)&gt;140){scale_text1-=0.025;}
 draw_text_transformed(x_center+120,y_center-195,keyboard_get_str(key_set[4]),scale_text1,scale_text1,0);
 scale_text1 = 0.9;
 if ( key_state == 6 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_80);}
+if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
 while((string_width(keyboard_get_str(key_set[5]))*scale_text1)&gt;200){scale_text1-=0.025;}
-draw_text_transformed(x_center+410,y_center-230,keyboard_get_str(key_set[5]),scale_text1,scale_text1,0);
+draw_text_transformed(x_center+410,y_center-225,keyboard_get_str(key_set[5]),scale_text1,scale_text1,0);
 
 draw_set_color(c_white);
 break;}}

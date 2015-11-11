@@ -13,9 +13,9 @@ if ( room == rm_garage && menu_set == "none" && !game_time_pause )
 
 switch(game_time_speed)
 {
-case 0:{game_time_seconds+=2/room_speed;break;} // Normal Speed
-case 1:{game_time_seconds+=45/room_speed;break;} // Fast Speed
-case 2:{game_time_seconds+=30+5/room_speed;break;} // Sanic Speed
+case 0:{game_time_seconds+=16/room_speed;break;} // Normal Speed
+case 1:{game_time_seconds+=28+5/room_speed;break;} // Fast Speed
+case 2:{game_time_minutes+=1;game_time_seconds+=30+5/room_speed;break;} // Sanic Speed
 }
 
 // Seconds

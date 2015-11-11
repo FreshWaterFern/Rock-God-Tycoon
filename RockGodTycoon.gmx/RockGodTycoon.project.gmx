@@ -1590,7 +1590,7 @@
           <filename>Sub_Menu_Piece.png</filename>
         </datafile>
         <datafile>
-          <name>Stats Piece.png</name>
+          <name>Stats_Piece.png</name>
           <exists>-1</exists>
           <size>59717</size>
           <exportAction>2</exportAction>
@@ -1604,7 +1604,7 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Stats Piece.png</filename>
+          <filename>Stats_Piece.png</filename>
         </datafile>
         <datafile>
           <name>Stars Outlines.png</name>
@@ -1926,7 +1926,7 @@
   <fonts name="fonts">
     <font>fonts\font_grave_36</font>
     <font>fonts\font_peax_20</font>
-    <font>fonts\font_grave_80</font>
+    <font>fonts\font_grave_60</font>
     <font>fonts\font_peax_70</font>
     <font>fonts\font_peax_28</font>
     <font>fonts\font_metal_14</font>
@@ -1968,7 +1968,7 @@
     </rooms>
   </rooms>
   <constants number="1">
-    <constant name="build_version">"Build 0.0.0.6"</constant>
+    <constant name="build_version">"Build 0.0.0.7"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

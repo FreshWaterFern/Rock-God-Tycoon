@@ -50,7 +50,7 @@ ds_list_add(sprite_list,"Main Game\GUI\Speed 3 Button.png");
 ds_list_add(sprite_list,"Main Game\GUI\Speed 3 Button Effect.png");
 ds_list_add(sprite_list,"Main Game\GUI\Pause Button.png");
 ds_list_add(sprite_list,"Main Game\GUI\Pause Button Effect.png");
-ds_list_add(sprite_list,"Main Game\GUI\Stats Piece.png");
+ds_list_add(sprite_list,"Main Game\GUI\Stats_Piece.png");
 ds_list_add(sprite_list,"Main Game\GUI\Stars Outlines.png");
 ds_list_add(sprite_list,"Main Game\GUI\Stars Fill.png");
 ds_list_add(sprite_list,"Main Game\GUI\Stars BG.png");
