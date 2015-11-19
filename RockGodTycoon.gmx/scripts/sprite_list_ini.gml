@@ -68,6 +68,37 @@ ds_list_add(sprite_list,"Main Game\GUI\Sub_Menu_Piece.png");
 ds_list_add(sprite_list,"Main Game\GUI\Day_Bar_Piece.png");
 ds_list_add(sprite_list,"Main Game\GUI\Date_Box.png");
 ds_list_add(sprite_list,"Main Game\GUI\date_box_back.png");
+
+// Band Info Tab
+ds_list_add(sprite_list,"Band_Info\Binder_Rings.png");
+ds_list_add(sprite_list,"Band_Info\Rivalries Tab\Green Bar.png");
+ds_list_add(sprite_list,"Band_Info\Rivalries Tab\Pointer.png");
+ds_list_add(sprite_list,"Band_Info\Rivalries Tab\Red Bar.png");
+ds_list_add(sprite_list,"Band_Info\Rivalries Tab\Rivalries_Button.png");
+ds_list_add(sprite_list,"Band_Info\Rivalries Tab\Rivalries_Button_Effect.png");
+ds_list_add(sprite_list,"Band_Info\Songs and Records Tab\Song and record Button.png");
+ds_list_add(sprite_list,"Band_Info\Songs and Records Tab\Song and record Button Effect.png");
+ds_list_add(sprite_list,"Band_Info\Band Info Tab\Band Info Button.png");
+ds_list_add(sprite_list,"Band_Info\Band Info Tab\Band Info Button Effect.png");
+ds_list_add(sprite_list,"Band_Info\Band Info Tab\Green_Bar_Tension.png");
+ds_list_add(sprite_list,"Band_Info\Band Info Tab\Red_Bar_Tension.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Bassist.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Bassist Effect.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Blue Bar.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Drummer.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Drummer effect.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Green_bar.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Guitarist_Effect.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Guitarist.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Member Button Effect.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Member Button.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Member Face Piece.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Orange Bar.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Red Bar.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Vocalist.png");
+ds_list_add(sprite_list,"Band_Info\Member Tab\Vocalist Effect.png");
+
+
 ds_list_add(sprite_list,"Notes\Blue.png");
 ds_list_add(sprite_list,"Notes\Blue1.png");
 ds_list_add(sprite_list,"Notes\Green.png");

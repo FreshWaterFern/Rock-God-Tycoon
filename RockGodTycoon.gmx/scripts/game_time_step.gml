@@ -35,10 +35,10 @@ game_time_minutes = clamp(game_time_minutes,0,60);
 }
 
 // Hours
-if ( game_time_hours > 24 )
+if ( game_time_hours > 23 )
 {
 game_time_hours -= 24;
-game_time_hours = clamp(game_time_hours,1,25);
+game_time_hours = clamp(game_time_hours,0,24);
 game_time_day++;
 game_world_date = string(game_time_day)+"/"+string(game_time_month)+"/Year "+string(game_time_year);
 }

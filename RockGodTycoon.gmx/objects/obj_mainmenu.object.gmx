@@ -38,6 +38,11 @@ music_slider = obj_game.g_music;
 sound_slider = obj_game.g_sound;
 key_state = 0;
 track_volume = 0;
+surface_main = surface_create(view_wview[0],view_hview[0]);
+surface_update = true;
+
+x_center = view_wview[0]/2;y_center = view_hview[0]/2;
+y_point = 0;color = 0;gray = make_colour_rgb(200,200,200);
 
 math_set_epsilon(0.0001);
 
@@ -80,229 +85,36 @@ slider_lock[0] = 0;slider_lock[1] = 0;
             <kind>1</kind>
             <string>/// Button Logic
 if ( obj_game.menu_set == "none" ){
-var x_center = view_xport+view_wport[0]/2;var y_center = view_yport+view_hport[0]/2;
-var y_point = 0;mouse_over = -1;
+mouse_over = -1;
 
 switch(menu_state){
-case "Main Menu":{y_point = 192;// Main Menu
+case "Main Menu":{
 
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Main Menu\Buttons\New game button effect.png"]}else{spr[0]=global.sprite_map[?"Main Menu\Buttons\New game button.png"]}
-
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Main Menu\Buttons\Continue button effect.png"]}else{spr[1]=global.sprite_map[?"Main Menu\Buttons\Continue button.png"]}
-
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 2;}if ( button_select == 2 ){
-spr[2]=global.sprite_map[?"Main Menu\Buttons\Load game button effect.png"]}else{spr[2]=global.sprite_map[?"Main Menu\Buttons\Load game button.png"]}
-
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 3;}if ( button_select == 3 ){
-spr[3]=global.sprite_map[?"Main Menu\Buttons\Options button effect.png"]}else{spr[3]=global.sprite_map[?"Main Menu\Buttons\Options button.png"]}
-
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 4;}if ( button_select == 4 ){
-spr[4]=global.sprite_map[?"Main Menu\Buttons\Credits button effect.png"]}else{spr[4]=global.sprite_map[?"Main Menu\Buttons\Credits button.png"]}
-
-y_point -= 116;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 5;}if ( button_select == 5 ){
-spr[5]=global.sprite_map[?"Main Menu\Buttons\Exit game button effect.png"]}else{spr[5]=global.sprite_map[?"Main Menu\Buttons\Exit game button.png"]}
-
-if ( mouse_check_button_released(mb_left) ){
-if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
-switch(button_select){
-case 0:{obj_game.menu_set="start game";break;}
-case 1:{break;}
-case 2:{break;}
-case 3:{menu_state = "Options";state_load=0;break;}
-case 4:{break;}
-case 5:{game_end();break;}
-}}button_select=-2;}
-
-if ( mouse_check_button_pressed(mb_left) ){
-if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}
+step_mainmenu_MainMenu();
 
 break;}
 
-case "Options":{y_point = 334;// Options
+case "Options":{
 
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Options\Buttons\Video settings button effect.png"]}else{spr[0]=global.sprite_map[?"Options\Buttons\Video settings button.png"]}
-
-y_point -= 245;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Options\Buttons\Audio settings button effect.png"]}else{spr[1]=global.sprite_map[?"Options\Buttons\Audio settings button.png"]}
-
-y_point -= 241;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 2;}if ( button_select == 2 ){
-spr[2]=global.sprite_map[?"Options\Buttons\Control settings button effect.png"]}else{spr[2]=global.sprite_map[?"Options\Buttons\Control settings button.png"]}
-
-y_point -= 171;
-if ( mouse_check_area(x_center-200,y_center-y_point-32,x_center+200,y_center-y_point+32) ){mouse_over = 3;}if ( button_select == 3 ){
-spr[3]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[3]=global.sprite_map[?"Back button\Back Button.png"]}
-
-if ( mouse_check_button_released(mb_left) ){
-if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
-switch(button_select){
-case 0:{menu_state = "Video Settings";break;}
-case 1:{menu_state = "Audio Settings";break;}
-case 2:{menu_state = "Control Settings";break;}
-case 3:{menu_state = "Main Menu";break;}
-}}button_select=-2;}
-
-if ( mouse_check_button_pressed(mb_left) ){
-if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}
+step_mainmenu_Options();
 
 break;}
 
 case "Video Settings":{ // Video Settings
 
-if ( mouse_check_area(x_center-325-133-15,y_center-152-30,x_center-325-133+15,y_center-152+30) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[0]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-if ( mouse_check_area(x_center-325+133-15,y_center-152-30,x_center-325+133+15,y_center-152+30) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[1]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-
-if ( mouse_check_area(x_center-325-133-15,y_center+118-30,x_center-325-133+15,y_center+118+30) ){mouse_over = 2;}if ( button_select == 2 ){
-spr[2]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[2]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-if ( mouse_check_area(x_center-325+133-15,y_center+118-30,x_center-325+133+15,y_center+118+30) ){mouse_over = 3;}if ( button_select == 3 ){
-spr[3]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[3]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-
-if ( mouse_check_area(x_center+325-126-15,y_center-152-30,x_center+325-126+15,y_center-152+30) ){mouse_over = 4;}if ( button_select == 4 ){
-spr[4]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[4]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-if ( mouse_check_area(x_center+325+136-15,y_center-152-30,x_center+325+136+15,y_center-152+30) ){mouse_over = 5;}if ( button_select == 5 ){
-spr[5]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[5]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-
-if ( mouse_check_area(x_center+325-126-15,y_center+118-30,x_center+325-126+15,y_center+118+30) ){mouse_over = 6;}if ( button_select == 6 ){
-spr[6]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[6]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-if ( mouse_check_area(x_center+325+136-15,y_center+118-30,x_center+325+136+15,y_center+118+30) ){mouse_over = 7;}if ( button_select == 7 ){
-spr[7]=global.sprite_map[?"Video Settings\Buttons\Arrow button effect.png"]}else{spr[7]=global.sprite_map[?"Video Settings\Buttons\Button.png"]}
-
-if ( mouse_check_area(x_center+270-94,y_center+398-36,x_center+270+94,y_center+398+36) ){mouse_over = 8;}if ( button_select == 8 ){
-spr[8]=global.sprite_map[?"Apply button\Apply button effect.png"]}else{spr[8]=global.sprite_map[?"Apply button\Apply button.png"]}
-if ( mouse_check_area(x_center+505-94,y_center+398-36,x_center+505+94,y_center+398+36) ){mouse_over = 9;}if ( button_select == 9 ){
-spr[9]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[9]=global.sprite_map[?"Back button\Back Button.png"]}
-
-if ( mouse_check_button_released(mb_left) ){
-if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
-switch(button_select){
-case 0:{fxaa_set--;if(fxaa_set&lt;0){fxaa_set=4;}break;}
-case 1:{fxaa_set++;if(fxaa_set&gt;4){fxaa_set=0;}break;}
-case 2:{vsync_set--;if(vsync_set&lt;0){vsync_set=1;}break;}
-case 3:{vsync_set++;if(vsync_set&gt;1){vsync_set=0;}break;}
-case 4:{res_set--;if(res_set&lt;0){res_set=obj_game.res_count-1;}break;}
-case 5:{res_set++;if(res_set&gt;obj_game.res_count-1){res_set=0;}break;}
-case 6:{fs_set--;if(fs_set&lt;0){fs_set=1;}break;}
-case 7:{fs_set++;if(fs_set&gt;1){fs_set=0;}break;}
-case 8:{if ( obj_game.g_vsync != vsync_set || obj_game.g_fs != fs_set ){message_show("The game needs to restart to apply vsync.",0);io_clear();}
-if(obj_game.g_fxaa!=fxaa_set||obj_game.g_vsync!=vsync_set||obj_game.g_res!=res_set||obj_game.g_fs!=fs_set){
-obj_game.g_vsync=vsync_set;obj_game.g_fxaa=fxaa_set;obj_game.g_res=res_set;obj_game.g_fs=fs_set;resolution_update();game_save_settings();}break;}
-case 9:{menu_state = "Options";fxaa_set = obj_game.g_fxaa;vsync_set = obj_game.g_vsync;res_set = obj_game.g_res;fs_set = obj_game.g_fs;state_load=0;break;}
-}}button_select=-2;}
-
-if ( mouse_check_button_pressed(mb_left) ){
-if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}
+step_mainmenu_VideoSettings();
 
 break;}
 
 case "Audio Settings":{ // Audio Settings
 
-if ( mouse_check_area(x_center-530+(375*music_slider)-24,y_center-42-24,x_center-530+(375*music_slider)+24,y_center-42+24) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Audio\Hand.png"]}else{spr[0]=global.sprite_map[?"Audio\Hand.png"]}
-if ( mouse_check_area(x_center+130+(375*sound_slider)-24,y_center-42-24,x_center+130+(375*sound_slider)+24,y_center-42+24) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Audio\Hand.png"]}else{spr[1]=global.sprite_map[?"Audio\Hand.png"]}
-
-if ( mouse_check_area(x_center+245-94,y_center+398-36,x_center+245+94,y_center+398+36) ){mouse_over = 2;}if ( button_select == 2 ){
-spr[2]=global.sprite_map[?"Apply button\Apply button effect.png"]}else{spr[2]=global.sprite_map[?"Apply button\Apply button.png"]}
-if ( mouse_check_area(x_center+480-94,y_center+398-36,x_center+480+94,y_center+398+36) ){mouse_over = 3;}if ( button_select == 3 ){
-spr[3]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[3]=global.sprite_map[?"Back button\Back Button.png"]}
-
-if ( mouse_check_button_released(mb_left) ){slider_lock[0]=0;slider_lock[1]=0;//show_message(string(music_slider));
-if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
-switch(button_select){
-case 0:{fxaa_set--;if(fxaa_set&lt;0){fxaa_set=4;}break;}
-case 1:{fxaa_set++;if(fxaa_set&gt;4){fxaa_set=0;}break;}
-case 2:{if ( obj_game.g_sound != sound_slider ){obj_game.g_sound=sound_slider}if ( obj_game.g_music != music_slider ){obj_game.g_music=music_slider}volume_update();game_save_settings();break;}
-case 3:{music_slider=obj_game.g_music;sound_slider=obj_game.g_sound;menu_state = "Options";volume_update();break;}
-}}button_select=-2;}
-
-if ( mouse_check_button_pressed(mb_left) ){slider_lock[0]=0;slider_lock[1]=0;
-if ( mouse_over != -1 ){button_select = mouse_over;
-if ( button_select == 0 ){slider_lock[0]=1;}
-if ( button_select == 1 ){slider_lock[1]=1;}
-}else{button_select = -2;}}
-
-// Special code for slider handling
-if ( mouse_check_button(mb_left) ){
-audio_emitter_gain(obj_game.emit_sound,sound_slider);audio_emitter_gain(obj_game.emit_music,music_slider);
-if ( slider_lock[0] == 1 ){music_slider = (clamp(device_mouse_x_to_gui(0)-(x_center-530),0,375)/375);}
-if ( slider_lock[1] == 1 ){sound_slider = (clamp(device_mouse_x_to_gui(0)-(x_center+130),0,375)/375);}}
+step_mainmenu_AudioSettings();
 
 break;}
 
 case "Control Settings":{ // Control Settings
 
-if ( mouse_check_area(x_center-507-64,y_center-325-64,x_center-507+64,y_center-325+64) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Notes\Green.png"]}else{spr[0]=global.sprite_map[?"Notes\Green1.png"]}
-if ( mouse_check_area(x_center-352-64,y_center-325-64,x_center-352+64,y_center-325+64) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Notes\Red.png"]}else{spr[1]=global.sprite_map[?"Notes\Red1.png"]}
-if ( mouse_check_area(x_center-195-64,y_center-325-64,x_center-195+64,y_center-325+64) ){mouse_over = 2;}if ( button_select == 2 ){
-spr[2]=global.sprite_map[?"Notes\Yellow.png"]}else{spr[2]=global.sprite_map[?"Notes\Yellow1.png"]}
-if ( mouse_check_area(x_center-38-64,y_center-325-64,x_center-38+64,y_center-325+64) ){mouse_over = 3;}if ( button_select == 3 ){
-spr[3]=global.sprite_map[?"Notes\Blue.png"]}else{spr[3]=global.sprite_map[?"Notes\Blue1.png"]}
-if ( mouse_check_area(x_center+120-64,y_center-325-64,x_center+120+64,y_center-325+64) ){mouse_over = 4;}if ( button_select == 4 ){
-spr[4]=global.sprite_map[?"Notes\Orange.png"]}else{spr[4]=global.sprite_map[?"Notes\Orange1.png"]}
-if ( mouse_check_area(x_center+404-115,y_center-325-22,x_center+404+115,y_center-325+22) ){mouse_over = 5;}if ( button_select == 5 ){
-spr_internal[0]=real(obj_game.img_ext[14]);}else{spr_internal[0]=real(obj_game.img_ext[13]);}
-
-
-if ( mouse_check_area(x_center+245-94,y_center+398-36,x_center+245+94,y_center+398+36) ){mouse_over = 6;}if ( button_select == 6 ){
-spr[6]=global.sprite_map[?"Apply button\Apply button effect.png"]}else{spr[6]=global.sprite_map[?"Apply button\Apply button.png"]}
-if ( mouse_check_area(x_center+480-94,y_center+398-36,x_center+480+94,y_center+398+36) ){mouse_over = 7;}if ( button_select == 7 ){
-spr[7]=global.sprite_map[?"Back button\Back Button effect.png"]}else{spr[7]=global.sprite_map[?"Back button\Back Button.png"]}
-
-if ( mouse_check_area(x_center-250-64,y_center+60-22,x_center-250+64,y_center+60+22) ){mouse_over = 8;}if ( button_select == 8 ){
-spr_internal[1]=real(obj_game.img_ext[16]);}else{spr_internal[1]=real(obj_game.img_ext[15]);}
-
-if ( mouse_check_area(x_center-250-64,y_center+160-22,x_center-250+64,y_center+160+22) ){mouse_over = 9;}if ( button_select == 9 ){
-spr_internal[2]=real(obj_game.img_ext[18]);}else{spr_internal[2]=real(obj_game.img_ext[17]);}
-
-if ( mouse_check_area(x_center-250-64,y_center+250-22,x_center-250+64,y_center+250+22) ){mouse_over = 10;}if ( button_select == 10 ){
-spr_internal[3]=real(obj_game.img_ext[20]);}else{spr_internal[3]=real(obj_game.img_ext[19]);}
-
-if ( mouse_check_button_released(mb_left) ){
-if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
-key_state=button_select+1;
-switch(button_select){
-case 6:{
-obj_game.control_map[?"key1"] = keyboard_set_key(obj_game.control_map[?"key1"],key_set[0]);
-obj_game.control_map[?"key2"] = keyboard_set_key(obj_game.control_map[?"key2"],key_set[1]);
-obj_game.control_map[?"key3"] = keyboard_set_key(obj_game.control_map[?"key3"],key_set[2]);
-obj_game.control_map[?"key4"] = keyboard_set_key(obj_game.control_map[?"key4"],key_set[3]);
-obj_game.control_map[?"key5"] = keyboard_set_key(obj_game.control_map[?"key5"],key_set[4]);
-obj_game.control_map[?"key6"] = keyboard_set_key(obj_game.control_map[?"key6"],key_set[5]);
-game_save_settings();break;}
-case 7:{for(var i=5;i&gt;=0;i--){key_set[i]=obj_game.control_map[?"key"+string(i+1)];}menu_state = "Options";break;}
-case 8:{key_set[0]=ord("Z");key_set[1]=ord("X");key_set[2]=ord("C");key_set[3]=ord("V");key_set[4]=ord("B");key_set[5]=vk_enter;break;}
-case 9:{key_set[0]=ord("1");key_set[1]=ord("2");key_set[2]=ord("3");key_set[3]=ord("4");key_set[4]=ord("5");key_set[5]=vk_enter;break;}
-case 10:{key_set[0]=obj_game.control_map[?"key1"];key_set[1]=obj_game.control_map[?"key2"];key_set[2]=obj_game.control_map[?"key3"];key_set[3]=obj_game.control_map[?"key4"];key_set[4]=obj_game.control_map[?"key5"];key_set[5]=obj_game.control_map[?"key6"];break;}
-}}button_select=-2;}
-
-if ( mouse_check_button_pressed(mb_left) ){
-if ( mouse_over != -1 ){button_select = mouse_over;key_state=0;
-if ( button_select == 0 ){}
-if ( button_select == 1 ){}
-}else{button_select = -2;}}
-
-if ( keyboard_check(vk_anykey) ){
-switch(key_state){
-case 1:{key_set[0] = keyboard_set_key(obj_game.control_map[?"key1"],keyboard_key);break;}
-case 2:{key_set[1] = keyboard_set_key(obj_game.control_map[?"key2"],keyboard_key);break;}
-case 3:{key_set[2] = keyboard_set_key(obj_game.control_map[?"key3"],keyboard_key);break;}
-case 4:{key_set[3] = keyboard_set_key(obj_game.control_map[?"key4"],keyboard_key);break;}
-case 5:{key_set[4] = keyboard_set_key(obj_game.control_map[?"key5"],keyboard_key);break;}
-case 6:{key_set[5] = keyboard_set_key(obj_game.control_map[?"key6"],keyboard_key);break;}
-}key_state=0;keyboard_clear(keyboard_key)}
+step_mainmenu_ControlSettings();
 
 break;}}}
 </string>
@@ -353,6 +165,7 @@ audio_sound_gain(track,0,1200);}}
             <kind>1</kind>
             <string>/// Unload Menu Data
 spr=0;key_set=0;spr_internal=0;audio_stop_sound(track);
+surface_free(surface_main);
 </string>
           </argument>
         </arguments>
@@ -400,265 +213,50 @@ track = audio_play(1,1,1,2);
           <argument>
             <kind>1</kind>
             <string>/// Render
-var x_center = view_wview[0]/2;var y_center = view_hview[0]/2;
-var y_point = 0;var color = 0;var gray = make_colour_rgb(200,200,200);
+
+if ( !surface_exists(surface_main) ){
+surface_main = surface_create(view_wview[0],view_hview[0]);
+surface_update = true;}
 
 switch(menu_state){
+
 case "Main Menu":{ // Main Menu
 
-// Do Whatever Special Code Here
-if ( light_rot1 &lt; 2.5 ){light_rot_speed1 = 0.05;}if ( light_rot1 &gt; 11 ){light_rot_speed1 = -0.05;}
-light_rot1 += light_rot_speed1;
+draw_mainmenu_MainMenu();
 
-// Menu Pieces
-draw_background(obj_game.img_ext[0],0,0);
-draw_external_sprite(global.sprite_map[?"Main Menu\Paper Light Reflection.png"],0,x_center,y_center);
-draw_sprite_ext(obj_game.img_ext[10],0,x_center-920,y_center-540,1,1,light_rot1,c_white,1);
-draw_sprite_ext(obj_game.img_ext[10],0,x_center+920,y_center-540,-1,1,-light_rot1,c_white,1);
-draw_background(obj_game.img_ext[3],x_center-515,y_center-491);
-
-// Buttons
-y_point = 192;
-// New Game
-if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Continue
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Load Game
-if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
-draw_external_sprite_ext(spr[2],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Options
-if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Credits
-if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
-draw_external_sprite_ext(spr[4],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
-// Exit Game
-if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
-draw_external_sprite_ext(spr[5],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 116;
 break;}
 
 case "Options":{ // Options Menu
 
-// Do Whatever Special Code Here
-if ( light_rot2 &lt; -1 ){light_rot_speed2 = 0.025;}if ( light_rot2 &gt; 3.5 ){light_rot_speed2 = -0.025;}
-light_rot2 += light_rot_speed2;
+draw_mainmenu_Options();
 
-if ( speaker_move1 &lt; 0 ){speaker_move_speed1 = 0.15;}if ( speaker_move1 &gt; 12 ){speaker_move_speed1 = -0.15;}
-speaker_move1 += speaker_move_speed1;
-
-// Menu Pieces
-draw_background(obj_game.img_ext[1],0,0);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center-920,y_center+580,1,1,light_rot2,c_white,1);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center+920,y_center+580,-1,1,-light_rot2,c_white,1);
-draw_external_sprite_ext(global.sprite_map[?"Options\Speaker.png"],0,x_center-900-speaker_move1,y_center-470-speaker_move1,1,1,0,c_white,1);
-draw_external_sprite_ext(global.sprite_map[?"Options\Speaker.png"],0,x_center+900+speaker_move1,y_center-470-speaker_move1,-1,1,0,c_white,1);
-draw_background(obj_game.img_ext[4],x_center-431,y_center-451);
-
-// Buttons
-y_point = 328;
-// Video Settings
-if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 250;
-// Audio Settings
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 248;
-// Control Settings
-if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
-draw_external_sprite_ext(spr[2],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 165;
-// Back
-if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,x_center,y_center-y_point,1,1,0,color,1);y_point -= 212;
 break;}
 
 case "Video Settings":{ // Video Settings
 
-// Do Whatever Special Code Here
-if ( light_rot3 &lt; 35 ){light_rot_speed3 = 0.05;}if ( light_rot3 &gt; 50 ){light_rot_speed3 = -0.05;}
-light_rot3 += light_rot_speed3;
-if ( tv_move1 &lt; -6 ){tv_move_speed1 = 0.1;}if ( tv_move1 &gt; 6 ){tv_move_speed1 = -0.1;}
-tv_move1 += tv_move_speed1;
-if ( remote_move1 &lt; -6 ){remote_move_speed1 = 0.1;}if ( remote_move1 &gt; 6 ){remote_move_speed1 = -0.1;}
-remote_move1 += remote_move_speed1;
+draw_mainmenu_VideoSettings();
 
-// Menu Pieces
-draw_background(obj_game.img_ext[2],0,0);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center-1050,y_center,1,1,light_rot3-80,c_white,1);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center+1050,y_center,-1,1,-light_rot3+80,c_white,1);
-draw_sprite_ext(obj_game.img_ext[9],0,x_center-828+tv_move1,y_center+260-tv_move1,0.9,0.9,0,c_white,1);
-draw_external_sprite_ext(global.sprite_map[?"Video Settings\Controller.png"],0,x_center+828-(remote_move1/-2),y_center-360+remote_move1,0.9,0.9,0,c_white,1);
-draw_background(obj_game.img_ext[5],x_center-667,y_center-517.5);
-
-// Buttons
-y_point = 328;
-
-if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center-328-130,y_center-152,1,1,0,color,1);
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center-328+136,y_center-152,-1,1,0,color,1);
-
-if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
-draw_external_sprite_ext(spr[2],0,x_center-328-130,y_center+118,1,1,0,color,2);
-if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,x_center-328+136,y_center+118,-1,1,0,color,3);
-
-if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
-draw_external_sprite_ext(spr[4],0,x_center+328-130,y_center-152,1,1,0,color,4);
-if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
-draw_external_sprite_ext(spr[5],0,x_center+328+136,y_center-152,-1,1,0,color,5);
-
-if ( mouse_over != 6 ){color = c_white}else{color = gray}if ( button_select == 6 ){color = c_white}
-draw_external_sprite_ext(spr[6],0,x_center+328-130,y_center+118,1,1,0,color,6);
-if ( mouse_over != 7 ){color = c_white}else{color = gray}if ( button_select == 7 ){color = c_white}
-draw_external_sprite_ext(spr[7],0,x_center+328+136,y_center+118,-1,1,0,color,7);
-
-if ( mouse_over != 8 ){color = c_white}else{color = gray}if ( button_select == 8 ){color = c_white}
-draw_external_sprite_ext(spr[8],0,x_center+270,y_center+398,1,1,0,color,1);
-if ( mouse_over != 9 ){color = c_white}else{color = gray}if ( button_select == 9 ){color = c_white}
-draw_external_sprite_ext(spr[9],0,x_center+505,y_center+398,1,1,0,color,1);
-
-// Draw Text
-draw_set_font(font_grave_36);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_black);var str = "";
-switch(fxaa_set){case 0:{str="Off";break;}case 1:{str="2X";break;}case 2:{str="4X";break;}case 3:{str="8X";break;}case 4:{str="16X";break;}}
-draw_text(x_center-325,y_center-144,str);
-if(vsync_set){str="On";}else{str="Off";}
-draw_text(x_center-325,y_center+126,str);
-draw_text(x_center+325,y_center-144,resolution_get(res_set));
-if(fs_set){str="On";}else{str="Off";}
-draw_text(x_center+325,y_center+126,str);
-
-draw_set_color(c_white);
 break;}
 
 case "Audio Settings":{ // Audio Settings
 
+draw_mainmenu_AudioSettings();
 
-// Do Whatever Special Code Here
-if ( light_rot3 &lt; 35 ){light_rot_speed3 = 0.05;}if ( light_rot3 &gt; 50 ){light_rot_speed3 = -0.05;}
-light_rot3 += light_rot_speed3;
-
-if ( mic_rot1 &lt; 0 ){mic_rot_speed1 += 0.015;}if ( mic_rot1 &gt; 0 ){mic_rot_speed1 += -0.015;}
-mic_rot1 += mic_rot_speed1;
-
-if ( tv_move1 &lt; -6 ){tv_move_speed1 = 0.1;}if ( tv_move1 &gt; 6 ){tv_move_speed1 = -0.1;}
-tv_move1 += tv_move_speed1;
-
-// Menu Pieces
-draw_background(obj_game.img_ext[2],0,0);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center-1050,y_center,1,1,light_rot3-80,c_white,1);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center+1050,y_center,-1,1,-light_rot3+80,c_white,1);
-draw_sprite_ext(obj_game.img_ext[7],0,x_center+840,-10,1,1,mic_rot1,c_white,1);
-draw_sprite(obj_game.img_ext[8],0,x_center-800+(tv_move1/2),800-tv_move1);
-draw_background(obj_game.img_ext[6],x_center-667,y_center-517.5);
-
-// Buttons
-y_point = 328;
-
-if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center-530+(375*music_slider),y_center-52,1,1,0,color,1);
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center+130+(375*sound_slider),y_center-52,1,1,0,color,1);
-
-if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
-draw_external_sprite_ext(spr[2],0,x_center+245,y_center+398,1,1,0,color,1);
-if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,x_center+480,y_center+398,1,1,0,color,1);
-
-draw_set_color(c_white);
 break;}
 
 case "Control Settings":{ // Audio Settings
 
+draw_mainmenu_ControlSettings();
 
-// Do Whatever Special Code Here
-if ( light_rot3 &lt; 35 ){light_rot_speed3 = 0.05;}if ( light_rot3 &gt; 50 ){light_rot_speed3 = -0.05;}
-light_rot3 += light_rot_speed3;
+break;}
 
-if ( mic_rot1 &lt; 0 ){mic_rot_speed1 += 0.015;}if ( mic_rot1 &gt; 0 ){mic_rot_speed1 += -0.015;}
-mic_rot1 += mic_rot_speed1;
-
-if ( tv_move1 &lt; -6 ){tv_move_speed1 = 0.1;}if ( tv_move1 &gt; 6 ){tv_move_speed1 = -0.1;}
-tv_move1 += tv_move_speed1;
-
-// Menu Pieces
-draw_background(obj_game.img_ext[2],0,0);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center-1050,y_center,1,1,light_rot3-80,c_white,1);
-draw_sprite_ext(obj_game.img_ext[11],0,x_center+1050,y_center,-1,1,-light_rot3+80,c_white,1);
-draw_sprite_ext(obj_game.img_ext[21],0,x_center+840,-10,1,1,mic_rot1-10,c_white,1);
-draw_sprite(obj_game.img_ext[22],0,x_center-800+tv_move1,960-tv_move1);
-draw_background(obj_game.img_ext[12],x_center-667,y_center-517.5);
-
-if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,x_center-507,y_center-325,1,1,0,color,1);
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,x_center-352,y_center-325,1,1,0,color,1);
-if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
-draw_external_sprite_ext(spr[2],0,x_center-195,y_center-325,1,1,0,color,1);
-if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,x_center-38,y_center-325,1,1,0,color,1);
-if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
-draw_external_sprite_ext(spr[4],0,x_center+120,y_center-325,1,1,0,color,1);
-if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
-draw_sprite_ext(real(spr_internal[0]),0,x_center+410,y_center-318,1.25,1.25,0,color,1);
-
-// Buttons
-y_point = 328;
-
-if ( mouse_over != 6 ){color = c_white}else{color = gray}if ( button_select == 6 ){color = c_white}
-draw_external_sprite_ext(spr[6],0,x_center+245,y_center+398,1,1,0,color,1);
-if ( mouse_over != 7 ){color = c_white}else{color = gray}if ( button_select == 7 ){color = c_white}
-draw_external_sprite_ext(spr[7],0,x_center+480,y_center+398,1,1,0,color,1);
-
-if ( mouse_over != 8 ){color = c_white}else{color = gray}if ( button_select == 8 ){color = c_white}
-draw_sprite_ext(real(spr_internal[1]),0,x_center-250,y_center+60,1,1,0,color,1);
-if ( mouse_over != 9 ){color = c_white}else{color = gray}if ( button_select == 9 ){color = c_white}
-draw_sprite_ext(real(spr_internal[2]),0,x_center-250,y_center+160,1,1,0,color,1);
-if ( mouse_over != 10 ){color = c_white}else{color = gray}if ( button_select == 10 ){color = c_white}
-draw_sprite_ext(real(spr_internal[3]),0,x_center-250,y_center+250,1,1,0,color,1);
-
-
-
-// Draw Text
-var color = make_colour_hsv(48,42,100);
-draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_black);var str = "";
-var scale_text1 = 1;
-if ( key_state == 1 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
-while((string_width(string(keyboard_get_str(key_set[0])))*scale_text1)&gt;140){scale_text1-=0.025;}
-draw_text_transformed(x_center-507,y_center-195,string(keyboard_get_str(key_set[0])),scale_text1,scale_text1,0);
-scale_text1 = 1;
-if ( key_state == 2 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
-while((string_width(keyboard_get_str(key_set[1]))*scale_text1)&gt;140){scale_text1-=0.025;}
-draw_text_transformed(x_center-352,y_center-195,keyboard_get_str(key_set[1]),scale_text1,scale_text1,0);
-scale_text1 = 1;
-if ( key_state == 3 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
-while((string_width(keyboard_get_str(key_set[2]))*scale_text1)&gt;140){scale_text1-=0.025;}
-draw_text_transformed(x_center-195,y_center-195,keyboard_get_str(key_set[2]),scale_text1,scale_text1,0);
-scale_text1 = 1;
-if ( key_state == 4 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
-while((string_width(keyboard_get_str(key_set[3]))*scale_text1)&gt;140){scale_text1-=0.025;}
-draw_text_transformed(x_center-38,y_center-195,keyboard_get_str(key_set[3]),scale_text1,scale_text1,0);;
-scale_text1 = 1;
-if ( key_state == 5 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
-while((string_width(keyboard_get_str(key_set[4]))*scale_text1)&gt;140){scale_text1-=0.025;}
-draw_text_transformed(x_center+120,y_center-195,keyboard_get_str(key_set[4]),scale_text1,scale_text1,0);
-scale_text1 = 0.9;
-if ( key_state == 6 ){draw_set_color(color);}else{draw_set_color(c_black);}
-if ( key_set[0]==192 || key_set[0]==219 || key_set[0]==221 ){draw_set_font(font_peax_70);}else{draw_set_font(font_grave_60);}
-while((string_width(keyboard_get_str(key_set[5]))*scale_text1)&gt;200){scale_text1-=0.025;}
-draw_text_transformed(x_center+410,y_center-225,keyboard_get_str(key_set[5]),scale_text1,scale_text1,0);
-
-draw_set_color(c_white);
-break;}}
+}
 
 // Version Number
 draw_set_font(font_grave_36);draw_set_halign(fa_left);draw_set_valign(fa_bottom);draw_set_color(c_white);
 draw_text(view_xview[0],view_yview[0]+view_hview[0],build_version);
+
+if ( surface_update ){surface_update=false;}
 </string>
           </argument>
         </arguments>

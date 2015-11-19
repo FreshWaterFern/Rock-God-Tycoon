@@ -109,6 +109,47 @@ ds_list_add(game_month_day_count,31);
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// In-Game Variables
+
+// -- Statistics -- \\
+stat_songs_created = 0;
+stat_songs_written = 0;
+stat_songs_generated = 0;
+stat_best_rated_song = "Bunny Blow Out";
+stat_singles_released = 0;
+stat_eps_released = 0;
+stat_lps_released = 0;
+stat_best_rated_single = "Clown Boner";
+stat_best_rated_ep = "Clown Boner (Part II)";
+stat_best_rated_lp = "I Forgot The Notes";
+stat_record_deal_previous = "Ubisuck";
+stat_record_deal_current = "Pipe Dream";
+stat_label_name = "Dick Butt";
+stat_labelband_relationship = "It's Complicated";
+stat_label_status = "Ok";
+stat_contract_type = "The Bad Kind";
+stat_contract_duration = "6 Months";
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="1">
       <action>
@@ -311,7 +352,6 @@ draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
             <kind>1</kind>
             <string>/// Pre-load Assets
 
-draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 volume_update();
 
 if ( room == rm_main ){ // Main Menu
@@ -342,7 +382,6 @@ img_ext[21]=sprite_add("Controls Sub Menu\Mouse.png",0,0,0,10,1);
 img_ext[22]=sprite_add("Controls Sub Menu\Keyboard.png",0,0,0,162,171);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 audio_ext[1]=audio_create_stream("sound_files\bg_music01.ogg");
-draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 }
 
 if ( room == rm_intro ){ // Intro
@@ -359,13 +398,17 @@ img_ext[9]=sprite_add("Intro\Part I\Buttons\Drummer Button Effect.png",0,0,0,76,
 img_ext[10]=sprite_add("Intro\Part I\Buttons\Hand.png",0,0,0,2,202);
 img_ext[11]=sprite_add("Intro\Part I\Signature.png",39,false,false,76,38);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
-draw_set_blend_mode(bm_normal);draw_set_alpha(1);draw_set_color(c_white);
 }
 
 if ( room == rm_garage ){ // Garage
 img_ext[10]=background_add("Main Game\GUI\Background.png",0,0);
 img_ext[11]=background_add("Main Game\GUI\Evening_Background.png",0,0);
 img_ext[12]=background_add("Main Game\GUI\Night_Background.png",0,0);
+img_ext[13]=background_add("Band_Info\Background.png",0,0);
+img_ext[14]=background_add("Band_Info\Rivalries Tab\Band_Info_Submenu.png",0,0);
+img_ext[15]=background_add("Band_Info\Songs and Records Tab\Songs_and_Records_Paper_Piece.png",0,0);
+img_ext[16]=background_add("Band_Info\Band Info Tab\Band_Info_Paper_Piece.png",0,0);
+img_ext[17]=background_add("Band_Info\Member Tab\Member_Paper_Piece.png",0,0);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 }
 </string>

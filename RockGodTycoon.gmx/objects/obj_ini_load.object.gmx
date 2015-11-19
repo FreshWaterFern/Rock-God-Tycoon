@@ -71,6 +71,7 @@ sprite_external_set_offset(global.sprite_map[? sprite_list[|i]],sprite_external_
 ds_list_destroy(sprite_list);
 
 room_goto_next();
+//room_goto(rm_performance);
 </string>
           </argument>
         </arguments>
