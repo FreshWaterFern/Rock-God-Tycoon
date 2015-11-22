@@ -13,30 +13,45 @@ var binder_center = 941;
 draw_background(obj_game.img_ext[13],0,0);
 if ( band_info_page_left == 0 ){
 
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,285,370,1,1,0,color,1);
+if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
+draw_external_sprite_ext(spr[0],0,285,213,1,1,0,color,1);
 
 draw_background_part_ext(obj_game.img_ext[10],1920,0,676,832,260,120,1,1,c_white,1);
 
-if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,285,213,1,1,0,color,1);}
+if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
+draw_external_sprite_ext(spr[1],0,285,370,1,1,0,color,1);}
 
 else{
+
+if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
+draw_external_sprite_ext(spr[1],0,285,370,1,1,0,color,1);
+
+draw_background_part_ext(obj_game.img_ext[10],1920,2496,676,832,260,120,1,1,c_white,1);
 
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
 draw_external_sprite_ext(spr[0],0,285,213,1,1,0,color,1);
 
-draw_background_part_ext(obj_game.img_ext[10],1920,2496,676,832,260,120,1,1,c_white,1);
-
-
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,285,370,1,1,0,color,1);
 }
 
 if ( band_info_page_right == 0 ){
-draw_background_part_ext(obj_game.img_ext[10],1920,832,676,832,binder_center+10,120,1,1,c_white,1);}
+
+if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
+draw_external_sprite_ext(spr[2],0,1596,213,1,1,0,color,1);
+
+draw_background_part_ext(obj_game.img_ext[10],1920,832,676,832,binder_center+10,120,1,1,c_white,1);
+
+if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
+draw_external_sprite_ext(spr[3],0,1596,370,1,1,0,color,1);}
 
 else{
+
+if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
+draw_external_sprite_ext(spr[3],0,1596,370,1,1,0,color,1);
+
+draw_background_part_ext(obj_game.img_ext[10],1920,1664,676,832,binder_center+10,120,1,1,c_white,1);
+
+if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
+draw_external_sprite_ext(spr[2],0,1596,213,1,1,0,color,1);
 
 }
 
@@ -93,7 +108,14 @@ draw_text(1426,772,obj_game.stat_contract_type); // "type of contract:"
 draw_text(1430,802,obj_game.stat_contract_duration); // "contract duration:"
 }
 else{
-
+draw_text(1176,213,"Seabass And Friends"); // "band name:"
+draw_text(1218,244,"Punk Rock/Rap/Classical"); // "sub genre/style:"
+draw_text(1166,275,"1"); // "total fans:"
+draw_text(1175,306,"27"); // "total songs:"
+draw_text(1184,336,"2"); // "total albums:"
+draw_text(1224,368,"1"); // "total albums sold:"
+draw_text(1232,399,"Baby Biscuits"); // "best selling album:"
+draw_text(1193,710,"Cartoon Nutworks"); // "sponsered by:"
 }
 
 
@@ -131,6 +153,6 @@ draw_external_sprite_ext(spr[8],0,752,204,1,1,0,color,1); // "Drummer Button"
 }
 
 // Debug
-//draw_external_sprite(spr[1],0,mouse_x,mouse_y);
+//draw_external_sprite(spr[2],0,mouse_x,mouse_y);
 //draw_text(mouse_x+32,mouse_y,string(mouse_x)+","+string(mouse_y));
 //if ( mouse_check_button_pressed(mb_left) ){show_message(string(mouse_x)+","+string(mouse_y));}
