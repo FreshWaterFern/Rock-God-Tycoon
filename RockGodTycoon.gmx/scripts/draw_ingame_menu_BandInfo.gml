@@ -16,7 +16,7 @@ if ( band_info_page_left == 0 ){
 if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
 draw_external_sprite_ext(spr[1],0,285,370,1,1,0,color,1);
 
-draw_background(obj_game.img_ext[14],260,120);
+draw_background_part_ext(obj_game.img_ext[10],1920,0,676,832,260,120,1,1,c_white,1);
 
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
 draw_external_sprite_ext(spr[0],0,285,213,1,1,0,color,1);}
@@ -26,14 +26,19 @@ else{
 if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
 draw_external_sprite_ext(spr[0],0,285,213,1,1,0,color,1);
 
-draw_background(obj_game.img_ext[17],260,120);
+draw_background_part_ext(obj_game.img_ext[10],1920,2496,676,832,260,120,1,1,c_white,1);
+
 
 if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
 draw_external_sprite_ext(spr[1],0,285,370,1,1,0,color,1);
 }
 
 if ( band_info_page_right == 0 ){
-draw_background(obj_game.img_ext[15],binder_center+10,120);}
+draw_background_part_ext(obj_game.img_ext[10],1920,832,676,832,binder_center+10,120,1,1,c_white,1);}
+
+else{
+
+}
 
 if ( surface_update ){
 
@@ -50,16 +55,22 @@ if ( band_info_page_left == 0 ){
 draw_text(420,586,"Test String"); // "Ends At:"
 draw_text(466,617,"Test String"); // "Winner Gets:"
 draw_text(511,710,"Test String"); // "Previous Rivalries:"
-draw_text(480,741,"Test String"); // "Current Rivalries"
+draw_text(480,741,"Test String"); // "Current Rivalries""
 draw_text(480,772,"Test String"); // "Rivalries Won:"
 draw_text(480,803,"Test String"); // "Rivalries Lost:"
 }
 else{
-draw_text(466,617,"Test String"); // "Winner Gets:"
-draw_text(511,710,"Test String"); // "Previous Rivalries:"
-draw_text(480,741,"Test String"); // "Current Rivalries"
-draw_text(480,772,"Test String"); // "Rivalries Won:"
-draw_text(480,803,"Test String"); // "Rivalries Lost:"
+draw_text(598,337,"Saggy Sally"); // "Name:"
+draw_text(631,367,"Sally"); // "Surname:"
+draw_text(639,398,"Saggy Sal"); // "Nickname:"
+draw_text(645,429,"Vocalist"); // "Band Role:"
+draw_text(689,461,"The Fish Sticks"); // "Previous Bands:"
+draw_text(614,493,"$25,000"); // "Salary:"
+draw_text(481,523,"Saggy old ladies can sing like a black girls."); // "Personal Quotes:"
+draw_text(757,648,"1"); // "Star Quality:"
+draw_text(752,679,"7"); // "Musical Skill:"
+draw_text(765,710,"4"); // "Writing Skill:"
+draw_text(681,741,"5"); // "Ego:"
 }
 
 // Right Side
@@ -80,6 +91,9 @@ draw_text(1480,710,obj_game.stat_labelband_relationship); // "label-band relatio
 draw_text(1390,740,obj_game.stat_label_status); // "label obj_game.status:"
 draw_text(1426,772,obj_game.stat_contract_type); // "type of contract:"
 draw_text(1430,802,obj_game.stat_contract_duration); // "contract duration:"
+}
+else{
+
 }
 
 
@@ -110,6 +124,9 @@ draw_external_sprite_ext(spr[6],0,508,204,1,1,0,color,1); // "Bassist Button"
 
 if ( mouse_over != 7 ){color = c_white}else{color = gray}if ( button_select == 7 ){color = c_white}
 draw_external_sprite_ext(spr[7],0,630,204,1,1,0,color,1); // "Drummer Button"
+
+if ( mouse_over != 8 ){color = c_white}else{color = gray}if ( button_select == 8 ){color = c_white}
+draw_external_sprite_ext(spr[8],0,752,204,1,1,0,color,1); // "Drummer Button"
 
 }
 

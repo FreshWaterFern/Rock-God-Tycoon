@@ -34,6 +34,7 @@ message_pressed = 0;
 message_over = 0;
 message_id = 0;
 draw_fade = 0;
+surface_1 = 0;
 </string>
           </argument>
         </arguments>
@@ -410,6 +411,24 @@ img_ext[15]=background_add("Band_Info\Songs and Records Tab\Songs_and_Records_Pa
 img_ext[16]=background_add("Band_Info\Band Info Tab\Band_Info_Paper_Piece.png",0,0);
 img_ext[17]=background_add("Band_Info\Member Tab\Member_Paper_Piece.png",0,0);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
+
+// Save memory by importing backgrounds to a single surface where possible
+if ( !surface_exists(surface_1) ){
+surface_1 = surface_create(2596,3328);}
+surface_set_target(surface_1);
+draw_clear_alpha(0,0);
+draw_background(img_ext[10],0,0);draw_background(img_ext[11],0,1080);
+draw_background(img_ext[12],0,2160);draw_background(img_ext[14],1920,0);
+draw_background(img_ext[15],1920,832);draw_background(img_ext[16],1920,1664);
+draw_background(img_ext[17],1920,2496);
+surface_reset_target();
+background_delete(img_ext[10]);background_delete(img_ext[11]);background_delete(img_ext[12]);
+background_delete(img_ext[14]);background_delete(img_ext[15]);background_delete(img_ext[16]);
+background_delete(img_ext[17]);
+img_ext[10]=background_create_from_surface(surface_1,0,0,2596,3328,false,false);
+surface_free(surface_1);
+// End surface cache
+
 }
 </string>
           </argument>
@@ -585,30 +604,6 @@ if(g_fxaa&gt;0){shader_reset();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Render Loading Screen
-if ( room == rm_loading ){
-draw_set_font(font_grave_36);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_white);
-draw_text(960,540,"Loading...");}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// Special Drawing
 if ( menu_set == "start game" ){
 draw_set_alpha(draw_fade);draw_set_color(c_black);
@@ -668,6 +663,36 @@ draw_text(view_xview[0]+(view_wview[0]/2)-225,view_yview[0]+(view_hview[0]/2)-10
             <kind>1</kind>
             <string>/// GUI Scale Update
 display_set_gui_size(view_wview[0],view_hview[0]);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Render Loading Screen
+if ( room == rm_loading ){
+draw_set_font(font_grave_36);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_white);
+draw_text(view_wview[0]/2,view_hview[0]/2,"Loading...");}
+
+if ( draw_fade &gt;= 0.95 ){
+draw_set_font(font_grave_36);draw_set_halign(fa_center);draw_set_valign(fa_middle);draw_set_color(c_white);
+draw_set_alpha(draw_fade);
+draw_text(view_wview[0]/2,view_hview[0]/2,"Loading...");
+draw_set_alpha(1);}
 </string>
           </argument>
         </arguments>

@@ -24,7 +24,7 @@ if ( obj_game.game_time_hours < 15 ){
 day_alpha = clamp((((obj_game.game_time_minutes-360)+(obj_game.game_time_hours*60))/180),0,1);}
 if ( obj_game.game_time_hours > 14 ){
 day_alpha = 1-clamp((((obj_game.game_time_minutes-900)+(obj_game.game_time_hours*60))/180),0,1);}
-draw_background_ext(obj_game.img_ext[10],0,0,1,1,0,c_white,day_alpha);}
+draw_background_part_ext(obj_game.img_ext[10],0,0,1920,1080,0,0,1,1,c_white,day_alpha);}
 
 // Evening
 if ( obj_game.game_time_hours < 21 && obj_game.game_time_hours > 14 )
@@ -35,7 +35,7 @@ if ( obj_game.game_time_hours > 17 ){
 evening_alpha = 1-clamp((((obj_game.game_time_minutes-1140)+(obj_game.game_time_hours*60))/120),0,1);}
 shader_set(sha_overlay);
 texture_set_stage(tex_overlay,background_get_texture(bg_orange));
-draw_background_ext(obj_game.img_ext[11],0,0,1,1,0,c_white,evening_alpha);
+draw_background_part_ext(obj_game.img_ext[10],0,1080,1920,1080,0,0,1,1,c_white,evening_alpha);
 shader_reset();
 }
 
@@ -48,7 +48,7 @@ if ( obj_game.game_time_hours > 17 ){
 night_alpha = clamp((((obj_game.game_time_minutes-1140)+(obj_game.game_time_hours*60))/120),0,1);}
 shader_set(sha_overlay);
 texture_set_stage(tex_overlay,background_get_texture(bg_blue));
-draw_background_ext(obj_game.img_ext[12],0,0,1,1,0,c_white,night_alpha);
+draw_background_part_ext(obj_game.img_ext[10],0,0,1920,2160,0,0,1,1,c_white,night_alpha);
 shader_reset();
 }
 
