@@ -24,36 +24,30 @@ surface_update = false;
 
 draw_surface(surface_main,0,0);
 
-// Head Button
-if ( mouse_over != 0 ){color = c_white}else{color = gray}if ( button_select == 0 ){color = c_white}
-draw_external_sprite_ext(spr[0],0,130,view_hview[0]-78,1,1,0,color,1);
-// Outfit Buttons
-if ( mouse_over != 1 ){color = c_white}else{color = gray}if ( button_select == 1 ){color = c_white}
-draw_external_sprite_ext(spr[1],0,412,view_hview[0]-78,1,1,0,color,1);
-// Tattoos Button
-if ( mouse_over != 2 ){color = c_white}else{color = gray}if ( button_select == 2 ){color = c_white}
-draw_external_sprite_ext(spr[2],0,706,view_hview[0]-78,1,1,0,color,1);
-// Instrument Button
-if ( mouse_over != 3 ){color = c_white}else{color = gray}if ( button_select == 3 ){color = c_white}
-draw_external_sprite_ext(spr[3],0,1009,view_hview[0]-78,1,1,0,color,1);
-// Reset Button
-if ( obj_game.game_time_pause ){spr[4]=global.sprite_map[?"Main Game\GUI\Pause Button Effect.png"];}
-if ( mouse_over != 4 ){color = c_white}else{color = gray}if ( button_select == 4 ){color = c_white}
-draw_external_sprite_ext(spr[4],0,1218,1041,1,1,0,color,1);
-/*
-// Speed 1x Button
-if ( obj_game.game_time_speed == 0 && !obj_game.game_time_pause ){spr[5]=global.sprite_map[?"Main Game\GUI\Speed 1 Button Effect.png"];}
-if ( mouse_over != 5 ){color = c_white}else{color = gray}if ( button_select == 5 ){color = c_white}
-draw_external_sprite_ext(spr[5],0,1279,1041,1,1,0,color,1);
-// Speed 2x Button
-if ( obj_game.game_time_speed == 1 && !obj_game.game_time_pause ){spr[6]=global.sprite_map[?"Main Game\GUI\Speed 2 Button Effect.png"];}
-if ( mouse_over != 6 ){color = c_white}else{color = gray}if ( button_select == 6 ){color = c_white}
-draw_external_sprite_ext(spr[6],0,1355,1041,1,1,0,color,1);
-// Speed 3x Button
-if ( obj_game.game_time_speed == 2 && !obj_game.game_time_pause ){spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button Effect.png"];}
-if ( mouse_over != 7 ){color = c_white}else{color = gray}if ( button_select == 7 ){color = c_white}
-draw_external_sprite_ext(spr[7],0,1430,1041,1,1,0,color,1);
+// Character
+draw_sprite(spr_character_pose1,image_index,1350,900);
 
-// Stats Piece (Top Right)
-draw_external_sprite(global.sprite_map[?"Main Game\GUI\Stats_Piece.png"],0,view_wview[0]-123,89);
-*/
+// Head Button
+scr_button_handle("Character Creation\Buttons\Head Button.png","Character Creation\Buttons\Head Button effect.png",0,336,194,190,80);
+// Outfit Buttons
+scr_button_handle("Character Creation\Buttons\Outfit Button.png","Character Creation\Buttons\Outfit Button effect.png",1,361,364,230,80);
+// Tattoos Buttons
+scr_button_handle("Character Creation\Buttons\Tattoos_Button.png","Character Creation\Buttons\Tattoos_Button_effect.png",2,382,540,280,80);
+// Instrument Buttons
+scr_button_handle("Character Creation\Buttons\Instrument Button.png","Character Creation\Buttons\Instrument Button effect.png",3,424,740,370,80);
+
+if ( mouse_check_button_released(mb_left) ){
+if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
+switch(button_select){
+case 0:{menu_state="Head";surface_update=true;;break;}
+case 1:{break;}
+case 2:{break;}
+case 3:{break;}
+case 4:{if(obj_game.game_time_pause){obj_game.game_time_pause=false}else{obj_game.game_time_pause=true};break;}
+case 5:{obj_game.game_time_speed=0;obj_game.game_time_pause=false;break;}
+case 6:{obj_game.game_time_speed=1;obj_game.game_time_pause=false;break;}
+case 7:{obj_game.game_time_speed=2;obj_game.game_time_pause=false;break;}
+}}button_select=-2;}
+
+if ( mouse_check_button_pressed(mb_left) ){
+if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}

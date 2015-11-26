@@ -1,0 +1,83 @@
+
+spr_character_pose1.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head
+  rotate: false
+  xy: 267, 94
+  size: 132, 144
+  orig: 132, 144
+  offset: 0, 0
+  index: -1
+Left Arm
+  rotate: false
+  xy: 523, 78
+  size: 111, 104
+  orig: 111, 104
+  offset: 0, 0
+  index: -1
+Left Calf
+  rotate: true
+  xy: 604, 202
+  size: 36, 165
+  orig: 36, 165
+  offset: 0, 0
+  index: -1
+Left Forearm
+  rotate: false
+  xy: 401, 86
+  size: 120, 96
+  orig: 120, 96
+  offset: 0, 0
+  index: -1
+Left Hand
+  rotate: false
+  xy: 636, 80
+  size: 87, 61
+  orig: 87, 61
+  offset: 0, 0
+  index: -1
+Left Leg
+  rotate: true
+  xy: 2, 2
+  size: 54, 201
+  orig: 54, 201
+  offset: 0, 0
+  index: -1
+Right Arm
+  rotate: true
+  xy: 636, 143
+  size: 57, 137
+  orig: 57, 137
+  offset: 0, 0
+  index: -1
+Right Calf
+  rotate: true
+  xy: 771, 202
+  size: 36, 165
+  orig: 36, 165
+  offset: 0, 0
+  index: -1
+Right Hand
+  rotate: true
+  xy: 775, 144
+  size: 56, 87
+  orig: 56, 87
+  offset: 0, 0
+  index: -1
+Right Leg
+  rotate: true
+  xy: 401, 184
+  size: 54, 201
+  orig: 54, 201
+  offset: 0, 0
+  index: -1
+Torso
+  rotate: true
+  xy: 2, 58
+  size: 180, 263
+  orig: 180, 263
+  offset: 0, 0
+  index: -1

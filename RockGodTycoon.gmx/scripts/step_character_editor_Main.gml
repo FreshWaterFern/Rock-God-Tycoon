@@ -2,12 +2,18 @@
 
 gml_pragma("forceinline");
 
-if ( mouse_check_area(130-72,view_hview[0]-78-72,130+72,view_hview[0]-78+72) ){mouse_over = 0;}if ( button_select == 0 ){
-spr[0]=global.sprite_map[?"Main Game\GUI\Map Button Effect.png"]}else{spr[0]=global.sprite_map[?"Main Game\GUI\Map Button.png"]}
+if ( mouse_check_area(339-95,194-40,339+95,194+40) ){mouse_over = 0;}if ( button_select == 0 ){
+spr[0]=global.sprite_map[?"Character Creation\Buttons\Head Button effect.png"]}else{spr[0]=global.sprite_map[?"Character Creation\Buttons\Head Button.png"]}
 
-if ( mouse_check_area(412-72,view_hview[0]-78-72,412+72,view_hview[0]-78+72) ){mouse_over = 1;}if ( button_select == 1 ){
-spr[1]=global.sprite_map[?"Main Game\GUI\Money Button Effect.png"]}else{spr[1]=global.sprite_map[?"Main Game\GUI\Money Button.png"]}
+if ( mouse_check_area(361-115,364-40,361+115,364+40) ){mouse_over = 1;}if ( button_select == 1 ){
+spr[1]=global.sprite_map[?"Character Creation\Buttons\Outfit Button effect.png"]}else{spr[1]=global.sprite_map[?"Character Creation\Buttons\Outfit Button.png"]}
 
+if ( mouse_check_area(382-115,540-40,382+115,540+40) ){mouse_over = 2;}if ( button_select == 2 ){
+spr[2]=global.sprite_map[?"Character Creation\Buttons\Tattoos_Button_effect.png"]}else{spr[2]=global.sprite_map[?"Character Creation\Buttons\Tattoos_Button.png"]}
+
+if ( mouse_check_area(424-115,740-40,424+115,740+40) ){mouse_over = 3;}if ( button_select == 3 ){
+spr[3]=global.sprite_map[?"Character Creation\Buttons\Instrument Button effect.png"]}else{spr[3]=global.sprite_map[?"Character Creation\Buttons\Instrument Button.png"]}
+/*
 if ( mouse_check_area(706-72,view_hview[0]-78-72,706+72,view_hview[0]-78+72) ){mouse_over = 2;}if ( button_select == 2 ){
 spr[2]=global.sprite_map[?"Main Game\GUI\Band Info Button Effect.png"]}else{spr[2]=global.sprite_map[?"Main Game\GUI\Band Info Button.png"]}
 
@@ -25,7 +31,7 @@ spr[6]=global.sprite_map[?"Main Game\GUI\Speed 2 Button Effect.png"]}else{spr[6]
 
 if ( mouse_check_area(1430-24,1041-24,1430+24,1041+24) ){mouse_over = 7;}if ( button_select == 7 ){
 spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button Effect.png"]}else{spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button.png"]}
-
+*/
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
