@@ -1,4 +1,4 @@
-/// step_ingame_menu_Main()
+/// step_character_editor_Main()
 
 gml_pragma("forceinline");
 

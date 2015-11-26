@@ -1,0 +1,139 @@
+
+spr_character_guitar.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Crotch
+  rotate: false
+  xy: 1302, 156
+  size: 107, 60
+  orig: 107, 60
+  offset: 0, 0
+  index: -1
+Eyebrows
+  rotate: true
+  xy: 880, 31
+  size: 77, 13
+  orig: 77, 13
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: true
+  xy: 1271, 86
+  size: 71, 13
+  orig: 71, 13
+  offset: 0, 0
+  index: -1
+Guitar
+  rotate: false
+  xy: 2, 4
+  size: 525, 250
+  orig: 525, 250
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 794, 110
+  size: 132, 144
+  orig: 132, 144
+  offset: 0, 0
+  index: -1
+Left Arm
+  rotate: false
+  xy: 1050, 94
+  size: 111, 104
+  orig: 111, 104
+  offset: 0, 0
+  index: -1
+Left Calf
+  rotate: true
+  xy: 1131, 218
+  size: 36, 165
+  orig: 36, 165
+  offset: 0, 0
+  index: -1
+Left Forearm
+  rotate: false
+  xy: 928, 102
+  size: 120, 96
+  orig: 120, 96
+  offset: 0, 0
+  index: -1
+Left Hand
+  rotate: false
+  xy: 1465, 193
+  size: 87, 61
+  orig: 87, 61
+  offset: 0, 0
+  index: -1
+Left Leg
+  rotate: true
+  xy: 529, 18
+  size: 54, 201
+  orig: 54, 201
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 732, 63
+  size: 26, 9
+  orig: 26, 9
+  offset: 0, 0
+  index: -1
+Nose
+  rotate: false
+  xy: 529, 5
+  size: 28, 11
+  orig: 28, 11
+  offset: 0, 0
+  index: -1
+Right Arm
+  rotate: true
+  xy: 1163, 159
+  size: 57, 137
+  orig: 57, 137
+  offset: 0, 0
+  index: -1
+Right Calf
+  rotate: true
+  xy: 1298, 218
+  size: 36, 165
+  orig: 36, 165
+  offset: 0, 0
+  index: -1
+Right Hand
+  rotate: true
+  xy: 1554, 198
+  size: 56, 87
+  orig: 56, 87
+  offset: 0, 0
+  index: -1
+Right Leg
+  rotate: true
+  xy: 928, 200
+  size: 54, 201
+  orig: 54, 201
+  offset: 0, 0
+  index: -1
+Timberland Left
+  rotate: false
+  xy: 794, 2
+  size: 84, 106
+  orig: 84, 106
+  offset: 0, 0
+  index: -1
+Timberland Right
+  rotate: true
+  xy: 1163, 73
+  size: 84, 106
+  orig: 84, 106
+  offset: 0, 0
+  index: -1
+Torso
+  rotate: true
+  xy: 529, 74
+  size: 180, 263
+  orig: 180, 263
+  offset: 0, 0
+  index: -1

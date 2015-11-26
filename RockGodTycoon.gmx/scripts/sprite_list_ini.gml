@@ -97,6 +97,16 @@ ds_list_add(sprite_list,"Band_Info\Member Tab\Orange Bar.png");
 ds_list_add(sprite_list,"Band_Info\Member Tab\Red Bar.png");
 ds_list_add(sprite_list,"Band_Info\Member Tab\Vocalist.png");
 ds_list_add(sprite_list,"Band_Info\Member Tab\Vocalist Effect.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Head Button.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Head Button effect.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Outfit Button.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Outfit Button effect.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Tattoos_Button.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Tattoos_Button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Instrument Button.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Instrument Button effect.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Reset_Button.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Reset_Button_effect.png");
 
 
 ds_list_add(sprite_list,"Notes\Blue.png");

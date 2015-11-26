@@ -253,9 +253,10 @@ message_spr=global.sprite_map[? "Apply button\Apply button effect.png"];}}
 
 // Fade Out On Main Menu
 if ( menu_set == "start game" ){
+var rm_id = rm_character_editor;
 if ( room != rm_intro ){
-if ( draw_fade &lt; 1.25 ){draw_fade+=0.01;}if ( draw_fade &gt;= 1.25 ){room_goto(rm_garage);}}
-if ( room == rm_garage ){
+if ( draw_fade &lt; 1.25 ){draw_fade+=0.01;}if ( draw_fade &gt;= 1.25 ){room_goto(rm_id);}}
+if ( room == rm_id ){
 if ( draw_fade &gt; 0 ){draw_fade-=0.03;menu_set = "start game";}else{menu_set = "none";}}}
 </string>
           </argument>
@@ -414,7 +415,8 @@ audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 
 // Save memory by importing backgrounds to a single surface where possible
 if ( !surface_exists(surface_1) ){
-surface_1 = surface_create(2596,3328);}
+surface_1 = surface_create(2596,3328);}else{
+surface_free(surface1);surface_1 = surface_create(2596,3328);}
 surface_set_target(surface_1);
 draw_clear_alpha(0,0);
 draw_background(img_ext[10],0,0);draw_background(img_ext[11],0,1080);
@@ -427,6 +429,28 @@ background_delete(img_ext[14]);background_delete(img_ext[15]);background_delete(
 background_delete(img_ext[17]);
 img_ext[10]=background_create_from_surface(surface_1,0,0,2596,3328,false,false);
 surface_free(surface_1);
+// End surface cache
+
+}
+
+if ( room == rm_character_editor ){ // Character Editor
+img_ext[0]=background_add("Character Creation\Background.png",0,0);
+img_ext[1]=background_add("Character Creation\Main_Paper_Piece.png",0,0);
+audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
+
+// Save memory by importing backgrounds to a single surface where possible
+if ( !surface_exists(surface_1) ){
+surface_1 = surface_create(2656,1080);}else{
+surface_free(surface1);surface_1 = surface_create(2656,1080);}
+surface_set_target(surface_1);
+draw_clear_alpha(0,0);
+draw_background(img_ext[0],0,0);
+draw_background(img_ext[1],1920,0);
+surface_reset_target();
+background_delete(img_ext[0]);background_delete(img_ext[1]);
+img_ext[0]=background_create_from_surface(surface_1,0,0,2656,1080,false,false);
+surface_free(surface_1);
+
 // End surface cache
 
 }
@@ -693,6 +717,17 @@ draw_set_font(font_grave_36);draw_set_halign(fa_center);draw_set_valign(fa_middl
 draw_set_alpha(draw_fade);
 draw_text(view_wview[0]/2,view_hview[0]/2,"Loading...");
 draw_set_alpha(1);}
+
+/*
+for(var i=1;i&lt;96;i++){
+draw_set_alpha(0.2-(i/96));
+draw_set_color(c_black);
+draw_ellipse(mouse_x-(i*3.4),mouse_y-8-(i*0.5),mouse_x+(i*3.4),mouse_y-8+(i*0.5),false);
+}
+
+draw_set_alpha(1);draw_set_color(c_white);
+
+draw_sprite_ext(spr_character_guitar,image_index,mouse_x,mouse_y,1,1,0,c_white,1);*/
 </string>
           </argument>
         </arguments>
