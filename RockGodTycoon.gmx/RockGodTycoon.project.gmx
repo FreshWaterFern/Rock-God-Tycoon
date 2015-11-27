@@ -3798,8 +3798,8 @@
           <sprite>sprites\Flame</sprite>
           <sprite>sprites\Fade_Line_Haircut</sprite>
           <sprite>sprites\Fade_Haircut</sprite>
-          <sprite>sprites\Eyes</sprite>
           <sprite>sprites\Eyebrows</sprite>
+          <sprite>sprites\Eyes</sprite>
           <sprite>sprites\Dickbutt</sprite>
           <sprite>sprites\Crown</sprite>
           <sprite>sprites\Crotch</sprite>
@@ -3938,6 +3938,9 @@
         <object>objects\obj_ingame_menu</object>
         <object>objects\obj_character_editor</object>
       </objects>
+    </objects>
+    <objects name="Character">
+      <object>objects\obj_character_pose1</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -24,8 +24,8 @@ surface_update = false;
 
 draw_surface(surface_main,0,0);
 
-// Character
-draw_sprite(spr_character_pose1,image_index,1350,900);
+with(obj_character_pose1){
+x=1350;y=900;draw_self();}
 
 // Head Button
 scr_button_handle("Character Creation\Buttons\Head Button.png","Character Creation\Buttons\Head Button effect.png",0,336,194,190,80);

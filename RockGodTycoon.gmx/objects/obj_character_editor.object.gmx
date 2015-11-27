@@ -76,8 +76,8 @@ spr[7]=global.sprite_map[?"Main Game\GUI\Speed 3 Button.png"];
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Skeleton Initiate
-skeleton_attachment_set("Eyebrows",Eyebrows);
+            <string>/// Special Script
+instance_create(0,0,obj_character_pose1);
 </string>
           </argument>
         </arguments>
