@@ -26,8 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>/// Skeleton Initiate
-/*skeleton_attachment_create("Eyebrows",Eyebrows,0,-5,0,1,1,0);
+skeleton_attachment_create("Eyebrows",Eyebrows,0,0,0,1,1,0);
 skeleton_attachment_set("Eyebrows",Eyebrows);
+skeleton_attachment_create("Eyes",Eyes,0,0,0,1,1,0);
+skeleton_attachment_set("Eyes",Eyes);
+skeleton_attachment_create("Glasses",Glasses,0,0,0,1,1,0);
+skeleton_attachment_set("Glasses",Glasses);
+skeleton_attachment_create("Hair",Fade_Line_Haircut,0,0,0,1,1,0);
+skeleton_attachment_set("Hair",Fade_Line_Haircut);
+skeleton_attachment_create("Mouth",Mouth,0,0,0,1,1,0);
+skeleton_attachment_set("Mouth",Mouth);
 </string>
           </argument>
         </arguments>
