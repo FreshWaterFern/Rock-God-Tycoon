@@ -436,6 +436,7 @@ surface_free(surface_1);
 if ( room == rm_character_editor ){ // Character Editor
 img_ext[0]=background_add("Character Creation\Background.png",0,0);
 img_ext[1]=background_add("Character Creation\Main_Paper_Piece.png",0,0);
+img_ext[2]=background_add("Character Creation\Head Sub Menu\Paper Piece.png",0,0);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 
 // Save memory by importing backgrounds to a single surface where possible

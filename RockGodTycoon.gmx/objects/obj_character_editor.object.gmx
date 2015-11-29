@@ -111,6 +111,13 @@ draw_character_editor_Main();
 
 break;}
 
+case "Head":{ // Head Menu
+
+draw_character_editor_Head();
+
+break;}
+
+
 }
 </string>
           </argument>

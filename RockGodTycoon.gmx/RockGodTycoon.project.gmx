@@ -2850,7 +2850,7 @@
         </datafile>
         <datafiles number="234" name="Buttons">
           <datafile>
-            <name>Text_0000_EYES.png</name>
+            <name>CC_Button_Eyes_effect.png</name>
             <exists>-1</exists>
             <size>7474</size>
             <exportAction>2</exportAction>
@@ -2864,10 +2864,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0000_EYES.png</filename>
+            <filename>CC_Button_Eyes_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0001_EYES.png</name>
+            <name>CC_Button_Eyes.png</name>
             <exists>-1</exists>
             <size>6569</size>
             <exportAction>2</exportAction>
@@ -2881,10 +2881,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0001_EYES.png</filename>
+            <filename>CC_Button_Eyes.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0002_NOSE.png</name>
+            <name>CC_Button_Nose_effect.png</name>
             <exists>-1</exists>
             <size>7341</size>
             <exportAction>2</exportAction>
@@ -2898,10 +2898,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0002_NOSE.png</filename>
+            <filename>CC_Button_Nose_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0003_NOSE.png</name>
+            <name>CC_Button_Nose.png</name>
             <exists>-1</exists>
             <size>6368</size>
             <exportAction>2</exportAction>
@@ -2915,10 +2915,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0003_NOSE.png</filename>
+            <filename>CC_Button_Nose.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0004_MOUTH.png</name>
+            <name>CC_Button_Mouth_effect.png</name>
             <exists>-1</exists>
             <size>9840</size>
             <exportAction>2</exportAction>
@@ -2932,10 +2932,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0004_MOUTH.png</filename>
+            <filename>CC_Button_Mouth_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0005_MOUTH.png</name>
+            <name>CC_Button_Mouth.png</name>
             <exists>-1</exists>
             <size>8490</size>
             <exportAction>2</exportAction>
@@ -2949,10 +2949,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0005_MOUTH.png</filename>
+            <filename>CC_Button_Mouth.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0006_EYEBROWS.png</name>
+            <name>CC_Button_Eyebrows_effect.png</name>
             <exists>-1</exists>
             <size>13848</size>
             <exportAction>2</exportAction>
@@ -2966,10 +2966,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0006_EYEBROWS.png</filename>
+            <filename>CC_Button_Eyebrows_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0007_EYEBROWS.png</name>
+            <name>CC_Button_Eyebrows.png</name>
             <exists>-1</exists>
             <size>11793</size>
             <exportAction>2</exportAction>
@@ -2983,10 +2983,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0007_EYEBROWS.png</filename>
+            <filename>CC_Button_Eyebrows.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0008_HAIRSTYLE.png</name>
+            <name>CC_Button_Hairstyle_effect.png</name>
             <exists>-1</exists>
             <size>15117</size>
             <exportAction>2</exportAction>
@@ -3000,10 +3000,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0008_HAIRSTYLE.png</filename>
+            <filename>CC_Button_Hairstyle_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0009_HAIRSTYLE.png</name>
+            <name>CC_Button_Hairstyle.png</name>
             <exists>-1</exists>
             <size>12752</size>
             <exportAction>2</exportAction>
@@ -3017,10 +3017,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0009_HAIRSTYLE.png</filename>
+            <filename>CC_Button_Hairstyle.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0010_HAIR-COLOR.png</name>
+            <name>CC_Button_Haircolor_effect.png</name>
             <exists>-1</exists>
             <size>14976</size>
             <exportAction>2</exportAction>
@@ -3034,10 +3034,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0010_HAIR-COLOR.png</filename>
+            <filename>CC_Button_Haircolor_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0011_HAIR-COLOR.png</name>
+            <name>CC_Button_Haircolor.png</name>
             <exists>-1</exists>
             <size>12775</size>
             <exportAction>2</exportAction>
@@ -3051,10 +3051,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0011_HAIR-COLOR.png</filename>
+            <filename>CC_Button_Haircolor.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0012_BEARD-STYLE.png</name>
+            <name>CC_Button_Beardstyle_effect.png</name>
             <exists>-1</exists>
             <size>17144</size>
             <exportAction>2</exportAction>
@@ -3068,10 +3068,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0012_BEARD-STYLE.png</filename>
+            <filename>CC_Button_Beardstyle_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0013_BEARD-STYLE.png</name>
+            <name>CC_Button_Beardstyle.png</name>
             <exists>-1</exists>
             <size>14413</size>
             <exportAction>2</exportAction>
@@ -3085,10 +3085,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0013_BEARD-STYLE.png</filename>
+            <filename>CC_Button_Beardstyle.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0014_BEARD-COLOR.png</name>
+            <name>CC_Button_Beardcolor_effect.png</name>
             <exists>-1</exists>
             <size>17907</size>
             <exportAction>2</exportAction>
@@ -3102,10 +3102,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0014_BEARD-COLOR.png</filename>
+            <filename>CC_Button_Beardcolor_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0015_BEARD-COLOR.png</name>
+            <name>CC_Button_Beardcolor.png</name>
             <exists>-1</exists>
             <size>14995</size>
             <exportAction>2</exportAction>
@@ -3119,10 +3119,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0015_BEARD-COLOR.png</filename>
+            <filename>CC_Button_Beardcolor.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0016_HEAD-ACCESSORIES.png</name>
+            <name>CC_Button_Headaccessories_effect.png</name>
             <exists>-1</exists>
             <size>24949</size>
             <exportAction>2</exportAction>
@@ -3136,10 +3136,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0016_HEAD-ACCESSORIES.png</filename>
+            <filename>CC_Button_Headaccessories_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Text_0017_HEAD-ACCESSORIES.png</name>
+            <name>CC_Button_Headaccessories.png</name>
             <exists>-1</exists>
             <size>20829</size>
             <exportAction>2</exportAction>
@@ -3153,7 +3153,7 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Text_0017_HEAD-ACCESSORIES.png</filename>
+            <filename>CC_Button_Headaccessories.png</filename>
           </datafile>
         </datafiles>
       </datafiles>
@@ -3898,6 +3898,7 @@
       <scripts name="character_editor">
         <scripts name="draw">
           <script>scripts\draw_character_editor_Main.gml</script>
+          <script>scripts\draw_character_editor_Head.gml</script>
         </scripts>
       </scripts>
     </scripts>

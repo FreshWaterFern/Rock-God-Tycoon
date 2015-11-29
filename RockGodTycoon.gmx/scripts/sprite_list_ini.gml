@@ -107,6 +107,33 @@ ds_list_add(sprite_list,"Character Creation\Buttons\Instrument Button.png");
 ds_list_add(sprite_list,"Character Creation\Buttons\Instrument Button effect.png");
 ds_list_add(sprite_list,"Character Creation\Buttons\Reset_Button.png");
 ds_list_add(sprite_list,"Character Creation\Buttons\Reset_Button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Eyes_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Eyes.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Nose_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Nose.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Mouth_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Mouth.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Eyebrows_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Eyebrows.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Hairstyle_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Hairstyle.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Haircolor_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Haircolor.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Beardstyle_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Beardstyle.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Beardcolor_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Beardcolor.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Headaccessories_effect.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Headaccessories.png");
+/*
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
+ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
+*/
 
 
 ds_list_add(sprite_list,"Notes\Blue.png");
