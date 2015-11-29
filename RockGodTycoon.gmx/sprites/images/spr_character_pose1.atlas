@@ -53,13 +53,6 @@ Left Leg
   orig: 54, 201
   offset: 0, 0
   index: -1
-Mouth
-  rotate: false
-  xy: 2, 7
-  size: 26, 9
-  orig: 26, 9
-  offset: 0, 0
-  index: -1
 Right Arm
   rotate: true
   xy: 636, 159

@@ -3804,8 +3804,8 @@
           <sprite>sprites\Crown</sprite>
           <sprite>sprites\Crotch</sprite>
           <sprite>sprites\Cross</sprite>
-          <sprite>sprites\Converse_Right</sprite>
           <sprite>sprites\Converse_Left</sprite>
+          <sprite>sprites\Converse_Right</sprite>
           <sprite>sprites\Ceasar_Haircut</sprite>
           <sprite>sprites\Cargo_Shorts_Right</sprite>
           <sprite>sprites\Cargo_Shorts_Left</sprite>
@@ -3833,6 +3833,7 @@
       <script>scripts\resolution_update.gml</script>
       <script>scripts\volume_update.gml</script>
       <script>scripts\resolution_get.gml</script>
+      <script>scripts\spine_ini_guitarist.gml</script>
     </scripts>
     <scripts name="external">
       <script>scripts\draw_external_sprite.gml</script>
