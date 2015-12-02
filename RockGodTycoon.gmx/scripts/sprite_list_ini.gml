@@ -125,13 +125,26 @@ ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Bear
 ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Beardcolor.png");
 ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Headaccessories_effect.png");
 ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\CC_Button_Headaccessories.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Torso_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Torso_button.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Pants_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Pants_button.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Shoes_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Shoes_button.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Accessories_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Outfit Sub Menu\Buttons\Accessories_button.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Arm_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Arm_button.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Hands_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Hands_button.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Head_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Head_button.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Legs_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Legs_button.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Torso_button_effect.png");
+ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Torso_button.png");
+
 /*
-ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
-ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
-ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
-ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
-ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
-ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
 ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");
 */
 

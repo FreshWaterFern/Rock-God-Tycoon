@@ -65,4 +65,4 @@ if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}
 mouse_over = -1;
 
 //draw_external_sprite(global.sprite_map[?"Character Creation\Head Sub Menu\Buttons\CC_Button_Headaccessories.png"],0,mouse_x,mouse_y);
-draw_text(mouse_x,mouse_y-128,string(mouse_x)+","+string(mouse_y));
+//draw_text(mouse_x,mouse_y-128,string(mouse_x)+","+string(mouse_y));

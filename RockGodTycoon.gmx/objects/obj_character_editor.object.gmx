@@ -106,16 +106,16 @@ draw_set_blend_mode(bm_normal);draw_set_color(c_white);draw_set_alpha(1);
 
 switch(menu_state){
 case "Main":{ // Main Menu
-
-draw_character_editor_Main();
-
-break;}
+draw_character_editor_Main();break;}
 
 case "Head":{ // Head Menu
+draw_character_editor_Head();break;}
 
-draw_character_editor_Head();
+case "Outfit":{ // Outfit Menu
+draw_character_editor_Outfit();break;}
 
-break;}
+case "Tattoos":{ // Tattoos Menu
+draw_character_editor_Tattoos();break;}
 
 }
 </string>

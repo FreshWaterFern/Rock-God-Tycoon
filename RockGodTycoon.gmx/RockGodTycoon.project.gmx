@@ -3368,7 +3368,7 @@
         </datafile>
         <datafiles number="234" name="Buttons">
           <datafile>
-            <name>Accessories button effect.png</name>
+            <name>Accessories_button_effect.png</name>
             <exists>-1</exists>
             <size>20564</size>
             <exportAction>2</exportAction>
@@ -3382,10 +3382,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Accessories button effect.png</filename>
+            <filename>Accessories_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Accessories button.png</name>
+            <name>Accessories_button.png</name>
             <exists>-1</exists>
             <size>17048</size>
             <exportAction>2</exportAction>
@@ -3399,10 +3399,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Accessories button.png</filename>
+            <filename>Accessories_button.png</filename>
           </datafile>
           <datafile>
-            <name>Pants button effect.png</name>
+            <name>Pants_button_effect.png</name>
             <exists>-1</exists>
             <size>14214</size>
             <exportAction>2</exportAction>
@@ -3416,10 +3416,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Pants button effect.png</filename>
+            <filename>Pants_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Pants button.png</name>
+            <name>Pants_button.png</name>
             <exists>-1</exists>
             <size>11739</size>
             <exportAction>2</exportAction>
@@ -3433,10 +3433,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Pants button.png</filename>
+            <filename>Pants_button.png</filename>
           </datafile>
           <datafile>
-            <name>Shoes button effect.png</name>
+            <name>Shoes_button_effect.png</name>
             <exists>-1</exists>
             <size>13841</size>
             <exportAction>2</exportAction>
@@ -3450,10 +3450,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Shoes button effect.png</filename>
+            <filename>Shoes_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Shoes button.png</name>
+            <name>Shoes_button.png</name>
             <exists>-1</exists>
             <size>11506</size>
             <exportAction>2</exportAction>
@@ -3467,10 +3467,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Shoes button.png</filename>
+            <filename>Shoes_button.png</filename>
           </datafile>
           <datafile>
-            <name>Torso button effect.png</name>
+            <name>Torso_button_effect.png</name>
             <exists>-1</exists>
             <size>14317</size>
             <exportAction>2</exportAction>
@@ -3484,10 +3484,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Torso button effect.png</filename>
+            <filename>Torso_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>Torso button.png</name>
+            <name>Torso_button.png</name>
             <exists>-1</exists>
             <size>11867</size>
             <exportAction>2</exportAction>
@@ -3501,7 +3501,7 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>Torso button.png</filename>
+            <filename>Torso_button.png</filename>
           </datafile>
         </datafiles>
       </datafiles>
@@ -3542,7 +3542,7 @@
         </datafile>
         <datafiles number="234" name="Buttons">
           <datafile>
-            <name>ARMS.png</name>
+            <name>Tattoo_Arm_button_effect.png</name>
             <exists>-1</exists>
             <size>14848</size>
             <exportAction>2</exportAction>
@@ -3556,10 +3556,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>ARMS.png</filename>
+            <filename>Tattoo_Arm_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>ARMS1.png</name>
+            <name>Tattoo_Arm_button.png</name>
             <exists>-1</exists>
             <size>12920</size>
             <exportAction>2</exportAction>
@@ -3573,10 +3573,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>ARMS1.png</filename>
+            <filename>Tattoo_Arm_button.png</filename>
           </datafile>
           <datafile>
-            <name>HANDS.png</name>
+            <name>Tattoo_Hands_button_effect.png</name>
             <exists>-1</exists>
             <size>17681</size>
             <exportAction>2</exportAction>
@@ -3590,10 +3590,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>HANDS.png</filename>
+            <filename>Tattoo_Hands_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>HANDS1.png</name>
+            <name>Tattoo_Hands_button.png</name>
             <exists>-1</exists>
             <size>14886</size>
             <exportAction>2</exportAction>
@@ -3607,10 +3607,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>HANDS1.png</filename>
+            <filename>Tattoo_Hands_button.png</filename>
           </datafile>
           <datafile>
-            <name>HEAD.png</name>
+            <name>Tattoo_Head_button_effect.png</name>
             <exists>-1</exists>
             <size>12641</size>
             <exportAction>2</exportAction>
@@ -3624,10 +3624,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>HEAD.png</filename>
+            <filename>Tattoo_Head_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>HEAD1.png</name>
+            <name>Tattoo_Head_button.png</name>
             <exists>-1</exists>
             <size>11403</size>
             <exportAction>2</exportAction>
@@ -3641,10 +3641,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>HEAD1.png</filename>
+            <filename>Tattoo_Head_button.png</filename>
           </datafile>
           <datafile>
-            <name>LEGS.png</name>
+            <name>Tattoo_Legs_button_effect.png</name>
             <exists>-1</exists>
             <size>39479</size>
             <exportAction>2</exportAction>
@@ -3658,10 +3658,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>LEGS.png</filename>
+            <filename>Tattoo_Legs_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>LEGS1.png</name>
+            <name>Tattoo_Legs_button.png</name>
             <exists>-1</exists>
             <size>43270</size>
             <exportAction>2</exportAction>
@@ -3675,10 +3675,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>LEGS1.png</filename>
+            <filename>Tattoo_Legs_button.png</filename>
           </datafile>
           <datafile>
-            <name>TORSO.png</name>
+            <name>Tattoo_Torso_button_effect.png</name>
             <exists>-1</exists>
             <size>15302</size>
             <exportAction>2</exportAction>
@@ -3692,10 +3692,10 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>TORSO.png</filename>
+            <filename>Tattoo_Torso_button_effect.png</filename>
           </datafile>
           <datafile>
-            <name>TORSO1.png</name>
+            <name>Tattoo_Torso_button.png</name>
             <exists>-1</exists>
             <size>13370</size>
             <exportAction>2</exportAction>
@@ -3709,7 +3709,7 @@
                 <CopyToMask>9223372036854775807</CopyToMask>
               </Config>
             </ConfigOptions>
-            <filename>TORSO1.png</filename>
+            <filename>Tattoo_Torso_button.png</filename>
           </datafile>
         </datafiles>
       </datafiles>
@@ -3899,6 +3899,8 @@
         <scripts name="draw">
           <script>scripts\draw_character_editor_Main.gml</script>
           <script>scripts\draw_character_editor_Head.gml</script>
+          <script>scripts\draw_character_editor_Outfit.gml</script>
+          <script>scripts\draw_character_editor_Tattoos.gml</script>
         </scripts>
       </scripts>
     </scripts>
