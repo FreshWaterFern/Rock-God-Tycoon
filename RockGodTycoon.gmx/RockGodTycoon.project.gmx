@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="234" name="datafiles">
-    <datafiles number="234" name="Apply button">
+  <datafiles number="236" name="datafiles">
+    <datafiles number="236" name="Apply button">
       <datafile>
         <name>Apply button.png</name>
         <exists>-1</exists>
@@ -40,7 +40,7 @@
         <filename>Apply button effect.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="Back button">
+    <datafiles number="236" name="Back button">
       <datafile>
         <name>Back Button effect.png</name>
         <exists>-1</exists>
@@ -76,7 +76,7 @@
         <filename>Back Button.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="Main Menu">
+    <datafiles number="236" name="Main Menu">
       <datafile>
         <name>Light.png</name>
         <exists>-1</exists>
@@ -145,7 +145,7 @@
         </ConfigOptions>
         <filename>Paper Piece.png</filename>
       </datafile>
-      <datafiles number="234" name="Buttons">
+      <datafiles number="236" name="Buttons">
         <datafile>
           <name>Credits button effect.png</name>
           <exists>-1</exists>
@@ -352,7 +352,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="234" name="Options">
+    <datafiles number="236" name="Options">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -421,7 +421,7 @@
         </ConfigOptions>
         <filename>Speaker.png</filename>
       </datafile>
-      <datafiles number="234" name="Buttons">
+      <datafiles number="236" name="Buttons">
         <datafile>
           <name>Audio settings button.png</name>
           <exists>-1</exists>
@@ -526,7 +526,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="234" name="Audio">
+    <datafiles number="236" name="Audio">
       <datafile>
         <name>Amplifier.png</name>
         <exists>-1</exists>
@@ -596,7 +596,7 @@
         <filename>Paper Piece.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="Video Settings">
+    <datafiles number="236" name="Video Settings">
       <datafile>
         <name>Paper Piece.png</name>
         <exists>-1</exists>
@@ -648,7 +648,7 @@
         </ConfigOptions>
         <filename>Tv.png</filename>
       </datafile>
-      <datafiles number="234" name="Buttons">
+      <datafiles number="236" name="Buttons">
         <datafile>
           <name>Arrow button effect.png</name>
           <exists>-1</exists>
@@ -685,7 +685,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="234" name="Audio_Controls_Video">
+    <datafiles number="236" name="Audio_Controls_Video">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -704,7 +704,7 @@
         <filename>Background.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="General">
+    <datafiles number="236" name="General">
       <datafile>
         <name>message_show.png</name>
         <exists>-1</exists>
@@ -723,7 +723,7 @@
         <filename>message_show.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="sound_files">
+    <datafiles number="236" name="sound_files">
       <datafile>
         <name>click01.ogg</name>
         <exists>-1</exists>
@@ -759,7 +759,7 @@
         <filename>bg_music01.ogg</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="Controls Sub Menu">
+    <datafiles number="236" name="Controls Sub Menu">
       <datafile>
         <name>Keyboard.png</name>
         <exists>-1</exists>
@@ -828,7 +828,7 @@
         </ConfigOptions>
         <filename>Reference Image.png</filename>
       </datafile>
-      <datafiles number="234" name="Buttons">
+      <datafiles number="236" name="Buttons">
         <datafile>
           <name>Custom button effect.png</name>
           <exists>-1</exists>
@@ -967,7 +967,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="234" name="Notes">
+    <datafiles number="236" name="Notes">
       <datafile>
         <name>Blue.png</name>
         <exists>-1</exists>
@@ -1139,8 +1139,8 @@
         <filename>Yellow1.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="Intro">
-      <datafiles number="234" name="Part I">
+    <datafiles number="236" name="Intro">
+      <datafiles number="236" name="Part I">
         <datafile>
           <name>Background.png</name>
           <exists>-1</exists>
@@ -1192,7 +1192,7 @@
           </ConfigOptions>
           <filename>Signature.png</filename>
         </datafile>
-        <datafiles number="234" name="Buttons">
+        <datafiles number="236" name="Buttons">
           <datafile>
             <name>Bassist Button Effect.png</name>
             <exists>-1</exists>
@@ -1349,8 +1349,8 @@
         </datafiles>
       </datafiles>
     </datafiles>
-    <datafiles number="234" name="Main Game">
-      <datafiles number="234" name="GUI">
+    <datafiles number="236" name="Main Game">
+      <datafiles number="236" name="GUI">
         <datafile>
           <name>Box.png</name>
           <exists>-1</exists>
@@ -1863,8 +1863,8 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="234" name="Band_Info">
-      <datafiles number="234" name="Rivalries Tab">
+    <datafiles number="236" name="Band_Info">
+      <datafiles number="236" name="Rivalries Tab">
         <datafile>
           <name>Band_Info_Submenu.png</name>
           <exists>-1</exists>
@@ -1985,7 +1985,7 @@
           <filename>Rivalries_Button.png</filename>
         </datafile>
       </datafiles>
-      <datafiles number="234" name="Songs and Records Tab">
+      <datafiles number="236" name="Songs and Records Tab">
         <datafile>
           <name>Reference.png</name>
           <exists>-1</exists>
@@ -2055,7 +2055,7 @@
           <filename>Songs_and_Records_Paper_Piece.png</filename>
         </datafile>
       </datafiles>
-      <datafiles number="234" name="Band Info Tab">
+      <datafiles number="236" name="Band Info Tab">
         <datafile>
           <name>Band Info Button Effect.png</name>
           <exists>-1</exists>
@@ -2159,7 +2159,7 @@
           <filename>Reference.png</filename>
         </datafile>
       </datafiles>
-      <datafiles number="234" name="Member Tab">
+      <datafiles number="236" name="Member Tab">
         <datafile>
           <name>Bassist Effect.png</name>
           <exists>-1</exists>
@@ -2485,7 +2485,7 @@
         <filename>Binder_Rings.png</filename>
       </datafile>
     </datafiles>
-    <datafiles number="234" name="Character Creation">
+    <datafiles number="236" name="Character Creation">
       <datafile>
         <name>Background.png</name>
         <exists>-1</exists>
@@ -2537,7 +2537,7 @@
         </ConfigOptions>
         <filename>Reference.png</filename>
       </datafile>
-      <datafiles number="234" name="Buttons">
+      <datafiles number="236" name="Buttons">
         <datafile>
           <name>Head Button effect.png</name>
           <exists>-1</exists>
@@ -2692,6 +2692,40 @@
           <filename>Reset_Button_effect.png</filename>
         </datafile>
         <datafile>
+          <name>Back Button.png</name>
+          <exists>-1</exists>
+          <size>24333</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Back Button.png</filename>
+        </datafile>
+        <datafile>
+          <name>Back Button Effect.png</name>
+          <exists>-1</exists>
+          <size>23453</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>Back Button Effect.png</filename>
+        </datafile>
+        <datafile>
           <name>Reset_Button.png</name>
           <exists>-1</exists>
           <size>6028</size>
@@ -2709,7 +2743,7 @@
           <filename>Reset_Button.png</filename>
         </datafile>
       </datafiles>
-      <datafiles number="234" name="Equip List Sub Menu">
+      <datafiles number="236" name="Equip List Sub Menu">
         <datafile>
           <name>Buy List Paper Piece.png</name>
           <exists>-1</exists>
@@ -2813,7 +2847,7 @@
           <filename>bar_slider_button.png</filename>
         </datafile>
       </datafiles>
-      <datafiles number="234" name="Head Sub Menu">
+      <datafiles number="236" name="Head Sub Menu">
         <datafile>
           <name>Paper Piece.png</name>
           <exists>-1</exists>
@@ -2848,7 +2882,7 @@
           </ConfigOptions>
           <filename>Reference.png</filename>
         </datafile>
-        <datafiles number="234" name="Buttons">
+        <datafiles number="236" name="Buttons">
           <datafile>
             <name>CC_Button_Eyes_effect.png</name>
             <exists>-1</exists>
@@ -3157,7 +3191,7 @@
           </datafile>
         </datafiles>
       </datafiles>
-      <datafiles number="234" name="Instrunments Sub Menu">
+      <datafiles number="236" name="Instrunments Sub Menu">
         <datafile>
           <name>Paper piece.png</name>
           <exists>-1</exists>
@@ -3192,7 +3226,7 @@
           </ConfigOptions>
           <filename>Reference.png</filename>
         </datafile>
-        <datafiles number="234" name="Buttons">
+        <datafiles number="236" name="Buttons">
           <datafile>
             <name>Bass.png</name>
             <exists>-1</exists>
@@ -3331,7 +3365,7 @@
           </datafile>
         </datafiles>
       </datafiles>
-      <datafiles number="234" name="Outfit Sub Menu">
+      <datafiles number="236" name="Outfit Sub Menu">
         <datafile>
           <name>Paper Piece.png</name>
           <exists>-1</exists>
@@ -3366,7 +3400,7 @@
           </ConfigOptions>
           <filename>Reference.png</filename>
         </datafile>
-        <datafiles number="234" name="Buttons">
+        <datafiles number="236" name="Buttons">
           <datafile>
             <name>Accessories_button_effect.png</name>
             <exists>-1</exists>
@@ -3505,7 +3539,7 @@
           </datafile>
         </datafiles>
       </datafiles>
-      <datafiles number="234" name="Tattoos Sub Menu">
+      <datafiles number="236" name="Tattoos Sub Menu">
         <datafile>
           <name>Paper Piece.png</name>
           <exists>-1</exists>
@@ -3540,7 +3574,7 @@
           </ConfigOptions>
           <filename>Reference.png</filename>
         </datafile>
-        <datafiles number="234" name="Buttons">
+        <datafiles number="236" name="Buttons">
           <datafile>
             <name>Tattoo_Arm_button_effect.png</name>
             <exists>-1</exists>
@@ -3834,8 +3868,8 @@
       <script>scripts\resolution_update.gml</script>
       <script>scripts\volume_update.gml</script>
       <script>scripts\resolution_get.gml</script>
-      <script>scripts\spine_ini_guitarist.gml</script>
       <script>scripts\item_list_ini.gml</script>
+      <script>scripts\spine_ini_guitarist.gml</script>
     </scripts>
     <scripts name="external">
       <script>scripts\draw_external_sprite.gml</script>
@@ -3903,9 +3937,13 @@
           <script>scripts\draw_character_editor_Main.gml</script>
           <script>scripts\draw_character_editor_Head.gml</script>
           <script>scripts\draw_character_editor_EyesList.gml</script>
+          <script>scripts\draw_character_editor_HairstyleList.gml</script>
           <script>scripts\draw_character_editor_Outfit.gml</script>
           <script>scripts\draw_character_editor_Tattoos.gml</script>
         </scripts>
+      </scripts>
+      <scripts name="spine scripts">
+        <script>scripts\scr_equip_item.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -3945,6 +3983,7 @@
       <objects name="game menu">
         <object>objects\obj_ingame_menu</object>
         <object>objects\obj_character_editor</object>
+        <object>objects\obj_equiplist_button</object>
       </objects>
     </objects>
     <objects name="Character">

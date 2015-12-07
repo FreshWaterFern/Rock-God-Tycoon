@@ -53,7 +53,7 @@ case 0:{menu_state="Eyes List";surface_update=true;break;}
 case 1:{menu_state="Outfit";surface_update=true;break;}
 case 2:{menu_state="Tattoos";surface_update=true;break;}
 case 3:{menu_state="Instrument";surface_update=true;break;}
-case 4:{if(obj_game.game_time_pause){obj_game.game_time_pause=false}else{obj_game.game_time_pause=true};break;}
+case 4:{menu_state="Hairstyle List";surface_update=true;break;}
 case 5:{obj_game.game_time_speed=0;obj_game.game_time_pause=false;break;}
 case 6:{obj_game.game_time_speed=1;obj_game.game_time_pause=false;break;}
 case 7:{obj_game.game_time_speed=2;obj_game.game_time_pause=false;break;}

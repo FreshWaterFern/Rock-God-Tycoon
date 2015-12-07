@@ -1,4 +1,4 @@
-/// draw_character_editor_EyesList()
+/// draw_character_editor_HairstyleList()
 
 gml_pragma("forceinline");
 
@@ -48,21 +48,21 @@ if ( slider_set[0] ){
 slider_pos[1] = clamp(device_mouse_y_to_gui(0),152,797);}
 
 var list_index_start = slider_pos[1];
-if ( ds_list_size(global.item_list_beards) > 8 ){
-list_index_start = (slider_pos[1]-152)/(797-152);}else{
+if ( ds_list_size(global.item_list_hairstyles) > 8 ){
+ }else{
 list_index_start = 0;
 }
 
 // Draw list of items
 draw_set_color(c_white);
-var i = 0;var r = 0;var size = ds_list_size(global.item_list_beards);var size2 = 0;
+var i = 0;var r = 0;var size = ds_list_size(global.item_list_hairstyles);var size2 = 0;
 
 if ( !instance_exists(obj_equiplist_button) ){
 for(i=0;i<size;i++){
 ds_list_add(equiplist_inst,instance_create(311,162+(i*80),obj_equiplist_button));
 size2 = ds_list_size(equiplist_inst)-1;
-equiplist_inst[|size2].Item_Name = global.item_list_beards[|size2];
-equiplist_inst[|size2].Item_Price = global.price_list_beards[|size2];
+equiplist_inst[|size2].Item_Name = global.item_list_hairstyles[|size2];
+equiplist_inst[|size2].Item_Price = global.price_list_hairstyles[|size2];
 }
 }
 
@@ -99,10 +99,13 @@ draw_sprite(spr_equiplist_overlay,0,0,27);
 
 draw_external_sprite(global.sprite_map[?"Character Creation\Equip List Sub Menu\bar_slider_button.png"],0,slider_pos[0],slider_pos[1]);
 
+// Back Button
+scr_button_handle("Back button\Back Button.png","Back button\Back Button effect.png",0,477,890,140,60);
+
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
-case 0:{menu_state="Head";surface_update=true;break;}
+case 0:{menu_state="Main";surface_update=true;ds_list_clear(equiplist_inst);with(obj_equiplist_button){instance_destroy();}break;}
 case 1:{menu_state="Outfit";surface_update=true;break;}
 case 2:{menu_state="Tattoos";surface_update=true;break;}
 case 3:{menu_state="Instrument";surface_update=true;break;}
@@ -116,3 +119,6 @@ if ( mouse_check_button_pressed(mb_left) ){
 if ( mouse_over != -1 ){button_select = mouse_over;}else{button_select = -2;}}
 
 mouse_over = -1;
+
+//draw_external_sprite(global.sprite_map[?"Back button\Back Button.png"],0,mouse_x,mouse_y);
+//draw_text(mouse_x,mouse_y-128,string(mouse_x)+","+string(mouse_y));
