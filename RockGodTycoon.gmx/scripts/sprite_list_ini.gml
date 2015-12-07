@@ -1,8 +1,8 @@
 /// sprite_list_ini()
 /*
-This script allows us to load all of our images into the game.
-It contains the location for each file and the desired name
-for referencing later on.
+    This script allows us to load all of our images into the game.
+    It contains the location for each file and the desired name
+    for referencing later on.
 */
 global.sprite_map = ds_map_create();
 sprite_list = ds_list_create();
@@ -143,6 +143,10 @@ ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Legs
 ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Legs_button.png");
 ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Torso_button_effect.png");
 ds_list_add(sprite_list,"Character Creation\Tattoos Sub Menu\Buttons\Tattoo_Torso_button.png");
+ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\Item_Price_Tag.png");
+ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\button_equip_effect.png");
+ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\button_equip.png");
+ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\bar_slider_button.png");
 
 /*
 ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");

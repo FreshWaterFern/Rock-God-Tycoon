@@ -1,4 +1,4 @@
-/// resolution_update(num)
+/// resolution_get(num)
 var x_res = 0;var y_res = 0;
 if ( display_get_width()/display_get_height() == 1.7777 ){
 switch(res_set){

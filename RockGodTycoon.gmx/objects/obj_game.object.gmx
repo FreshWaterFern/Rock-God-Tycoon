@@ -439,6 +439,7 @@ img_ext[1]=background_add("Character Creation\Main_Paper_Piece.png",0,0);
 img_ext[2]=background_add("Character Creation\Head Sub Menu\Paper Piece.png",0,0);
 img_ext[3]=background_add("Character Creation\Outfit Sub Menu\Paper Piece.png",0,0);
 img_ext[4]=background_add("Character Creation\Tattoos Sub Menu\Paper Piece.png",0,0);
+img_ext[5]=background_add("Character Creation\Equip List Sub Menu\Buy List Paper Piece.png",0,0);
 audio_ext[0]=audio_create_stream("sound_files\click01.ogg");
 
 // Save memory by importing backgrounds to a single surface where possible

@@ -2728,7 +2728,7 @@
           <filename>Buy List Paper Piece.png</filename>
         </datafile>
         <datafile>
-          <name>Item Tag Piece.png</name>
+          <name>Item_Price_Tag.png</name>
           <exists>-1</exists>
           <size>24289</size>
           <exportAction>2</exportAction>
@@ -2742,7 +2742,7 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Item Tag Piece.png</filename>
+          <filename>Item_Price_Tag.png</filename>
         </datafile>
         <datafile>
           <name>Reference.png</name>
@@ -2762,7 +2762,7 @@
           <filename>Reference.png</filename>
         </datafile>
         <datafile>
-          <name>Yo_0000_EQUIP-effect.png</name>
+          <name>button_equip_effect.png</name>
           <exists>-1</exists>
           <size>6474</size>
           <exportAction>2</exportAction>
@@ -2776,10 +2776,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Yo_0000_EQUIP-effect.png</filename>
+          <filename>button_equip_effect.png</filename>
         </datafile>
         <datafile>
-          <name>Yo_0002_EQUIP.png</name>
+          <name>button_equip.png</name>
           <exists>-1</exists>
           <size>5729</size>
           <exportAction>2</exportAction>
@@ -2793,10 +2793,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Yo_0002_EQUIP.png</filename>
+          <filename>button_equip.png</filename>
         </datafile>
         <datafile>
-          <name>Yo_0004_Bar-Button.png</name>
+          <name>bar_slider_button.png</name>
           <exists>-1</exists>
           <size>1401</size>
           <exportAction>2</exportAction>
@@ -2810,7 +2810,7 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>Yo_0004_Bar-Button.png</filename>
+          <filename>bar_slider_button.png</filename>
         </datafile>
       </datafiles>
       <datafiles number="234" name="Head Sub Menu">
@@ -3721,6 +3721,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_ui_cursor</sprite>
+    <sprite>sprites\spr_equiplist_overlay</sprite>
     <sprite>sprites\spr_trans</sprite>
     <sprite>sprites\spr_neck</sprite>
     <sprite>sprites\spr_note</sprite>
@@ -3834,6 +3835,7 @@
       <script>scripts\volume_update.gml</script>
       <script>scripts\resolution_get.gml</script>
       <script>scripts\spine_ini_guitarist.gml</script>
+      <script>scripts\item_list_ini.gml</script>
     </scripts>
     <scripts name="external">
       <script>scripts\draw_external_sprite.gml</script>
@@ -3862,6 +3864,7 @@
         <script>scripts\mouse_check_area.gml</script>
       </scripts>
       <scripts name="ui">
+        <script>scripts\scr_button_handle_text.gml</script>
         <script>scripts\scr_button_handle.gml</script>
       </scripts>
     </scripts>
@@ -3899,6 +3902,7 @@
         <scripts name="draw">
           <script>scripts\draw_character_editor_Main.gml</script>
           <script>scripts\draw_character_editor_Head.gml</script>
+          <script>scripts\draw_character_editor_EyesList.gml</script>
           <script>scripts\draw_character_editor_Outfit.gml</script>
           <script>scripts\draw_character_editor_Tattoos.gml</script>
         </scripts>

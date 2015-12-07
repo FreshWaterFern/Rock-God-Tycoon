@@ -26,8 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
+global.item_list_beards = -999;
 sprite_external_init();
 sprite_list_ini();
+item_list_ini();
 global.texture_pages = ds_list_create();
 WD = working_directory;
 alarm[0]=1;

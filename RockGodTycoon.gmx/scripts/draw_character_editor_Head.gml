@@ -49,7 +49,7 @@ scr_button_handle("Character Creation\Head Sub Menu\Buttons\CC_Button_Headaccess
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
-case 0:{menu_state="Head";surface_update=true;break;}
+case 0:{menu_state="Eyes List";surface_update=true;break;}
 case 1:{menu_state="Outfit";surface_update=true;break;}
 case 2:{menu_state="Tattoos";surface_update=true;break;}
 case 3:{menu_state="Instrument";surface_update=true;break;}
