@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-global.item_list_hairstyles = -999;
 sprite_external_init();
 sprite_list_ini();
 item_list_ini();

@@ -49,7 +49,8 @@ slider_pos[1] = clamp(device_mouse_y_to_gui(0),152,797);}
 
 var list_index_start = slider_pos[1];
 if ( ds_list_size(global.item_list_hairstyles) > 8 ){
- }else{
+list_index_start = (slider_pos[1]-152)/(797-152);
+}else{
 list_index_start = 0;
 }
 
