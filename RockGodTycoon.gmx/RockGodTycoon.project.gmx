@@ -3760,7 +3760,7 @@
     <sprite>sprites\spr_neck</sprite>
     <sprite>sprites\spr_note</sprite>
     <sprites name="skeletons">
-      <sprites name="pose1">
+      <sprites name="pose1 guitarist">
         <sprites name="main">
           <sprite>sprites\spr_character_pose1</sprite>
         </sprites>
@@ -3786,22 +3786,21 @@
           <sprite>sprites\Right_Hand</sprite>
           <sprite>sprites\Right_Calf</sprite>
           <sprite>sprites\Right_Arm</sprite>
-          <sprite>sprites\Regular_Shorts_Right</sprite>
-          <sprite>sprites\Regular_Shorts_Left</sprite>
-          <sprite>sprites\Regular_Shorts_Crotch</sprite>
-          <sprite>sprites\Regular_Pants_Right_Leg</sprite>
-          <sprite>sprites\Regular_Pants_Right_Calf</sprite>
-          <sprite>sprites\Regular_Pants_Left_Leg</sprite>
-          <sprite>sprites\Regular_Pants_Left_Calf</sprite>
-          <sprite>sprites\Regular_Pants_Crotch</sprite>
-          <sprite>sprites\Ragged_Shorts_Right</sprite>
-          <sprite>sprites\Ragged_Shorts_Left</sprite>
-          <sprite>sprites\Ragged_Shorts_Crotch</sprite>
-          <sprite>sprites\Ragged_Pants_Right_Leg</sprite>
-          <sprite>sprites\Ragged_Pants_Right_Calf</sprite>
-          <sprite>sprites\Ragged_Pants_Leg_Calf</sprite>
-          <sprite>sprites\Ragged_Pants_Left_Leg</sprite>
-          <sprite>sprites\Ragged_Pants_Crotch</sprite>
+          <sprite>sprites\Jeans_Shorts_Right</sprite>
+          <sprite>sprites\Jeans_Shorts_Left</sprite>
+          <sprite>sprites\Jeans_Crotch</sprite>
+          <sprite>sprites\Jeans_Pants_Right_Leg</sprite>
+          <sprite>sprites\Jeans_Pants_Right_Calf</sprite>
+          <sprite>sprites\Jeans_Pants_Left_Leg</sprite>
+          <sprite>sprites\Jeans_Pants_Left_Calf</sprite>
+          <sprite>sprites\RaggedJeans_Shorts_Right</sprite>
+          <sprite>sprites\RaggedJeans_Shorts_Left</sprite>
+          <sprite>sprites\RaggedJeans_Shorts_Crotch</sprite>
+          <sprite>sprites\RaggedJeans_Pants_Right_Leg</sprite>
+          <sprite>sprites\RaggedJeans_Pants_Right_Calf</sprite>
+          <sprite>sprites\RaggedJeans_Pants_Left_Calf</sprite>
+          <sprite>sprites\RaggedJeans_Pants_Left_Leg</sprite>
+          <sprite>sprites\RaggedJeans_Crotch</sprite>
           <sprite>sprites\Punk</sprite>
           <sprite>sprites\Piercings</sprite>
           <sprite>sprites\OP_Guitar</sprite>
@@ -3817,7 +3816,7 @@
           <sprite>sprites\Leather_Pants_Right_Calf</sprite>
           <sprite>sprites\Leather_Pants_Left_Leg</sprite>
           <sprite>sprites\Leather_Pants_Left_Calf</sprite>
-          <sprite>sprites\Leather_Pants_Crotch</sprite>
+          <sprite>sprites\Leather_Crotch</sprite>
           <sprite>sprites\Knife</sprite>
           <sprite>sprites\KillerClown</sprite>
           <sprite>sprites\Jersey_Shirt_Torso</sprite>
@@ -3844,12 +3843,11 @@
           <sprite>sprites\Ceasar_Haircut</sprite>
           <sprite>sprites\Cargo_Shorts_Right</sprite>
           <sprite>sprites\Cargo_Shorts_Left</sprite>
-          <sprite>sprites\Cargo_Shorts_Crotch</sprite>
+          <sprite>sprites\Cargo_Crotch</sprite>
           <sprite>sprites\Cargo_Pants_Right_Leg</sprite>
           <sprite>sprites\Cargo_Pants_Right_Calf</sprite>
           <sprite>sprites\Cargo_Pants_Left_Leg</sprite>
           <sprite>sprites\Cargo_Pants_Left_Calf</sprite>
-          <sprite>sprites\Cargo_Pants_Crotch</sprite>
           <sprite>sprites\Bushy_Beard</sprite>
         </sprites>
       </sprites>
@@ -3936,8 +3934,8 @@
         <scripts name="draw">
           <script>scripts\draw_character_editor_Main.gml</script>
           <script>scripts\draw_character_editor_Head.gml</script>
-          <script>scripts\draw_character_editor_EyesList.gml</script>
           <script>scripts\draw_character_editor_HairstyleList.gml</script>
+          <script>scripts\draw_character_editor_LegsList.gml</script>
           <script>scripts\draw_character_editor_Outfit.gml</script>
           <script>scripts\draw_character_editor_Tattoos.gml</script>
         </scripts>

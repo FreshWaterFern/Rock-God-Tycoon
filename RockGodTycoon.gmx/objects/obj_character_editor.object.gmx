@@ -119,10 +119,13 @@ case "Hairstyle List":{ // Eyes List
 draw_character_editor_HairstyleList();break;}
 
 case "Eyes List":{ // Eyes List
-draw_character_editor_EyesList();break;}
+break;}
 
 case "Outfit":{ // Outfit Menu
 draw_character_editor_Outfit();break;}
+
+case "Legs List":{ // Eyes List
+draw_character_editor_LegsList();break;}
 
 case "Tattoos":{ // Tattoos Menu
 draw_character_editor_Tattoos();break;}

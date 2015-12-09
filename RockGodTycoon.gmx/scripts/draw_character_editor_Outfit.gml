@@ -40,7 +40,7 @@ if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
 case 0:{menu_state="Head";surface_update=true;break;}
-case 1:{menu_state="Outfit";surface_update=true;break;}
+case 1:{menu_state="Legs List";surface_update=true;break;}
 case 2:{menu_state="Tattoos";surface_update=true;break;}
 case 3:{menu_state="Instrument";surface_update=true;break;}
 case 4:{if(obj_game.game_time_pause){obj_game.game_time_pause=false}else{obj_game.game_time_pause=true};break;}

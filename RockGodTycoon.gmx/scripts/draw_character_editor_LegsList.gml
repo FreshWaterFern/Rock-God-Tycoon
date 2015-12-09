@@ -48,7 +48,7 @@ if ( slider_set[0] ){
 slider_pos[1] = clamp(device_mouse_y_to_gui(0),152,797);}
 
 var list_index_start = slider_pos[1];
-if ( ds_list_size(global.item_list_hairstyles) > 8 ){
+if ( ds_list_size(global.item_list_legs) > 8 ){
 list_index_start = (slider_pos[1]-152)/(797-152);
 }else{
 list_index_start = 0;
@@ -56,14 +56,14 @@ list_index_start = 0;
 
 // Draw list of items
 draw_set_color(c_white);
-var i = 0;var r = 0;var size = ds_list_size(global.item_list_hairstyles);var size2 = 0;
+var i = 0;var r = 0;var size = ds_list_size(global.item_list_legs);var size2 = 0;
 
 if ( !instance_exists(obj_equiplist_button) ){
 for(i=0;i<size;i++){
 ds_list_add(equiplist_inst,instance_create(311,162+(i*80),obj_equiplist_button));
 size2 = ds_list_size(equiplist_inst)-1;
-equiplist_inst[|size2].Item_Name = global.item_list_hairstyles[|size2];
-equiplist_inst[|size2].Item_Price = global.price_list_hairstyles[|size2];
+equiplist_inst[|size2].Item_Name = global.item_list_legs[|size2];
+equiplist_inst[|size2].Item_Price = global.price_list_legs[|size2];
 }
 }
 
@@ -75,7 +75,7 @@ if ( mouse_check_area(311-239,math_y-34,311+239,math_y+34) ){
 draw_external_sprite_ext(global.sprite_map[?"Character Creation\Equip List Sub Menu\Item_Price_Tag.png"],0,311,math_y,1,1,0,c_green,0.25);
 if ( mouse_check_button_pressed(mb_left) ){
 if ( !Locked ){
-scr_equip_item(obj_character_pose1,"Hair",Item_Name);}}}}
+scr_equip_item(obj_character_pose1,"Legs",Item_Name);}}}}
 }
 
 draw_set_font(font_peax_20);draw_set_color(c_black);draw_set_halign(fa_left);draw_set_valign(fa_middle);
