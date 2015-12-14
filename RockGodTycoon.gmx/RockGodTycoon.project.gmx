@@ -3821,7 +3821,7 @@
           <sprite>sprites\KillerClown</sprite>
           <sprite>sprites\Jersey_Shirt_Torso</sprite>
           <sprite>sprites\Jersey_Shirt_Right_Sleeve</sprite>
-          <sprite>sprites\Jersey_Shirt_Left_Undersleeve</sprite>
+          <sprite>sprites\Jersey_Shirt_Left_Forearm</sprite>
           <sprite>sprites\Jersey_Shirt_Left_Sleeve</sprite>
           <sprite>sprites\Jacket_No_Sleeve_Shirt</sprite>
           <sprite>sprites\Headband</sprite>
@@ -3936,6 +3936,12 @@
           <script>scripts\draw_character_editor_Head.gml</script>
           <script>scripts\draw_character_editor_HairstyleList.gml</script>
           <script>scripts\draw_character_editor_LegsList.gml</script>
+          <script>scripts\draw_character_editor_ShoesList.gml</script>
+          <script>scripts\draw_character_editor_EyesList.gml</script>
+          <script>scripts\draw_character_editor_EyebrowsList.gml</script>
+          <script>scripts\draw_character_editor_MouthList.gml</script>
+          <script>scripts\draw_character_editor_NoseList.gml</script>
+          <script>scripts\draw_character_editor_TorsoList.gml</script>
           <script>scripts\draw_character_editor_Outfit.gml</script>
           <script>scripts\draw_character_editor_Tattoos.gml</script>
         </scripts>

@@ -147,6 +147,8 @@ ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\Item_Price_Tag.p
 ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\button_equip_effect.png");
 ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\button_equip.png");
 ds_list_add(sprite_list,"Character Creation\Equip List Sub Menu\bar_slider_button.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Back Button.png");
+ds_list_add(sprite_list,"Character Creation\Buttons\Back Button Effect.png");
 
 /*
 ds_list_add(sprite_list,"Character Creation\Head Sub Menu\Buttons\.png");

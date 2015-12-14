@@ -50,9 +50,9 @@ if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound
 switch(button_select){
 case 0:{menu_state="Eyes List";surface_update=true;break;}
-case 1:{menu_state="Outfit";surface_update=true;break;}
-case 2:{menu_state="Tattoos";surface_update=true;break;}
-case 3:{menu_state="Instrument";surface_update=true;break;}
+case 1:{menu_state="Nose List";surface_update=true;break;}
+case 2:{menu_state="Mouth List";surface_update=true;break;}
+case 3:{menu_state="Eyebrows List";surface_update=true;break;}
 case 4:{menu_state="Hairstyle List";surface_update=true;break;}
 case 5:{obj_game.game_time_speed=0;obj_game.game_time_pause=false;break;}
 case 6:{obj_game.game_time_speed=1;obj_game.game_time_pause=false;break;}

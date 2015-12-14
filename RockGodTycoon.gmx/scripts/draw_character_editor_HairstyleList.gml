@@ -102,7 +102,7 @@ draw_sprite(spr_equiplist_overlay,0,0,27);
 draw_external_sprite(global.sprite_map[?"Character Creation\Equip List Sub Menu\bar_slider_button.png"],0,slider_pos[0],slider_pos[1]);
 
 // Back Button
-scr_button_handle("Back button\Back Button.png","Back button\Back Button effect.png",0,477,890,140,60);
+scr_button_handle("Character Creation\Buttons\Back Button.png","Character Creation\Buttons\Back Button Effect.png",0,477,890,140,60);
 
 if ( mouse_check_button_released(mb_left) ){
 if ( mouse_over == button_select ){audio_play(0,0,0,0); // Click sound

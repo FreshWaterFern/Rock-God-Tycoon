@@ -119,13 +119,28 @@ case "Hairstyle List":{ // Eyes List
 draw_character_editor_HairstyleList();break;}
 
 case "Eyes List":{ // Eyes List
-break;}
+draw_character_editor_EyesList();break;}
+
+case "Nose List":{ // Nose List
+draw_character_editor_NoseList();break;}
+
+case "Mouth List":{ // Mouth List
+draw_character_editor_MouthList();break;}
+
+case "Eyebrows List":{ // Eyebrows List
+draw_character_editor_EyebrowsList();break;}
 
 case "Outfit":{ // Outfit Menu
 draw_character_editor_Outfit();break;}
 
+case "Torso List":{ // Eyes List
+draw_character_editor_TorsoList();break;}
+
 case "Legs List":{ // Eyes List
 draw_character_editor_LegsList();break;}
+
+case "Shoes List":{ // Eyes List
+draw_character_editor_ShoesList();break;}
 
 case "Tattoos":{ // Tattoos Menu
 draw_character_editor_Tattoos();break;}
