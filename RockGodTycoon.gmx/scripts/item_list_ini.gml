@@ -6,6 +6,7 @@
 
 // hairstyles
 global.item_list_hairstyles = ds_list_create();
+ds_list_add(global.item_list_hairstyles,"No Hair");
 ds_list_add(global.item_list_hairstyles,"Ceasar");
 ds_list_add(global.item_list_hairstyles,"Fade");
 ds_list_add(global.item_list_hairstyles,"Fade (Line)");
@@ -14,11 +15,67 @@ global.price_list_hairstyles = ds_list_create();
 ds_list_add(global.price_list_hairstyles,0);
 ds_list_add(global.price_list_hairstyles,0);
 ds_list_add(global.price_list_hairstyles,0);
+ds_list_add(global.price_list_hairstyles,0);
 
 global.lock_list_hairstyles = ds_list_create();
 ds_list_add(global.lock_list_hairstyles,0);
 ds_list_add(global.lock_list_hairstyles,0);
 ds_list_add(global.lock_list_hairstyles,0);
+ds_list_add(global.lock_list_hairstyles,0);
+
+// haircolors
+global.item_list_haircolors = ds_list_create();
+ds_list_add(global.item_list_haircolors,"Black");
+ds_list_add(global.item_list_haircolors,"Brown");
+ds_list_add(global.item_list_haircolors,"Blond");
+ds_list_add(global.item_list_haircolors,"Red");
+
+global.price_list_haircolors = ds_list_create();
+ds_list_add(global.price_list_haircolors,0);
+ds_list_add(global.price_list_haircolors,0);
+ds_list_add(global.price_list_haircolors,0);
+ds_list_add(global.price_list_haircolors,0);
+
+global.lock_list_haircolors = ds_list_create();
+ds_list_add(global.lock_list_haircolors,0);
+ds_list_add(global.lock_list_haircolors,0);
+ds_list_add(global.lock_list_haircolors,0);
+ds_list_add(global.lock_list_haircolors,0);
+
+// Beards
+global.item_list_beards = ds_list_create();
+ds_list_add(global.item_list_beards,"No Beard");
+ds_list_add(global.item_list_beards,"Short");
+ds_list_add(global.item_list_beards,"Bushy");
+
+global.price_list_beards = ds_list_create();
+ds_list_add(global.price_list_beards,0);
+ds_list_add(global.price_list_beards,0);
+ds_list_add(global.price_list_beards,0);
+
+global.lock_list_beards = ds_list_create();
+ds_list_add(global.lock_list_beards,0);
+ds_list_add(global.lock_list_beards,0);
+ds_list_add(global.lock_list_beards,0);
+
+// Beard Colors
+global.item_list_beardcolors = ds_list_create();
+ds_list_add(global.item_list_beardcolors,"Black");
+ds_list_add(global.item_list_beardcolors,"Brown");
+ds_list_add(global.item_list_beardcolors,"Blond");
+ds_list_add(global.item_list_beardcolors,"Red");
+
+global.price_list_beardcolors = ds_list_create();
+ds_list_add(global.price_list_beardcolors,0);
+ds_list_add(global.price_list_beardcolors,0);
+ds_list_add(global.price_list_beardcolors,0);
+ds_list_add(global.price_list_beardcolors,0);
+
+global.lock_list_beardcolors = ds_list_create();
+ds_list_add(global.lock_list_beardcolors,0);
+ds_list_add(global.lock_list_beardcolors,0);
+ds_list_add(global.lock_list_beardcolors,0);
+ds_list_add(global.lock_list_beardcolors,0);
 
 // torso
 global.item_list_torso = ds_list_create();
@@ -77,12 +134,15 @@ ds_list_add(global.lock_list_legs,0);
 global.item_list_shoes = ds_list_create();
 ds_list_add(global.item_list_shoes,"No Shoes");
 ds_list_add(global.item_list_shoes,"Timberland");
+ds_list_add(global.item_list_shoes,"Converse");
 
 global.price_list_shoes = ds_list_create();
 ds_list_add(global.price_list_shoes,0);
 ds_list_add(global.price_list_shoes,0);
+ds_list_add(global.price_list_shoes,0);
 
 global.lock_list_shoes = ds_list_create();
+ds_list_add(global.lock_list_shoes,0);
 ds_list_add(global.lock_list_shoes,0);
 ds_list_add(global.lock_list_shoes,0);
 
@@ -137,3 +197,35 @@ ds_list_add(global.price_list_eyebrows,0);
 global.lock_list_eyebrows = ds_list_create();
 ds_list_add(global.lock_list_eyebrows,0);
 ds_list_add(global.lock_list_eyebrows,0);
+
+// Head Accessories
+global.item_list_headaccessories = ds_list_create();
+ds_list_add(global.item_list_headaccessories,"No Accessories");
+ds_list_add(global.item_list_headaccessories,"[Category: Head Bands]");
+ds_list_add(global.item_list_headaccessories,"[Category: Glasses]");
+ds_list_add(global.item_list_headaccessories,"[Category: Piercings]");
+
+global.price_list_headaccessories = ds_list_create();
+ds_list_add(global.price_list_headaccessories,0);
+ds_list_add(global.price_list_headaccessories,0);
+ds_list_add(global.price_list_headaccessories,0);
+ds_list_add(global.price_list_headaccessories,0);
+
+global.lock_list_headaccessories = ds_list_create();
+ds_list_add(global.lock_list_headaccessories,0);
+ds_list_add(global.lock_list_headaccessories,0);
+ds_list_add(global.lock_list_headaccessories,0);
+ds_list_add(global.lock_list_headaccessories,0);
+
+// Guitar
+global.item_list_guitar = ds_list_create();
+ds_list_add(global.item_list_guitar,"No Guitar");
+ds_list_add(global.item_list_guitar,"Guitar");
+
+global.price_list_guitar = ds_list_create();
+ds_list_add(global.price_list_guitar,0);
+ds_list_add(global.price_list_guitar,0);
+
+global.lock_list_guitar = ds_list_create();
+ds_list_add(global.lock_list_guitar,0);
+ds_list_add(global.lock_list_guitar,0);

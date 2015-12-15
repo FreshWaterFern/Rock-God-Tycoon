@@ -115,8 +115,17 @@ draw_character_editor_Main();break;}
 case "Head":{ // Head Menu
 draw_character_editor_Head();break;}
 
-case "Hairstyle List":{ // Eyes List
+case "Hairstyle List":{ // Hairstyle List
 draw_character_editor_HairstyleList();break;}
+
+case "Haircolor List":{ // Haircolor List
+draw_character_editor_HaircolorsList();break;}
+
+case "Beard List":{ // Beard List
+draw_character_editor_BeardsList();break;}
+
+case "Beardcolor List":{ // Beardcolor List
+draw_character_editor_BeardcolorsList();break;}
 
 case "Eyes List":{ // Eyes List
 draw_character_editor_EyesList();break;}

@@ -3935,6 +3935,9 @@
           <script>scripts\draw_character_editor_Main.gml</script>
           <script>scripts\draw_character_editor_Head.gml</script>
           <script>scripts\draw_character_editor_HairstyleList.gml</script>
+          <script>scripts\draw_character_editor_HaircolorsList.gml</script>
+          <script>scripts\draw_character_editor_BeardcolorsList.gml</script>
+          <script>scripts\draw_character_editor_BeardsList.gml</script>
           <script>scripts\draw_character_editor_LegsList.gml</script>
           <script>scripts\draw_character_editor_ShoesList.gml</script>
           <script>scripts\draw_character_editor_EyesList.gml</script>
