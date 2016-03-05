@@ -139,6 +139,9 @@ draw_character_editor_MouthList();break;}
 case "Eyebrows List":{ // Eyebrows List
 draw_character_editor_EyebrowsList();break;}
 
+case "Headaccessories List":{ // Headaccessories List
+draw_character_editor_HeadaccessoriesList();break;}
+
 case "Outfit":{ // Outfit Menu
 draw_character_editor_Outfit();break;}
 

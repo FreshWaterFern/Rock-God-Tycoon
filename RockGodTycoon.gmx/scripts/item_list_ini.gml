@@ -201,9 +201,9 @@ ds_list_add(global.lock_list_eyebrows,0);
 // Head Accessories
 global.item_list_headaccessories = ds_list_create();
 ds_list_add(global.item_list_headaccessories,"No Accessories");
-ds_list_add(global.item_list_headaccessories,"[Category: Head Bands]");
-ds_list_add(global.item_list_headaccessories,"[Category: Glasses]");
-ds_list_add(global.item_list_headaccessories,"[Category: Piercings]");
+ds_list_add(global.item_list_headaccessories,"-Head Bands");
+ds_list_add(global.item_list_headaccessories,"-Glasses");
+ds_list_add(global.item_list_headaccessories,"-Piercings");
 
 global.price_list_headaccessories = ds_list_create();
 ds_list_add(global.price_list_headaccessories,0);

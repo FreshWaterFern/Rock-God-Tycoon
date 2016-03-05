@@ -57,6 +57,7 @@ case 4:{menu_state="Hairstyle List";surface_update=true;break;}
 case 5:{menu_state="Haircolor List";surface_update=true;break;}
 case 6:{menu_state="Beard List";surface_update=true;break;}
 case 7:{menu_state="Beardcolor List";surface_update=true;break;}
+case 8:{menu_state="Headaccessories List";surface_update=true;break;}
 }}button_select=-2;}
 
 if ( mouse_check_button_pressed(mb_left) ){
